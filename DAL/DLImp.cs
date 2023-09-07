@@ -42,7 +42,6 @@ namespace DAL
             {
                 HelperClass Helper = new HelperClass();
                 var json = RequestDataSync(allURL);
-                //AllRecipesData = JObject.Parse(json);
                 AllRecipesData = JArray.Parse(json);
 
 
