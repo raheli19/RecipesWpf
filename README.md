@@ -1,4 +1,3 @@
-A Desktop application that shows the flights entering and leaving Ben Gurion Airport in Tel Aviv.
-![image](https://user-images.githubusercontent.com/72945182/198103638-c531ff1e-c53b-491d-b817-e212c98b9ae3.png)
-
+A Desktop application that let you manage recipes !!
+![recipes](https://github.com/raheli19/RecipesWpf/assets/92311465/e5c3f99f-bf87-457d-b29f-8fe15eabcc01)
 
