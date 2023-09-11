@@ -323,23 +323,48 @@ namespace DAL
         #endregion
 
         #region holidays
-        public string GetNextWeekHolidies()
+        public string RecordRecipeUsage()
         {
-            string start = DateTime.Today.ToString("yyyy-MM-dd").Replace('/','-');
-            string end = DateTime.Today.AddDays(20).ToString("yyyy-MM-dd").Replace('/', '-');
-            string URL = @"https://www.hebcal.com/hebcal?v=1&cfg=json&maj=on&min=on&mod=on&start="+ start + "&end=" + end;
-            using(var webClient = new System.Net.WebClient())
+            List<DateTime> recordedDates = new List<DateTime>();
+
+            DateTime currentDate = DateTime.Today;
+            DateTime endDate = currentDate.AddDays(6);
+            string start = currentDate.ToString("yyyy-MM-dd").Replace('/', '-');
+            string end = currentDate.AddDays(6).ToString("yyyy-MM-dd").Replace('/', '-');
+            string URL = @"https://www.hebcal.com/hebcal?v=1&cfg=json&maj=on&min=on&mod=on&mf=on&ss=on&start=" + start + "&end=" + end;
+
+            using (var webClient = new System.Net.WebClient())
             {
                 var json = webClient.DownloadString(URL);
                 HolidayRoot holidayRoot = JsonConvert.DeserializeObject<HolidayRoot>(json);
-                
+
                 if (holidayRoot.items.Count > 0)
                 {
-                    holidayRoot.items.RemoveAll(i => i.subcat == "fast");
-                    holidayRoot.items.Sort();
-                    return holidayRoot.items.First().title;
+                    // Iterate through retrieved dates
+                    foreach (var item in holidayRoot.items)
+                    {
+                        DateTime holidayDate = DateTime.Parse(item.date);
+
+                        // Compare with dates when the recipe was used
+                        if (currentDate <= holidayDate && holidayDate <= endDate)
+                        {
+                            recordedDates.Add(holidayDate);
+                        }
+                    }
+
+                    if (recordedDates.Count > 0)
+                    {
+                        Console.WriteLine("Recipe was used on the following dates:");
+                        foreach (var date in recordedDates)
+                        {
+                            Console.WriteLine(date.ToString("yyyy-MM-dd"));
+                        }
+                    }
+                    // Return something meaningful based on your processing.
+                    return "Processed holidays and Shabbatot";
                 }
-                return "";
+
+                return "No holidays or Shabbatot found within the specified date range.";
             }
         }
         #endregion
