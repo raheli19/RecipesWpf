@@ -68,5 +68,10 @@ namespace FlightsMap
 
             }
         }
+
+        private void passwordBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

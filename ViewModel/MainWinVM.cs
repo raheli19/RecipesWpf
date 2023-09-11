@@ -63,8 +63,9 @@ namespace FlightsMap.ViewModel
         {
             get
             {                
-                string holiday = bl.GetNextWeekHolidies().ToUpper();
-                return holiday != "" ? "- Now is a Holiday Week: " + holiday : "";
+                string holiday = bl.RecordRecipeUsage().ToUpper();
+                return holiday != "" ? "- Now is a Holiday Week: " : "";
+                //+ holiday : "";
             }
         }
 

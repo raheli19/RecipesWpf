@@ -58,12 +58,34 @@
         <TextBox x:Name="SearchByIngTB" HorizontalAlignment="Left" Height="32" Margin="186,10,0,0"  VerticalAlignment="Top" Width="136" Foreground="Black" Text = "{Binding ListOfIngredients, Mode=OneWayToSource}" Grid.Row="1"/>
         <Button x:Name="enter" Content="Enter" HorizontalAlignment="Left" Height="34" Margin="204,63,0,0" VerticalAlignment="Top" Width="147" FontSize="16" FontWeight="Bold" Foreground="AntiqueWhite"
                            Click="enter_ingredients_click" Grid.Row="1" Cursor="Hand"/>
-        <DataGrid x:Name="dataGrid" Grid.Row="1" Margin="4,124,-4,10" >
+        <DataGrid x:Name="dataGrid"  Visibility="Hidden"  Grid.Row="1" Margin="4,124,-4,10" >
             <DataGrid.Columns>
                 <DataGridTemplateColumn>
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Image Width="100" Height="100" Source="{Binding ImageLink}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn >
+                    <DataGridTemplateColumn.CellTemplate >
+                        <DataTemplate >
+                            <Button Content="HEllo" CommandParameter="{Binding ImageLink}"
+                HorizontalAlignment="Right"  Tag="{Binding Id}"     Grid.Row="0" Cursor="Hand" Click="btnGrid_click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBox x:Name="SearchByKW" HorizontalAlignment="Left" Height="32" Margin="716,10,0,0"  VerticalAlignment="Top" Width="136" Foreground="Black" Text = "{Binding ListOfIngredients, Mode=OneWayToSource}" Grid.Row="1"/>
+        <Button x:Name="enter_KW" Content="Enter" HorizontalAlignment="Left" Height="34" Margin="761,63,0,0" VerticalAlignment="Top" Width="147" FontSize="16" FontWeight="Bold" Foreground="AntiqueWhite"
+         Grid.Row="1" Cursor="Hand" Click="enter_KW_Click"/>
+        <DataGrid x:Name="dataGridKW" Visibility="Hidden" Grid.Row="1" Margin="4,124,-4,10" >
+            <DataGrid.Columns >
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate >
+                        <DataTemplate>
+                            <Image Width="100" Height="100" Source="{Binding ImageLink}" />
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>

@@ -12,11 +12,12 @@ namespace BL
         void AddWatch(Watch w);
         List<Watch> GetAllWatches();
         List<Watch> GetUserWatches(string userName, DateTime start, DateTime end);
-        string GetNextWeekHolidies();
+        string RecordRecipeUsage();
 
         Dictionary<string, List<FlightInfoPartial>> GetCurrentFlights();
         List<RecipeInfoPartial> SearchByIngredients(List<string> listOfIngredients);
-        Dictionary<string, List<RecipeKeyWord>> SearchByKeyWord(string keyWord);
+        List<RecipeKeyWord> SearchByKeyWord(string keyWord);
+        string AnalyzedRecipeInstructions(string recipeId);
         FlightDetail GetFlightDetail(string partialFlightID);
 
         Dictionary<string, Dictionary<string, string>> GetWeather(FlightDetail flight, FlightInfoPartial fip);

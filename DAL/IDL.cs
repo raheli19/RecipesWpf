@@ -19,7 +19,8 @@ namespace DAL
 
         Dictionary<string, List<FlightInfoPartial>> GetCurrentFlights();
         List<RecipeInfoPartial> SearchByIngredients(List<string> listOfIngredients);
-        Dictionary<string, List<RecipeKeyWord>> SearchByKeyWord(string keyWord);
+        List<RecipeKeyWord> SearchByKeyWord(string keyWord);
+        string AnalyzedRecipeInstructions(string recipeId);
         FlightDetail GetFlightData(string key);
 
 

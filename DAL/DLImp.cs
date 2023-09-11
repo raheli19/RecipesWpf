@@ -109,7 +109,7 @@ namespace DAL
 
         }
 
-        public Dictionary<string, List<RecipeKeyWord>> SearchByKeyWord(string keyWord)
+        public List<RecipeKeyWord> SearchByKeyWord(string keyWord)
         {
             JObject AllRecipesData = null;
             string allURL = $"https://api.spoonacular.com/recipes/complexSearch?query={keyWord}&apiKey=cf71c601dec44bf086ed3a33b400c7c0";
@@ -141,15 +141,18 @@ namespace DAL
                         {
 
                             string recipeId = recipe.Value[i]["id"].ToString();
-                            Console.WriteLine(recipeId);
+                       
 
                             string recipeTitle = recipe.Value[i]["title"].ToString();
-                            Console.WriteLine(recipeTitle);
+                         
+                            string recipeImage = recipe.Value[i]["image"].ToString();
+                           
 
                             recipes.Add(new RecipeKeyWord
                             {
                                 Id = recipeId,
                                 Title = recipeTitle,
+                                ImageLink= recipeImage,
                             });
 
                         }
@@ -161,9 +164,51 @@ namespace DAL
                     Debug.Print(e.Message);
                 }
                 
-                recipesDictionary.Add("Recipes", recipes);
             }
-            return recipesDictionary;
+            return recipes;
+
+
+        }
+
+        public string AnalyzedRecipeInstructions(string recipeId)
+        {
+            JArray AllRecipesData = null;
+            string allURL = $"https://api.spoonacular.com/recipes/{recipeId}/analyzedInstructions?&apiKey=cf71c601dec44bf086ed3a33b400c7c0";
+
+            Dictionary<string, List<RecipeInfoPartial>> recipesDictionary = new Dictionary<string, List<RecipeInfoPartial>>();
+            List<RecipeInfoPartial> recipes = new List<RecipeInfoPartial>();
+            string steps = "";
+
+            using (var webClient = new System.Net.WebClient())
+            {
+                HelperClass Helper = new HelperClass();
+                var json = RequestDataSync(allURL);
+                AllRecipesData = JArray.Parse(json);
+              
+                try
+                {
+                    foreach (var item in AllRecipesData)
+
+                    {
+
+                        JObject recipe = (JObject)item;
+
+                        for (int i = 0; i < recipe["steps"].Count(); i++)
+                        {
+                            steps += "- " + (recipe["steps"][i]["step"].ToString()) + "\n";
+
+                        }
+                       
+                    }
+                }
+                catch (Exception e)
+                {
+                    Debug.Print(e.Message);
+                }
+
+            }
+
+            return steps;
 
 
         }

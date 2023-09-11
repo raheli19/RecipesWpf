@@ -32,9 +32,9 @@ namespace BL
 
         
 
-        public string GetNextWeekHolidies()
+        public string RecordRecipeUsage()
         {
-            return dl.GetNextWeekHolidies();
+            return dl.RecordRecipeUsage();
         }
 
         public List<Watch> GetUserWatches(string userName,DateTime start,DateTime end)
@@ -54,11 +54,15 @@ namespace BL
             return dl.SearchByIngredients(listOfIngredients);
         }
 
-        public Dictionary<string, List<RecipeKeyWord>> SearchByKeyWord(string keyWord)
+        public List<RecipeKeyWord> SearchByKeyWord(string keyWord)
         {
             return dl.SearchByKeyWord(keyWord);
         }
 
+        public string AnalyzedRecipeInstructions(string recipeId)
+        {
+            return dl.AnalyzedRecipeInstructions(recipeId);
+        }
         public FlightDetail GetFlightDetail(string partialFlightID)
         {
             return dl.GetFlightData(partialFlightID);
