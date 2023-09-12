@@ -70,5 +70,8 @@ namespace FlightsMap
             WinFlightDetails window = new WinFlightDetails(my_id,my_link);
             window.Show();
         }
+
+
+
     }
 }

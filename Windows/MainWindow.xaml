@@ -52,7 +52,7 @@
             <TextBlock x:Name="txtButton"><Run Text="View History"/></TextBlock>
         </Button>
         <Label x:Name="Title" Content="Recipes Website"  HorizontalAlignment="Left"  VerticalAlignment="Top" FontSize="35"  Grid.Row="0" FontWeight="bold" Margin="10,10,0,0" FontFamily="Gill Sans Ultra Bold"/>
-        <Label Height="41" Content="{Binding TitleText}" HorizontalAlignment="Left" Margin="326,19,0,10.4" VerticalAlignment="Center" Width="560" Grid.Row="0" FontFamily="Arial Rounded MT Bold" FontSize="20" Foreground="#DD461FAB"/>
+        <Label Height="22" Content="{Binding TitleText}" HorizontalAlignment="Left" Margin="568,101.6,0,377.2" VerticalAlignment="Center" Width="366" Grid.Row="1" FontFamily="Arial Rounded MT" FontSize="14" Foreground="#DD461FAB"/>
         <Label x:Name="SearchbyIng" Content="Find recipes by ingredients:" HorizontalAlignment="Left" Margin="10,23,0,0" Grid.Row="1" VerticalAlignment="Top" Height="27" Width="158"/>
         <Label x:Name="SearchbykeyWords" Content="Find recipes by key words:" HorizontalAlignment="Left" Margin="527,23,0,0" Grid.Row="1" VerticalAlignment="Top" Height="27" Width="158"/>
         <TextBox x:Name="SearchByIngTB" HorizontalAlignment="Left" Height="32" Margin="186,10,0,0"  VerticalAlignment="Top" Width="136" Foreground="Black" Text = "{Binding ListOfIngredients, Mode=OneWayToSource}" Grid.Row="1"/>
@@ -75,6 +75,13 @@
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
+                <DataGridTemplateColumn >
+                    <DataGridTemplateColumn.CellTemplate >
+                        <DataTemplate >
+                            <TextBlock Text="{Binding TextTitle}" HorizontalAlignment="Right" Tag="{Binding Id}" Grid.Row="0" Cursor="Hand" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
         <TextBox x:Name="SearchByKW" HorizontalAlignment="Left" Height="32" Margin="716,10,0,0"  VerticalAlignment="Top" Width="136" Foreground="Black" Text = "{Binding ListOfIngredients, Mode=OneWayToSource}" Grid.Row="1"/>
@@ -91,7 +98,6 @@
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
-
 
     </Grid>
 

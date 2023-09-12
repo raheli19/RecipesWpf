@@ -8,8 +8,6 @@ using BO.Flights;
 using Newtonsoft.Json.Linq;
 using System.Diagnostics;
 using GeoCoordinatePortable;
-using Newtonsoft.Json;
-using System.Windows.Media.Media3D;
 
 //using System.Activities;
 //using System.Device.Location;
@@ -27,7 +25,7 @@ namespace DAL
 
         #region recipes
 
-        public  List<RecipeInfoPartial> SearchByIngredients(List<string> listOfIngredients)
+        public List<RecipeInfoPartial> SearchByIngredients(List<string> listOfIngredients)
         {
             //JObject AllRecipesData = null;
             JArray AllRecipesData = null;
@@ -166,7 +164,6 @@ namespace DAL
                 
             }
             return recipes;
-
 
         }
 
@@ -368,7 +365,7 @@ namespace DAL
         #endregion
 
         #region holidays
-        public string RecordRecipeUsage()
+        public RecipeDateUsage RecordRecipeUsage()
         {
             List<DateTime> recordedDates = new List<DateTime>();
 
@@ -376,40 +373,44 @@ namespace DAL
             DateTime endDate = currentDate.AddDays(6);
             string start = currentDate.ToString("yyyy-MM-dd").Replace('/', '-');
             string end = currentDate.AddDays(6).ToString("yyyy-MM-dd").Replace('/', '-');
-            string URL = @"https://www.hebcal.com/hebcal?v=1&cfg=json&maj=on&min=on&mod=on&mf=on&ss=on&start=" + start + "&end=" + end;
+
+            string URL = $"https://www.hebcal.com/hebcal?v=1&cfg=json&maj=on&min=on&mod=on&mf=on&ss=on&start={start}&end={end}";
 
             using (var webClient = new System.Net.WebClient())
             {
-                var json = webClient.DownloadString(URL);
-                HolidayRoot holidayRoot = JsonConvert.DeserializeObject<HolidayRoot>(json);
 
-                if (holidayRoot.items.Count > 0)
+                try
                 {
-                    // Iterate through retrieved dates
-                    foreach (var item in holidayRoot.items)
-                    {
-                        DateTime holidayDate = DateTime.Parse(item.date);
+                    var json = webClient.DownloadString(URL);
+                    var holidays = JsonConvert.DeserializeObject<HolidayRoot>(json);
 
-                        // Compare with dates when the recipe was used
-                        if (currentDate <= holidayDate && holidayDate <= endDate)
+
+                    if (holidays.items != null && holidays.items.Count > 0)
+                    {
+                        foreach (var item in holidays.items)
                         {
-                            recordedDates.Add(holidayDate);
+                            DateTime holidayDate = DateTime.Parse(item.date);
+
+                            if (currentDate <= holidayDate && holidayDate <= endDate)
+                            {
+                                var recipeUsage = new RecipeDateUsage
+                                {
+                                    Date = holidayDate.ToString("yyyy-MM-dd"),
+                                    Hebrew_date = item.hebrew,
+                                    Title = item.title
+                                };
+
+                                return recipeUsage; // Return the first holiday found
+                            }
                         }
                     }
-
-                    if (recordedDates.Count > 0)
-                    {
-                        Console.WriteLine("Recipe was used on the following dates:");
-                        foreach (var date in recordedDates)
-                        {
-                            Console.WriteLine(date.ToString("yyyy-MM-dd"));
-                        }
-                    }
-                    // Return something meaningful based on your processing.
-                    return "Processed holidays and Shabbatot";
+                }
+                catch (Exception e)
+                {
+                    Debug.Print(e.Message);
                 }
 
-                return "No holidays or Shabbatot found within the specified date range.";
+                return null;
             }
         }
         #endregion

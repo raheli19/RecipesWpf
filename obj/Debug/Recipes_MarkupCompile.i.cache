@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Marc\Desktop\Recipes\obj\Debug\
+C:\ProjectMaarehetHalonot\RecipesWpf\obj\Debug\
 Recipes
 none
 false
 DEBUG;TRACE
-C:\Users\Marc\Desktop\Recipes\Windows\App.xaml
-4525781374
-31692776584
-20-1548445606
-40494473210
+C:\ProjectMaarehetHalonot\RecipesWpf\Windows\App.xaml
+4587889498
+31711011326
+20-345054217
+401403219120
 Windows\enterWin.xaml;Windows\MainWindow.xaml;Windows\WatchesWin.xaml;Windows\WinFlightDetails.xaml;
 
-False
+True
 

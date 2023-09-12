@@ -32,7 +32,7 @@ namespace BL
 
         
 
-        public string RecordRecipeUsage()
+        public RecipeDateUsage RecordRecipeUsage()
         {
             return dl.RecordRecipeUsage();
         }

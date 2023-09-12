@@ -12,7 +12,7 @@ namespace BL
         void AddWatch(Watch w);
         List<Watch> GetAllWatches();
         List<Watch> GetUserWatches(string userName, DateTime start, DateTime end);
-        string RecordRecipeUsage();
+        RecipeDateUsage RecordRecipeUsage();
 
         Dictionary<string, List<FlightInfoPartial>> GetCurrentFlights();
         List<RecipeInfoPartial> SearchByIngredients(List<string> listOfIngredients);

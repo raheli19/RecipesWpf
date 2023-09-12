@@ -62,12 +62,23 @@ namespace FlightsMap.ViewModel
         public string TitleText
         {
             get
-            {                
-                string holiday = bl.RecordRecipeUsage().ToUpper();
-                return holiday != "" ? "- Now is a Holiday Week: " : "";
-                //+ holiday : "";
+            {
+                BLImp bl = new BLImp();
+                RecipeDateUsage firstHoliday = bl.RecordRecipeUsage();
+
+                if (firstHoliday != null)
+                {
+                    // Format the string with holiday details
+                    return $"- Now is a Holiday Week: {firstHoliday.Title} ({firstHoliday.Date}) ({firstHoliday.Hebrew_date})";
+                }
+                else
+                {
+                    // Return a default message when no holiday is found
+                    return "No Jewish holiday or Shabbat found within the specified date range.";
+                }
             }
         }
+
 
         public object Push { get; private set; }
 

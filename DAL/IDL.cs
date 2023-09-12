@@ -14,7 +14,7 @@ namespace DAL
         void UpdatePassword(User u, string newPassword);
         bool ExistUser(User u);
         List<Watch> GetUserWatches(string userName, DateTime start, DateTime end);
-        string RecordRecipeUsage();
+        RecipeDateUsage RecordRecipeUsage();
        // List<Flight> GetAllFlights();
 
         Dictionary<string, List<FlightInfoPartial>> GetCurrentFlights();
