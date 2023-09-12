@@ -46,7 +46,6 @@ namespace FlightsMap
             dataGridKW.Visibility = Visibility.Hidden;
             dataGrid.Visibility = Visibility.Visible;
             dataGrid.ItemsSource = listIng;
-            dataGrid.Columns.RemoveAt(3);
            // dataGrid.Columns.Add((new DataGridColumn).SetValue((new Image).Source= "https://spoonacular.com/recipeImages/633126-312x231.jpg"));
 
         }
@@ -59,7 +58,6 @@ namespace FlightsMap
             dataGrid.Visibility = Visibility.Hidden;
             dataGridKW.Visibility = Visibility.Visible;
             dataGridKW.ItemsSource = listIng;
-            dataGridKW.Columns.RemoveAt(3);
         }
 
         private void btnGrid_click(object sender, RoutedEventArgs e)
@@ -68,10 +66,9 @@ namespace FlightsMap
             Console.WriteLine(my_id);
             var my_link= ((Button)sender).CommandParameter.ToString();
             WinFlightDetails window = new WinFlightDetails(my_id,my_link);
+            
             window.Show();
         }
-
-
 
     }
 }

@@ -36,10 +36,17 @@
                 <Image  Source="airplane_take_off_r100px.png"  />
             </StackPanel>
         </ControlTemplate>
+
     </Window.Resources>
 
-    <Grid Background="White">
+
+    <Grid  >
+        <Grid.Background>
+            <ImageBrush ImageSource="recipes_enter_maccarron.jpg" Stretch="UniformToFill" />
+
+        </Grid.Background>
         <Grid.RowDefinitions>
+
             <RowDefinition Height="70"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
@@ -51,14 +58,15 @@
                 HorizontalAlignment="Right"  Command="{Binding watchCmd}" CommandParameter="{Binding MyUser}"  Grid.Row="0" Cursor="Hand">
             <TextBlock x:Name="txtButton"><Run Text="View History"/></TextBlock>
         </Button>
-        <Label x:Name="Title" Content="Recipes Website"  HorizontalAlignment="Left"  VerticalAlignment="Top" FontSize="35"  Grid.Row="0" FontWeight="bold" Margin="10,10,0,0" FontFamily="Gill Sans Ultra Bold"/>
+        <Label x:Name="Title" Foreground="AntiqueWhite" Content="Gastronomy Genius" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="35" FontWeight="bold" FontFamily="Gill Sans Ultra Bold"/>
+
         <Label Height="22" Content="{Binding TitleText}" HorizontalAlignment="Left" Margin="568,101.6,0,377.2" VerticalAlignment="Center" Width="366" Grid.Row="1" FontFamily="Arial Rounded MT" FontSize="14" Foreground="#DD461FAB"/>
-        <Label x:Name="SearchbyIng" Content="Find recipes by ingredients:" HorizontalAlignment="Left" Margin="10,23,0,0" Grid.Row="1" VerticalAlignment="Top" Height="27" Width="158"/>
-        <Label x:Name="SearchbykeyWords" Content="Find recipes by key words:" HorizontalAlignment="Left" Margin="527,23,0,0" Grid.Row="1" VerticalAlignment="Top" Height="27" Width="158"/>
-        <TextBox x:Name="SearchByIngTB" HorizontalAlignment="Left" Height="32" Margin="186,10,0,0"  VerticalAlignment="Top" Width="136" Foreground="Black" Text = "{Binding ListOfIngredients, Mode=OneWayToSource}" Grid.Row="1"/>
-        <Button x:Name="enter" Content="Enter" HorizontalAlignment="Left" Height="34" Margin="204,63,0,0" VerticalAlignment="Top" Width="147" FontSize="16" FontWeight="Bold" Foreground="AntiqueWhite"
+        <Label x:Name="SearchbyIng" Background="Gray" Opacity="0.75" Foreground="AntiqueWhite" FontSize="20" FontFamily="Arial " FontWeight="Bold" Content="Search recipes by ingredients:"  HorizontalAlignment="Left" Margin="8,23,0,0" Grid.Row="1" VerticalAlignment="Top" Height="35" Width="303"/>
+        <Label x:Name="SearchbykeyWords" FontWeight="Bold" Background="Gray" Opacity="0.75" Foreground="AntiqueWhite" FontSize="20" FontFamily="Arial "  Content="Search recipes by key words:" HorizontalAlignment="Left" Margin="550,23,0,0" Grid.Row="1" VerticalAlignment="Top" Height="35" Width="288"/>
+        <TextBox x:Name="SearchByIngTB" Foreground="AntiqueWhite" BorderBrush="AntiqueWhite" HorizontalAlignment="Left" Height="32" Margin="313,18,0,0"  VerticalAlignment="Top" Width="136" Text = "{Binding ListOfIngredients, Mode=OneWayToSource}" Grid.Row="1"/>
+        <Button x:Name="enter" Content="Enter" HorizontalAlignment="Left" Height="34" Margin="360,63,0,0" VerticalAlignment="Top" Width="107" FontSize="16" FontWeight="Bold" Foreground="AntiqueWhite"
                            Click="enter_ingredients_click" Grid.Row="1" Cursor="Hand"/>
-        <DataGrid x:Name="dataGrid"  Visibility="Hidden"  Grid.Row="1" Margin="4,124,-4,10" >
+        <DataGrid x:Name="dataGrid"  Visibility="Hidden"  Grid.Row="1" Margin="0,124,0,10" Opacity="0.8" >
             <DataGrid.Columns>
                 <DataGridTemplateColumn>
                     <DataGridTemplateColumn.CellTemplate>
@@ -70,7 +78,7 @@
                 <DataGridTemplateColumn >
                     <DataGridTemplateColumn.CellTemplate >
                         <DataTemplate >
-                            <Button Content="HEllo" CommandParameter="{Binding ImageLink}"
+                            <Button Content="Steps" CommandParameter="{Binding ImageLink}" CommandTarget="{Binding}"
                 HorizontalAlignment="Right"  Tag="{Binding Id}"     Grid.Row="0" Cursor="Hand" Click="btnGrid_click"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
@@ -84,8 +92,8 @@
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <TextBox x:Name="SearchByKW" HorizontalAlignment="Left" Height="32" Margin="716,10,0,0"  VerticalAlignment="Top" Width="136" Foreground="Black" Text = "{Binding ListOfIngredients, Mode=OneWayToSource}" Grid.Row="1"/>
-        <Button x:Name="enter_KW" Content="Enter" HorizontalAlignment="Left" Height="34" Margin="761,63,0,0" VerticalAlignment="Top" Width="147" FontSize="16" FontWeight="Bold" Foreground="AntiqueWhite"
+        <TextBox x:Name="SearchByKW" HorizontalAlignment="Left" Height="32" Margin="843,18,0,0"  VerticalAlignment="Top" Width="136" BorderBrush="AntiqueWhite" Foreground="AntiqueWhite" Text = "{Binding ListOfIngredients, Mode=OneWayToSource}" Grid.Row="1"/>
+        <Button x:Name="enter_KW" Content="Enter" HorizontalAlignment="Left" Height="34" Margin="892,63,0,0" VerticalAlignment="Top" Width="101" FontSize="16" FontWeight="Bold" Foreground="AntiqueWhite"
          Grid.Row="1" Cursor="Hand" Click="enter_KW_Click"/>
         <DataGrid x:Name="dataGridKW" Visibility="Hidden" Grid.Row="1" Margin="4,124,-4,10" >
             <DataGrid.Columns >
@@ -98,6 +106,7 @@
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
+        <Image x:Name="image" HorizontalAlignment="Left" Source="../recipe.ico" Height="52" Margin="285,0,0,0" VerticalAlignment="Center" Width="61"/>
 
     </Grid>
 

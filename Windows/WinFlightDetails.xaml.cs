@@ -28,11 +28,16 @@ namespace FlightsMap.Windows
         }
         public WinFlightDetails(string id,string link)
         {
+            
             InitializeComponent();
             string steps = bl.AnalyzedRecipeInstructions(id);
-            label.Content = steps;
+            //label.Content = steps;
+            //List<string> stepsList = steps.Split('\n').ToList<string>();
+            textBlock.Text= steps;
+            //dataGrid.ItemsSource = steps;
             var converter = new ImageSourceConverter();
             background.Source = (ImageSource)converter.ConvertFromString(link);
+            
 
         }
 

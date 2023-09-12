@@ -5,9 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FlightsMap.Windows"
         mc:Ignorable="d"     
-        Height="496" Width="582" ResizeMode="NoResize"
-        Background="{DynamicResource {x:Static SystemColors.InactiveBorderBrushKey}}"
-        TextElement.Foreground="{DynamicResource MaterialDesignBody}" FontFamily="Arial Black" FontSize="14" HorizontalContentAlignment="Center"
+        Height="496" Width="582" ResizeMode="NoResize"  HorizontalContentAlignment="Center"
         Left="820" Title="{Binding FlightNumber}">
 
     <Window.Resources>
@@ -16,8 +14,18 @@
 
     <Grid Margin="0,0,0,-6">
 
-        <Image Name="background"  Opacity="0.25" Stretch="Fill"></Image>
-        <Label x:Name="label" Content="Label" HorizontalAlignment="Left" Margin="52,107,0,0" VerticalAlignment="Top" Height="304" Width="462"/>
+        <Image Name="background"  Opacity="0.35" Stretch="Fill"></Image>
+
+        <Border BorderThickness="1" BorderBrush="Black">
+            <TextBlock x:Name="textBlock"  FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Center" Margin="0,74,0,0" TextWrapping="Wrap" Typography.StylisticSet9="True" FontSize="14" VerticalAlignment="Top" Height="384" Width="534"/>
+
+
+        </Border>
+
+
+        <Label x:Name="label" BorderBrush="Black" FontWeight="Bold" Content="Your recipe's steps:" HorizontalAlignment="Left" Margin="207,10,0,0" VerticalAlignment="Top" Height="44" Width="426" FontSize="20"/>
+
+
 
 
 

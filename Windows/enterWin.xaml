@@ -18,8 +18,8 @@
         </Grid.ColumnDefinitions>
 
 
-        <Label x:Name="Title" Content="Recipes App" Foreground="AntiqueWhite" HorizontalAlignment="Left"  VerticalAlignment="Top" FontSize="30"  FontWeight="bold" FontFamily="Gill Sans Ultra Bold" Height="44" Width="181"/>
-
+        <Label x:Name="Title" Content="Gastronomy Genius" Foreground="AntiqueWhite" HorizontalAlignment="Left"  VerticalAlignment="Top" FontSize="25"  FontWeight="bold" FontFamily="Gill Sans Ultra Bold" Height="44" Width="245" Margin="73,5,0,0"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Source="../recipe.ico" Height="34" VerticalAlignment="Top" Width="42" Margin="39,5,0,0"/>
         <TabControl  Margin="0,49,0,0">
 
             <TabItem Header="Log in" Height="57" >

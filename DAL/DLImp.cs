@@ -192,7 +192,7 @@ namespace DAL
 
                         for (int i = 0; i < recipe["steps"].Count(); i++)
                         {
-                            steps += "- " + (recipe["steps"][i]["step"].ToString()) + "\n";
+                            steps += "- " + (recipe["steps"][i]["step"].ToString()) + "\n" +"\n";
 
                         }
                        
