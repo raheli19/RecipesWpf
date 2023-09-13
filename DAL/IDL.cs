@@ -15,6 +15,8 @@ namespace DAL
         bool ExistUser(User u);
         List<Watch> GetUserWatches(string userName, DateTime start, DateTime end);
         RecipeDateUsage RecordRecipeUsage();
+        //string RateAndCommentRecipe(string recipeName, int starRating, string comment);
+        //string UpdateCommentRecipe(string recipeName, int starRating, string comment);
        // List<Flight> GetAllFlights();
 
         Dictionary<string, List<FlightInfoPartial>> GetCurrentFlights();

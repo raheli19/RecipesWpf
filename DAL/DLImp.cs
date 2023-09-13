@@ -210,6 +210,56 @@ namespace DAL
 
         }
 
+/*
+        #region  RATING & COMMENTS
+        // RATING & COMMENTS
+        public string RateAndCommentRecipe(string recipeName, int starRating, string comment)
+        {
+            using (var context = new FlightContext())
+            {
+                HelperClass Helper = new HelperClass();
+                // Add a new recipe
+                var newRecipe = new Recipe
+                {
+                    Title = recipeName,
+                    StarRating = starRating,
+                    Comments = comment
+                };
+
+                context.Recipes.Add(newRecipe);
+                context.SaveChanges();
+
+                // Retrieve recipes
+                var recipes = context.Recipes.ToList();
+
+                return comment;
+
+            }
+        }
+
+
+
+        public string UpdateCommentRecipe(string recipeName, int starRating, string comment)
+        {
+            using (var context = new FlightContext())
+            {
+                // Update a recipe
+                var recipeToUpdate = context.Recipes.Find(recipeName);
+                if (recipeToUpdate != null)
+                {
+                    recipeToUpdate.StarRating = starRating;
+                    recipeToUpdate.Comments = comment;
+                    context.SaveChanges();
+                }
+            }
+            return comment;
+        }
+        #endregion
+*/
+
+
+
+
         private const string flightDetails = @"https://data-live.flightradar24.com/clickhandler/?version=1.5&flight=";
         public Dictionary<string, List<FlightInfoPartial>> GetCurrentFlights()
         {
@@ -367,6 +417,7 @@ namespace DAL
         #region holidays
         public RecipeDateUsage RecordRecipeUsage()
         {
+
             List<DateTime> recordedDates = new List<DateTime>();
 
             DateTime currentDate = DateTime.Today;

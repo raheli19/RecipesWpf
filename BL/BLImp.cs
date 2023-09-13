@@ -179,5 +179,16 @@ namespace BL
         {
             return dl.GetDTimezone(flight);
         }
+
+     /*   public string RateAndCommentRecipe(string recipeName, int starRating, string comment)
+        {
+            return dl.RateAndCommentRecipe(recipeName, starRating, comment);
+        }
+
+        public string UpdateCommentRecipe(string recipeName, int starRating, string comment)
+        {
+            return dl.UpdateCommentRecipe(recipeName, starRating, comment);
+        }
+     */
     }
 }

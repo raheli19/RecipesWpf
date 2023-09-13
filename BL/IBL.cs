@@ -14,6 +14,9 @@ namespace BL
         List<Watch> GetUserWatches(string userName, DateTime start, DateTime end);
         RecipeDateUsage RecordRecipeUsage();
 
+        //string RateAndCommentRecipe(string recipeName, int starRating, string comment);
+        //string UpdateCommentRecipe(string recipeName, int starRating, string comment);
+
         Dictionary<string, List<FlightInfoPartial>> GetCurrentFlights();
         List<RecipeInfoPartial> SearchByIngredients(List<string> listOfIngredients);
         List<RecipeKeyWord> SearchByKeyWord(string keyWord);
