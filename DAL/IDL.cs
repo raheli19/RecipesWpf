@@ -17,7 +17,10 @@ namespace DAL
         RecipeDateUsage RecordRecipeUsage();
         //string RateAndCommentRecipe(string recipeName, int starRating, string comment);
         //string UpdateCommentRecipe(string recipeName, int starRating, string comment);
-       // List<Flight> GetAllFlights();
+        List<Recipe> GetAllRecipeDetails(string recipeId);
+        
+
+
 
         Dictionary<string, List<FlightInfoPartial>> GetCurrentFlights();
         List<RecipeInfoPartial> SearchByIngredients(List<string> listOfIngredients);

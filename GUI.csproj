@@ -141,6 +141,9 @@
     <Compile Include="ViewModel\MainWinVM.cs" />
     <Compile Include="ViewModel\RecipeDetailsWinVM.cs" />
     <Compile Include="ViewModel\WatchWinVM.cs" />
+    <Compile Include="Windows\ViewDatabase.xaml.cs">
+      <DependentUpon>ViewDatabase.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\WatchesWin.xaml.cs">
       <DependentUpon>WatchesWin.xaml</DependentUpon>
     </Compile>
@@ -166,6 +169,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Windows\ViewDatabase.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\WatchesWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

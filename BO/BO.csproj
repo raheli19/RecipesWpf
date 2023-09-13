@@ -87,7 +87,7 @@
     <Compile Include="Flights\Position.cs" />
     <Compile Include="Flights\Real.cs" />
     <Compile Include="Flights\RecipesSimilar.cs" />
-    <Compile Include="Users\Recipe.cs" />
+    <Compile Include="Flights\Recipe.cs" />
     <Compile Include="Flights\RecipeDateUsage.cs" />
     <Compile Include="Flights\RecipeInfoPartial.cs" />
     <Compile Include="Flights\RecipeKeyWord.cs" />

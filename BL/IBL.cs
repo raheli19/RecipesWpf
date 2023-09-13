@@ -13,6 +13,7 @@ namespace BL
         List<Watch> GetAllWatches();
         List<Watch> GetUserWatches(string userName, DateTime start, DateTime end);
         RecipeDateUsage RecordRecipeUsage();
+        List<Recipe> GetAllRecipeDetails(string Id);
 
         //string RateAndCommentRecipe(string recipeName, int starRating, string comment);
         //string UpdateCommentRecipe(string recipeName, int starRating, string comment);

@@ -328,3 +328,5 @@ C:\ProjectMaarehetHalonot\RecipesWpf\obj\Debug\GUI.csproj.CoreCompileInputs.cach
 C:\ProjectMaarehetHalonot\RecipesWpf\obj\Debug\GUI.csproj.CopyComplete
 C:\ProjectMaarehetHalonot\RecipesWpf\obj\Debug\Recipes.exe
 C:\ProjectMaarehetHalonot\RecipesWpf\obj\Debug\Recipes.pdb
+C:\ProjectMaarehetHalonot\RecipesWpf\obj\Debug\Windows\ViewDatabase.g.cs
+C:\ProjectMaarehetHalonot\RecipesWpf\obj\Debug\Windows\ViewDatabase.baml

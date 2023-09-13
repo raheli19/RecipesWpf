@@ -10,6 +10,13 @@ namespace BL
     public class BLImp : IBL
     {
         DLImp dl = new DLImp();
+
+        public List<Recipe> RecipesDataBase
+        {
+            get { return dl.RecipesDataBase; }
+        }
+
+
         public void AddUser(User u)
         {
             dl.AddUser(u);
@@ -28,6 +35,7 @@ namespace BL
         public List<Watch> GetAllWatches()
         {
             throw new NotImplementedException();
+            
         }
 
         
@@ -184,15 +192,21 @@ namespace BL
             return dl.GetDTimezone(flight);
         }
 
-     /*   public string RateAndCommentRecipe(string recipeName, int starRating, string comment)
+        public List<Recipe> GetAllRecipeDetails(string Id)
         {
-            return dl.RateAndCommentRecipe(recipeName, starRating, comment);
+            return dl.GetAllRecipeDetails(Id);
         }
 
-        public string UpdateCommentRecipe(string recipeName, int starRating, string comment)
-        {
-            return dl.UpdateCommentRecipe(recipeName, starRating, comment);
-        }
-     */
+        
+        /*   public string RateAndCommentRecipe(string recipeName, int starRating, string comment)
+           {
+               return dl.RateAndCommentRecipe(recipeName, starRating, comment);
+           }
+
+           public string UpdateCommentRecipe(string recipeName, int starRating, string comment)
+           {
+               return dl.UpdateCommentRecipe(recipeName, starRating, comment);
+           }
+        */
     }
 }

@@ -21,9 +21,15 @@ namespace DAL
     {
         HelperClass helperC = new HelperClass();
 
-
-
         #region recipes
+
+        public List<Recipe> recipesDataBase = new List<Recipe>();
+
+        public List<Recipe> RecipesDataBase
+        {
+            get { return recipesDataBase; }
+        }
+
 
         public List<RecipeInfoPartial> SearchByIngredients(List<string> listOfIngredients)
         {
@@ -49,12 +55,12 @@ namespace DAL
                     foreach (var item in AllRecipesData)
 
                     {
-                        
+
                         JObject recipe = (JObject)item;
 
-                        string recipeId = recipe["id"].ToString(); 
+                        string recipeId = recipe["id"].ToString();
 
-                        string recipeTitle = recipe["title"].ToString(); 
+                        string recipeTitle = recipe["title"].ToString();
 
                         string imageLink = recipe["image"].ToString();
 
@@ -64,24 +70,24 @@ namespace DAL
                         string usedIngredientsCount = recipe["usedIngredientCount"].ToString();
                         int usedIngredientsCountDouble = Convert.ToInt16(usedIngredientsCount);
 
-                        string usedIngredients="";
+                        string usedIngredients = "";
                         string missedIngredients = "";
 
-                        for (int i= 0; i < missedIngredientsCountDouble; i++)
+                        for (int i = 0; i < missedIngredientsCountDouble; i++)
                         {
-                            missedIngredients+= "- "+(recipe["missedIngredients"][i]["name"].ToString())+"\n";
+                            missedIngredients += "- " + (recipe["missedIngredients"][i]["name"].ToString()) + "\n";
 
                         }
                         for (int i = 0; i < usedIngredientsCountDouble; i++)
                         {
-                            usedIngredients+="- "+(recipe["usedIngredients"][i]["name"].ToString())+"\n";
+                            usedIngredients += "- " + (recipe["usedIngredients"][i]["name"].ToString()) + "\n";
 
                         }
-                       
+
 
                         recipes.Add(new RecipeInfoPartial
                         {
-                            
+
                             Id = recipeId,
                             Title = recipeTitle,
                             ImageLink = imageLink,
@@ -92,16 +98,16 @@ namespace DAL
 
 
 
-                        }) ;
+                        });
                     }
                 }
                 catch (Exception e)
                 {
                     Debug.Print(e.Message);
                 }
-          
+
             }
-            
+
             return recipes;
 
 
@@ -139,29 +145,29 @@ namespace DAL
                         {
 
                             string recipeId = recipe.Value[i]["id"].ToString();
-                       
+
 
                             string recipeTitle = recipe.Value[i]["title"].ToString();
-                         
+
                             string recipeImage = recipe.Value[i]["image"].ToString();
-                           
+
 
                             recipes.Add(new RecipeKeyWord
                             {
                                 Id = recipeId,
                                 Title = recipeTitle,
-                                ImageLink= recipeImage,
+                                ImageLink = recipeImage,
                             });
 
                         }
-                       
+
                     }
                 }
                 catch (Exception e)
                 {
                     Debug.Print(e.Message);
                 }
-                
+
             }
             return recipes;
 
@@ -181,7 +187,7 @@ namespace DAL
                 HelperClass Helper = new HelperClass();
                 var json = RequestDataSync(allURL);
                 AllRecipesData = JArray.Parse(json);
-              
+
                 try
                 {
                     foreach (var item in AllRecipesData)
@@ -192,10 +198,10 @@ namespace DAL
 
                         for (int i = 0; i < recipe["steps"].Count(); i++)
                         {
-                            steps += "- " + (recipe["steps"][i]["step"].ToString()) + "\n" +"\n";
+                            steps += "- " + (recipe["steps"][i]["step"].ToString()) + "\n" + "\n";
 
                         }
-                       
+
                     }
                 }
                 catch (Exception e)
@@ -210,7 +216,7 @@ namespace DAL
 
         }
 
-        public List<RecipesSimilar> GetSimilarRecipes (string recipeId)
+        public List<RecipesSimilar> GetSimilarRecipes(string recipeId)
         {
             JArray AllRecipesData = null;
             string allURL = $"https://api.spoonacular.com/recipes/{recipeId}/similar?&apiKey=cf71c601dec44bf086ed3a33b400c7c0";
@@ -390,23 +396,97 @@ namespace DAL
 
         public FlightDetail GetFlightData(string key)
         {
-            string CurrentUrl =(string) flightDetails + key;
+            string CurrentUrl = (string)flightDetails + key;
             FlightDetail currentFlight = null;
-           
+
             using (var webClient = new System.Net.WebClient())
             {
                 var json = webClient.DownloadString(CurrentUrl);
                 try
                 {
-                    currentFlight = (FlightDetail)JsonConvert.DeserializeObject<FlightDetail>(json, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore }); 
-                }catch (Exception e)
+                    currentFlight = (FlightDetail)JsonConvert.DeserializeObject<FlightDetail>(json, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore });
+                }
+                catch (Exception e)
                 {
                     Debug.WriteLine(e.Message);
                 }
 
             }
 
-            return currentFlight;   
+            return currentFlight;
+        }
+
+
+        public List<Recipe> GetAllRecipeDetails(string Id)
+        {
+            Random random = new Random();
+            JArray RecipeDetails = null;
+            //List<Recipe> AllDetails = new List<Recipe>();
+
+            DateTime startDate = new DateTime(2022, 1, 1); // Start date
+            DateTime endDate = new DateTime(2023, 12, 31); // End date
+
+            // Calculate the number of days between start and end dates
+            int range = (endDate - startDate).Days;
+
+            string allURL = $"https://api.spoonacular.com/recipes/{Id}/information?includeNutrition=false&apiKey=cf71c601dec44bf086ed3a33b400c7c0";
+            using (var webClient = new System.Net.WebClient())
+            {
+                try
+                {
+                    HelperClass Helper = new HelperClass();
+                    var json = RequestDataSync(allURL);
+                    RecipeDetails = JArray.Parse(json);
+
+
+
+                    foreach (var item in RecipeDetails)
+
+                    {
+
+                        JObject recipe = (JObject)item;
+
+                        string recipeId = recipe["id"].ToString();
+
+                        string recipeAisle = recipe["aisle"].ToString();
+
+                        string imageLink = recipe["image"].ToString();
+
+                        string recipeName = recipe["name"].ToString();
+
+                        int starRat = random.Next(1, 6);
+
+                        string comment = "";
+
+                        // Generate a random number of days to add to the start date , Add the random number of days to the start date
+                        int randomDays = random.Next(range);
+                        DateTime randomDate = startDate.AddDays(randomDays);
+
+                        string date = randomDate.ToString("yyyy-MM-dd").Replace('/', '-');
+
+
+                        recipesDataBase.Add(new Recipe
+                        {
+
+                            Id = recipeId,
+                            Aisle = recipeAisle,
+                            ImageLink = imageLink,
+                            Name = recipeName,
+                            StarRating = starRat,
+                            Comments = comment,
+                            Date = date,
+
+                        });
+
+                    }
+                }
+                catch (Exception e)
+                {
+                    Debug.Print(e.Message);
+                }
+                return recipesDataBase;
+
+            }
         }
 
 
@@ -420,7 +500,7 @@ namespace DAL
                 db.Users.Add(u);
                 db.SaveChanges();
             }
-           
+
         }
 
         public void AddWatch(Watch w)
@@ -522,9 +602,9 @@ namespace DAL
         #endregion
 
         #region weather
-        public Dictionary<string,string> GetCurrentWeather(string lon, string lat)
+        public Dictionary<string, string> GetCurrentWeather(string lon, string lat)
         {
-            Dictionary<string,string> result = new Dictionary<string,string>();
+            Dictionary<string, string> result = new Dictionary<string, string>();
 
             string URL = @"https://openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&units=metric&appid=439d4b804bc8187953eb36d2a8c26a02";
             using (var webClient = new System.Net.WebClient())
@@ -538,14 +618,14 @@ namespace DAL
                 result.Add("temperature", temperature);
                 result.Add("mainWeather", mainWeather);
                 result.Add("shortDesc", shortDesc);
-                     
+
             }
             return result;
         }
         #endregion
 
         #region distance and time
-        public Dictionary<string,string> GetLonLatOrigin(FlightDetail flight)
+        public Dictionary<string, string> GetLonLatOrigin(FlightDetail flight)
         {
             string lon = flight.airport.origin.position.longitude.ToString();
             string lat = flight.airport.origin.position.latitude.ToString();
@@ -569,7 +649,7 @@ namespace DAL
 
             double distanceBetween = pin1.GetDistanceTo(pin2);
 
-            return distanceBetween/1000;
+            return distanceBetween / 1000;
 
         }
 
@@ -582,8 +662,8 @@ namespace DAL
 
             double distanceBetween = pin1.GetDistanceTo(pin2);
 
-            
-            double tmp =  distanceBetween/1000; //km
+
+            double tmp = distanceBetween / 1000; //km
             return tmp;
         }
 
@@ -594,12 +674,12 @@ namespace DAL
             long time;
             if (flight.time.estimated.arrival != null)
             {
-                 time = (long)flight.time.estimated.arrival;
+                time = (long)flight.time.estimated.arrival;
             }
-            else time= flight.time.scheduled.arrival;
+            else time = flight.time.scheduled.arrival;
             DateTime dest = helperClass.GetDateTimeFromEpoch(time);
 
-            TimeSpan res=  dest.Subtract(origin);
+            TimeSpan res = dest.Subtract(origin);
             return res;
 
         }
@@ -637,7 +717,8 @@ namespace DAL
             try
             {
                 return fip.Source;
-            }catch (Exception e)
+            }
+            catch (Exception e)
             {
                 Debug.Print(e.ToString());
                 return "N/A";
@@ -650,7 +731,7 @@ namespace DAL
             {
                 return fip.Destination;
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Debug.Print(e.ToString());
                 return "N/A";
@@ -662,7 +743,9 @@ namespace DAL
             try
             {
                 return flight.airport.origin.name;
-            }catch(Exception e){
+            }
+            catch (Exception e)
+            {
                 Debug.Print(e.ToString());
                 return "N/A";
             }
