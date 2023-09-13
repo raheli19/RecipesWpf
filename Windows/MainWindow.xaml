@@ -55,7 +55,7 @@
 
 
         <Button x:Name="btnCreatePolygon" 
-                HorizontalAlignment="Right"  Command="{Binding watchCmd}" CommandParameter="{Binding MyUser}"  Grid.Row="0" Cursor="Hand">
+                HorizontalAlignment="Left"  Command="{Binding watchCmd}" CommandParameter="{Binding MyUser}"  Grid.Row="0" Cursor="Hand" Margin="0,19,0,19">
             <TextBlock x:Name="txtButton"><Run Text="View History"/></TextBlock>
         </Button>
         <Label x:Name="Title" Foreground="AntiqueWhite" Content="Gastronomy Genius" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="35" FontWeight="bold" FontFamily="Gill Sans Ultra Bold"/>
@@ -104,9 +104,20 @@
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
+                <DataGridTemplateColumn >
+                    <DataGridTemplateColumn.CellTemplate >
+                        <DataTemplate >
+                            <Button Content="Steps" CommandParameter="{Binding ImageLink}" CommandTarget="{Binding}"
+                HorizontalAlignment="Right"  Tag="{Binding Id}"     Grid.Row="0" Cursor="Hand" Click="btnGrid_click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
         <Image x:Name="image" HorizontalAlignment="Left" Source="../recipe.ico" Height="52" Margin="285,0,0,0" VerticalAlignment="Center" Width="61"/>
+        <Button x:Name="viewDatabase"   Grid.Row="0" Cursor="Hand" Margin="877,19,0,19" HorizontalAlignment="Left" Width="128" Click="viewDatabase_Click">
+            <TextBlock x:Name="txtButton1"><Run Text="View "/><Run Language="fr-fr" Text="Database"/></TextBlock>
+        </Button>
 
     </Grid>
 

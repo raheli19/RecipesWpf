@@ -23,6 +23,7 @@ namespace DAL
         List<RecipeInfoPartial> SearchByIngredients(List<string> listOfIngredients);
         List<RecipeKeyWord> SearchByKeyWord(string keyWord);
         string AnalyzedRecipeInstructions(string recipeId);
+        List<RecipesSimilar> GetSimilarRecipes(string recipeId);
         FlightDetail GetFlightData(string key);
 
 

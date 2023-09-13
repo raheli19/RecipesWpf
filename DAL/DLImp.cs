@@ -210,52 +210,107 @@ namespace DAL
 
         }
 
-/*
-        #region  RATING & COMMENTS
-        // RATING & COMMENTS
-        public string RateAndCommentRecipe(string recipeName, int starRating, string comment)
+        public List<RecipesSimilar> GetSimilarRecipes (string recipeId)
         {
-            using (var context = new FlightContext())
+            JArray AllRecipesData = null;
+            string allURL = $"https://api.spoonacular.com/recipes/{recipeId}/similar?&apiKey=cf71c601dec44bf086ed3a33b400c7c0";
+
+            List<RecipesSimilar> recipes = new List<RecipesSimilar>();
+
+            using (var webClient = new System.Net.WebClient())
             {
                 HelperClass Helper = new HelperClass();
-                // Add a new recipe
-                var newRecipe = new Recipe
+                var json = RequestDataSync(allURL);
+                AllRecipesData = JArray.Parse(json);
+
+
+
+                try
                 {
-                    Title = recipeName,
-                    StarRating = starRating,
-                    Comments = comment
-                };
+                    foreach (var item in AllRecipesData)
 
-                context.Recipes.Add(newRecipe);
-                context.SaveChanges();
+                    {
 
-                // Retrieve recipes
-                var recipes = context.Recipes.ToList();
+                        JObject recipe = (JObject)item;
 
-                return comment;
+                        string id = recipe["id"].ToString();
 
-            }
-        }
+                        string recipeTitle = recipe["title"].ToString();
+                        string recipeReadyInMinutes = recipe["readyInMinutes"].ToString();
+                        string recipeServings = recipe["servings"].ToString();
 
 
 
-        public string UpdateCommentRecipe(string recipeName, int starRating, string comment)
-        {
-            using (var context = new FlightContext())
-            {
-                // Update a recipe
-                var recipeToUpdate = context.Recipes.Find(recipeName);
-                if (recipeToUpdate != null)
-                {
-                    recipeToUpdate.StarRating = starRating;
-                    recipeToUpdate.Comments = comment;
-                    context.SaveChanges();
+
+
+                        recipes.Add(new RecipesSimilar
+                        {
+
+                            Id = id,
+                            Title = recipeTitle,
+                            ReadyInMinutes = recipeReadyInMinutes,
+                            Servings = recipeServings,
+
+
+
+                        });
+                    }
                 }
+                catch (Exception e)
+                {
+                    Debug.Print(e.Message);
+                }
+
             }
-            return comment;
+
+            return recipes;
         }
-        #endregion
-*/
+        /*
+                #region  RATING & COMMENTS
+                // RATING & COMMENTS
+                public string RateAndCommentRecipe(string recipeName, int starRating, string comment)
+                {
+                    using (var context = new FlightContext())
+                    {
+                        HelperClass Helper = new HelperClass();
+                        // Add a new recipe
+                        var newRecipe = new Recipe
+                        {
+                            Title = recipeName,
+                            StarRating = starRating,
+                            Comments = comment
+                        };
+
+                        context.Recipes.Add(newRecipe);
+                        context.SaveChanges();
+
+                        // Retrieve recipes
+                        var recipes = context.Recipes.ToList();
+
+                        return comment;
+
+                    }
+                }
+
+
+
+                public string UpdateCommentRecipe(string recipeName, int starRating, string comment)
+                {
+                    using (var context = new FlightContext())
+                    {
+                        // Update a recipe
+                        var recipeToUpdate = context.Recipes.Find(recipeName);
+                        if (recipeToUpdate != null)
+                        {
+                            recipeToUpdate.StarRating = starRating;
+                            recipeToUpdate.Comments = comment;
+                            context.SaveChanges();
+                        }
+                    }
+                    return comment;
+                }
+                #endregion
+        */
 
 
 

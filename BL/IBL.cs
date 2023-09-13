@@ -21,6 +21,7 @@ namespace BL
         List<RecipeInfoPartial> SearchByIngredients(List<string> listOfIngredients);
         List<RecipeKeyWord> SearchByKeyWord(string keyWord);
         string AnalyzedRecipeInstructions(string recipeId);
+        List<RecipesSimilar> GetSimilarRecipes(string recipeId);
         FlightDetail GetFlightDetail(string partialFlightID);
 
         Dictionary<string, Dictionary<string, string>> GetWeather(FlightDetail flight, FlightInfoPartial fip);

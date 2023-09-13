@@ -63,6 +63,10 @@ namespace BL
         {
             return dl.AnalyzedRecipeInstructions(recipeId);
         }
+        public List<RecipesSimilar> GetSimilarRecipes(string recipeId)
+        {
+            return dl.GetSimilarRecipes(recipeId);
+        }
         public FlightDetail GetFlightDetail(string partialFlightID)
         {
             return dl.GetFlightData(partialFlightID);

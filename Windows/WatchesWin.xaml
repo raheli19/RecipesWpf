@@ -31,5 +31,12 @@
         <Image HorizontalAlignment="Left" Height="41" Margin="10,429,0,0" VerticalAlignment="Top" Width="56" Source="takaoff.png"/>
         <Image HorizontalAlignment="Left" Height="41" Margin="779,30,0,0" VerticalAlignment="Top" Width="54" Source="airplane_landing_100px.png"/>
 
+        <DataGrid x:Name="dataGrid"  Visibility="Hidden" Margin="251,140,0,10" Opacity="0.8" >
+
+        </DataGrid>
+        <Label x:Name="SimilarRecipes" Background="Gray" Opacity="0.75" Foreground="AntiqueWhite" FontSize="20" FontFamily="Arial " FontWeight="Bold" Content="Get Similar Recipes:"  HorizontalAlignment="Left" Margin="8,23,0,0" VerticalAlignment="Top" Height="35" Width="207"/>
+        <TextBox x:Name="SearchByIngTB" Foreground="AntiqueWhite" BorderBrush="Black" HorizontalAlignment="Left" Height="32" Margin="237,26,0,0"  VerticalAlignment="Top" Width="136" Text = "{Binding ListOfIngredients, Mode=OneWayToSource}"/>
+        <Button x:Name="enter" Content="Enter" HorizontalAlignment="Left" Height="34" Margin="410,26,0,0" VerticalAlignment="Top" Width="107" FontSize="16" FontWeight="Bold" Foreground="AntiqueWhite"
+                           Click="enter_ingredients_click" Cursor="Hand"/>
     </Grid>
 </Window>

@@ -60,15 +60,27 @@ namespace FlightsMap
             dataGridKW.ItemsSource = listIng;
         }
 
-        private void btnGrid_click(object sender, RoutedEventArgs e)
+        private void btnGrid_click(object sender, RoutedEventArgs e)  //quand on clique sur le bouton step
         {
             var my_id = ((Button)sender).Tag.ToString();
             Console.WriteLine(my_id);
             var my_link= ((Button)sender).CommandParameter.ToString();
             WinFlightDetails window = new WinFlightDetails(my_id,my_link);
+            //il faut faire une fonction dans la dal (api) qui recoit un id et renvoit les données.
+            //Tu envoie le id et recois en retour une liste de recette (creer une class Recipe avec ttes les infos)
+            //Ajouter pr chaque recette une date random
+            //renvoyer la liste dans la dal
+            //dans la nouvelle fenetre qui souvrira quand on appuie sur view database, on affiche un grid avec cette liste
+            //jajoute a la fin de chaque ligne du grid un bouton getSimilarRecipe et je lie avec le api créé dans la DAL
             
             window.Show();
+
         }
 
+        private void viewDatabase_Click(object sender, RoutedEventArgs e)
+        {
+            WatchesWin window = new WatchesWin();
+            window.Show();
+        }
     }
 }

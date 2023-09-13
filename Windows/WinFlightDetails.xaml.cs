@@ -41,6 +41,9 @@ namespace FlightsMap.Windows
 
         }
 
-
+        private void close_click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
