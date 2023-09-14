@@ -11,10 +11,7 @@ namespace BL
     {
         DLImp dl = new DLImp();
 
-        public List<Recipe> RecipesDataBase
-        {
-            get { return dl.RecipesDataBase; }
-        }
+        
         public List<Recipe> getRecipesDB()
         {
             return dl.getRecipesDB();
@@ -203,16 +200,16 @@ namespace BL
             return dl.GetAllRecipeDetails(Id);
         }
 
-        
-        /*   public string RateAndCommentRecipe(string recipeName, int starRating, string comment)
-           {
-               return dl.RateAndCommentRecipe(recipeName, starRating, comment);
-           }
+        public void UpdateRateRecipe(string recipeName, int starRating)
+        {
+            dl.UpdateRateRecipe(recipeName, starRating);
+        }
 
-           public string UpdateCommentRecipe(string recipeName, int starRating, string comment)
-           {
-               return dl.UpdateCommentRecipe(recipeName, starRating, comment);
-           }
-        */
+        public void UpdateCommentRecipe(string recipeName, string comment)
+        {
+            dl.UpdateCommentRecipe(recipeName, comment);
+        }
+
+
     }
 }

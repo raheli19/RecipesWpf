@@ -332,3 +332,7 @@ C:\ProjectMaarehetHalonot\RecipesWpf\obj\Debug\Windows\ViewDatabase.g.cs
 C:\ProjectMaarehetHalonot\RecipesWpf\obj\Debug\Windows\ViewDatabase.baml
 C:\Users\Marc\Desktop\Recipes\obj\Debug\Windows\ViewDatabase.g.cs
 C:\Users\Marc\Desktop\Recipes\obj\Debug\Windows\ViewDatabase.baml
+C:\ProjectMaarehetHalonot\RecipesWpf\obj\Debug\Windows\CommentWin.g.cs
+C:\ProjectMaarehetHalonot\RecipesWpf\obj\Debug\Windows\CommentWin.baml
+C:\ProjectMaarehetHalonot\RecipesWpf\obj\Debug\Windows\Window1.g.cs
+C:\ProjectMaarehetHalonot\RecipesWpf\obj\Debug\Windows\Window1.baml

@@ -26,18 +26,35 @@ namespace Recipes.Windows
         {
             InitializeComponent();
             List<Recipe> recipes = bl.getRecipesDB();
-            // List<Recipe> datRecipes = bl.GetAllRecipeDetails();  //bl.RecipeDataBase
             DataBaseGrid.Visibility = Visibility.Visible;
             DataBaseGrid.ItemsSource = recipes;
         }
-        /*
 
-        public ViewDatabase()
+        //
+        private void btnComment_click(object sender, RoutedEventArgs e)  
         {
-            List<Recipe> recipes = bl.RecipesDataBase;
-           // List<Recipe> datRecipes = bl.GetAllRecipeDetails();  //bl.RecipeDataBase
-            DataBaseGrid.Visibility = Visibility.Visible;
-            DataBaseGrid.ItemsSource = recipes;
-        }*/
+            var my_name = ((Button)sender).Tag.ToString();
+            Console.WriteLine(my_name);
+
+            Window1 window = new Window1(my_name);  // Comment window
+            window.DataContext = window;
+            window.Show();
+
+
+
+        }
+        //
+        private void btnSaveComment_Click(object sender, RoutedEventArgs e)
+        {
+            var button = (Button)sender;
+            var recipeId = button.Tag.ToString();
+            var updatedComments = ((Recipe)DataBaseGrid.SelectedItem).Comments;
+
+            // Update the comments in your database using your BL or DAL layer
+            bl.UpdateCommentRecipe(recipeId, updatedComments);
+        }
+
+
+
     }
 }

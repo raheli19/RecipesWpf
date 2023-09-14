@@ -89,8 +89,8 @@ C:\ProjectMaarehetHalonot\RecipesWpf\BO\bin\Debug\Microsoft.Web.WebView2.WinForm
 C:\ProjectMaarehetHalonot\RecipesWpf\BO\bin\Debug\Microsoft.Web.WebView2.Wpf.xml
 C:\ProjectMaarehetHalonot\RecipesWpf\BO\bin\Debug\Microsoft.Xaml.Behaviors.pdb
 C:\ProjectMaarehetHalonot\RecipesWpf\BO\bin\Debug\Microsoft.Xaml.Behaviors.xml
-C:\ProjectMaarehetHalonot\RecipesWpf\BO\obj\Debug\BO.csproj.AssemblyReference.cache
 C:\ProjectMaarehetHalonot\RecipesWpf\BO\obj\Debug\BO.csproj.CoreCompileInputs.cache
 C:\ProjectMaarehetHalonot\RecipesWpf\BO\obj\Debug\BO.csproj.CopyComplete
 C:\ProjectMaarehetHalonot\RecipesWpf\BO\obj\Debug\BO.dll
 C:\ProjectMaarehetHalonot\RecipesWpf\BO\obj\Debug\BO.pdb
+C:\ProjectMaarehetHalonot\RecipesWpf\BO\obj\Debug\BO.csproj.AssemblyReference.cache

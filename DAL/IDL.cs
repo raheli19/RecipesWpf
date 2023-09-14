@@ -15,8 +15,8 @@ namespace DAL
         bool ExistUser(User u);
         List<Watch> GetUserWatches(string userName, DateTime start, DateTime end);
         RecipeDateUsage RecordRecipeUsage();
-        //string RateAndCommentRecipe(string recipeName, int starRating, string comment);
-        //string UpdateCommentRecipe(string recipeName, int starRating, string comment);
+        void UpdateRateRecipe(string recipeName, int starRating);
+        void UpdateCommentRecipe(string recipeName, string comment);
         List<Recipe> GetAllRecipeDetails(string recipeId);
         List<Recipe> getRecipesDB();
         void AddRecipeToDB(Recipe recipe);

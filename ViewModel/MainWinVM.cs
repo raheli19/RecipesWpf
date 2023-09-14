@@ -166,11 +166,7 @@ namespace FlightsMap.ViewModel
             fdvm.WFD.Show();
         }
 
-        public void enter_ingredients_click_VM(object sender, RoutedEventArgs e)
-        {
-
-
-        }
+       
 
     }
 }

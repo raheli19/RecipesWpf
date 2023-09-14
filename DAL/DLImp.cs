@@ -31,10 +31,7 @@ namespace DAL
             return recipesDataBase;
         }
 
-        public List<Recipe> RecipesDataBase
-        {
-            get { return recipesDataBase; }
-        }
+
 
         public void AddRecipeToDB(Recipe recipe)
         {
@@ -282,52 +279,37 @@ namespace DAL
 
             return recipes;
         }
-        /*
-                #region  RATING & COMMENTS
-                // RATING & COMMENTS
-                public string RateAndCommentRecipe(string recipeName, int starRating, string comment)
-                {
-                    using (var context = new FlightContext())
-                    {
-                        HelperClass Helper = new HelperClass();
-                        // Add a new recipe
-                        var newRecipe = new Recipe
-                        {
-                            Title = recipeName,
-                            StarRating = starRating,
-                            Comments = comment
-                        };
 
-                        context.Recipes.Add(newRecipe);
-                        context.SaveChanges();
+        #region  RATING & COMMENTS
+        // RATING & COMMENTS
+        
+        public void UpdateRateRecipe(string recipeName, int starRating)
+        {
 
-                        // Retrieve recipes
-                        var recipes = context.Recipes.ToList();
+            List<Recipe> recipeDetails = getRecipesDB();
+            var existingRecipe = recipeDetails.FirstOrDefault(r => r.Title == recipeName);
 
-                        return comment;
+           // Update existing recipe with new rate
+           existingRecipe.StarRating = starRating;
+                    
+           List<Recipe> checkLst = getRecipesDB();
+           
+        }
 
-                    }
-                }
+           
+        public void UpdateCommentRecipe(string recipeName, string comment)
+        {
+            List<Recipe> recipeDetails = getRecipesDB();
+            var existingRecipe = recipeDetails.FirstOrDefault(r => r.Title == recipeName);
 
+            // Update existing recipe with new rate
+            existingRecipe.Comments = comment;
 
+            List<Recipe> checkLst = getRecipesDB();
 
-                public string UpdateCommentRecipe(string recipeName, int starRating, string comment)
-                {
-                    using (var context = new FlightContext())
-                    {
-                        // Update a recipe
-                        var recipeToUpdate = context.Recipes.Find(recipeName);
-                        if (recipeToUpdate != null)
-                        {
-                            recipeToUpdate.StarRating = starRating;
-                            recipeToUpdate.Comments = comment;
-                            context.SaveChanges();
-                        }
-                    }
-                    return comment;
-                }
-                #endregion
-        */
+        }
+        #endregion
+
 
 
 
@@ -493,7 +475,7 @@ namespace DAL
                         }
 
                         string image = recipe.Image.ToString();
-                        string instructions= recipe.Instructions.ToString();
+                        string instructions = recipe.Instructions.ToString();
                         string instructionsWithoutHtml = Regex.Replace(instructions, "<.*?>", "");
                         string[] words2 = instructionsWithoutHtml.Split(' ');
                         int wordCount2 = 0;
@@ -528,7 +510,7 @@ namespace DAL
                         {
                             RId = Id,
                             Title = title,
-                            ReadyInMinutes= readyInMinutes,
+                            ReadyInMinutes = readyInMinutes,
                             Servings = servings,
                             Summary = resultSum,
                             Image = image,
@@ -536,7 +518,7 @@ namespace DAL
                             StarRating = starRat,
                             Comments = comment,
                             Date = date,
-                            extendedIngredientsString=allDetailsString,
+                            extendedIngredientsString = allDetailsString,
                             extendedIngredients = AllDetails,
 
                         });
@@ -941,3 +923,7 @@ namespace DAL
 
     }
 }
+
+
+
+

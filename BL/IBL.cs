@@ -17,8 +17,8 @@ namespace BL
         RecipeDateUsage RecordRecipeUsage();
         List<Recipe> GetAllRecipeDetails(string Id);
 
-        //string RateAndCommentRecipe(string recipeName, int starRating, string comment);
-        //string UpdateCommentRecipe(string recipeName, int starRating, string comment);
+        void UpdateRateRecipe(string recipeName, int starRating);
+        void UpdateCommentRecipe(string recipeName, string comment);
 
         Dictionary<string, List<FlightInfoPartial>> GetCurrentFlights();
         List<RecipeInfoPartial> SearchByIngredients(List<string> listOfIngredients);
