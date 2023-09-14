@@ -18,7 +18,8 @@ namespace DAL
         //string RateAndCommentRecipe(string recipeName, int starRating, string comment);
         //string UpdateCommentRecipe(string recipeName, int starRating, string comment);
         List<Recipe> GetAllRecipeDetails(string recipeId);
-        
+        List<Recipe> getRecipesDB();
+        void AddRecipeToDB(Recipe recipe);
 
 
 

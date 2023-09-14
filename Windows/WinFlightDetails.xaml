@@ -17,7 +17,7 @@
         <Image Name="background"  Opacity="0.35" Stretch="Fill"></Image>
 
         <Border BorderThickness="1" BorderBrush="Black">
-            <TextBlock x:Name="textBlock"  FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Center" Margin="0,74,0,0" TextWrapping="Wrap" Typography.StylisticSet9="True" FontSize="14" VerticalAlignment="Top" Height="357" Width="534"/>
+            <TextBlock x:Name="textBlock"  FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Center" Margin="0,74,0,0" TextWrapping="Wrap" Typography.StylisticSet9="True" FontSize="14" VerticalAlignment="Top" Height="345" Width="534"/>
 
 
 
@@ -26,7 +26,7 @@
 
         <Label x:Name="label" BorderBrush="Black" FontWeight="Bold" Content="Your recipe's steps:" HorizontalAlignment="Left" Margin="207,10,0,0" VerticalAlignment="Top" Height="44" Width="426" FontSize="20"/>
         <Image x:Name="image" HorizontalAlignment="Left" Source="../recipe.ico" Height="52" Margin="142,2,0,0" VerticalAlignment="Top" Width="61"/>
-        <Button x:Name="Close" Content="Close" HorizontalAlignment="Left" Height="28" Margin="492,440,0,0" VerticalAlignment="Top" Width="70" FontSize="15" FontWeight="Bold" Foreground="AntiqueWhite"
+        <Button x:Name="Close" Content="Close" HorizontalAlignment="Left" Height="28" Margin="487,426,0,0" VerticalAlignment="Top" Width="70" FontSize="15" FontWeight="Bold" Foreground="AntiqueWhite"
                            Click="close_click" Cursor="Hand" Background="Red"/>
 
 

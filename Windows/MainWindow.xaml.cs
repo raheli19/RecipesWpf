@@ -64,7 +64,6 @@ namespace FlightsMap
             var my_id = ((Button)sender).Tag.ToString();
             Console.WriteLine(my_id);
             var my_link= ((Button)sender).CommandParameter.ToString();
-            WinFlightDetails window = new WinFlightDetails(my_id,my_link);
 
             //il faut faire une fonction dans la dal (api) qui recoit un id et renvoit les données.
             //Tu envoie le id et recois en retour une liste de recette (creer une class Recipe avec ttes les infos)
@@ -79,7 +78,7 @@ namespace FlightsMap
                 foreach (var recipe in recipeDetails)
                 {
                     // Check if the recipe with the same ID already exists in your list, and update it if necessary
-                    var existingRecipe = bl.RecipesDataBase.FirstOrDefault(r => r.Title == recipe.Title);
+                    var existingRecipe = bl.getRecipesDB().FirstOrDefault(r => r.Title == recipe.Title);
                     if (existingRecipe != null)
                     {
                         // Update existing recipe with new details
@@ -90,7 +89,8 @@ namespace FlightsMap
                     else
                     {
                         // Add the new recipe to your list
-                        bl.RecipesDataBase.Add(recipe);
+                        bl.AddRecipeToDB(recipe);
+                        List<Recipe> checkLst = bl.getRecipesDB();
                     }
                 }
 
@@ -107,6 +107,10 @@ namespace FlightsMap
                 // Handle the case where the recipe details could not be retrieved
                 MessageBox.Show("Failed to retrieve recipe details.");
             }
+
+            List<Recipe> checkLst2 = bl.getRecipesDB();
+
+            WinFlightDetails window = new WinFlightDetails(my_id, my_link);
             window.Show();
 
         }

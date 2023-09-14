@@ -25,13 +25,19 @@ namespace Recipes.Windows
         public ViewDatabase()
         {
             InitializeComponent();
-        }
-
-        public ViewDatabase(string my_id)
-        {
-            List<Recipe> datRecipes = bl.GetAllRecipeDetails(my_id);  //bl.RecipeDataBase
+            List<Recipe> recipes = bl.getRecipesDB();
+            // List<Recipe> datRecipes = bl.GetAllRecipeDetails();  //bl.RecipeDataBase
             DataBaseGrid.Visibility = Visibility.Visible;
-            DataBaseGrid.ItemsSource = datRecipes;
+            DataBaseGrid.ItemsSource = recipes;
         }
+        /*
+
+        public ViewDatabase()
+        {
+            List<Recipe> recipes = bl.RecipesDataBase;
+           // List<Recipe> datRecipes = bl.GetAllRecipeDetails();  //bl.RecipeDataBase
+            DataBaseGrid.Visibility = Visibility.Visible;
+            DataBaseGrid.ItemsSource = recipes;
+        }*/
     }
 }

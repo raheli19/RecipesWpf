@@ -15,8 +15,14 @@ namespace BL
         {
             get { return dl.RecipesDataBase; }
         }
-
-
+        public List<Recipe> getRecipesDB()
+        {
+            return dl.getRecipesDB();
+        }
+        public void AddRecipeToDB(Recipe recipe)
+        {
+            dl.AddRecipeToDB(recipe);
+        }
         public void AddUser(User u)
         {
             dl.AddUser(u);

@@ -1,4 +1,5 @@
 ﻿using BL;
+using BO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,7 +29,8 @@ namespace FlightsMap.Windows
         }
         public WinFlightDetails(string id,string link)
         {
-            
+            List<Recipe> recipes = bl.getRecipesDB();
+
             InitializeComponent();
             string steps = bl.AnalyzedRecipeInstructions(id);
             //label.Content = steps;

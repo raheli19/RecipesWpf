@@ -330,3 +330,5 @@ C:\ProjectMaarehetHalonot\RecipesWpf\obj\Debug\Recipes.exe
 C:\ProjectMaarehetHalonot\RecipesWpf\obj\Debug\Recipes.pdb
 C:\ProjectMaarehetHalonot\RecipesWpf\obj\Debug\Windows\ViewDatabase.g.cs
 C:\ProjectMaarehetHalonot\RecipesWpf\obj\Debug\Windows\ViewDatabase.baml
+C:\Users\Marc\Desktop\Recipes\obj\Debug\Windows\ViewDatabase.g.cs
+C:\Users\Marc\Desktop\Recipes\obj\Debug\Windows\ViewDatabase.baml

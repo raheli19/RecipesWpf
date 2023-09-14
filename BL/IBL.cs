@@ -7,6 +7,8 @@ namespace BL
 {
     interface IBL
     {
+        List<Recipe> getRecipesDB();
+        void AddRecipeToDB(Recipe recipe);
         void AddUser(User u);
         bool ExistUser(User u);
         void AddWatch(Watch w);
