@@ -79,13 +79,10 @@ namespace FlightsMap
                 foreach (var recipe in recipeDetails)
                 {
                     // Check if the recipe with the same ID already exists in your list, and update it if necessary
-                    var existingRecipe = bl.RecipesDataBase.FirstOrDefault(r => r.Id == recipe.Id);
+                    var existingRecipe = bl.RecipesDataBase.FirstOrDefault(r => r.Title == recipe.Title);
                     if (existingRecipe != null)
                     {
                         // Update existing recipe with new details
-                        existingRecipe.Aisle = recipe.Aisle;
-                        existingRecipe.ImageLink = recipe.ImageLink;
-                        existingRecipe.Name = recipe.Name;
                         existingRecipe.StarRating = recipe.StarRating;
                         existingRecipe.Comments = recipe.Comments;
                         existingRecipe.Date = recipe.Date;

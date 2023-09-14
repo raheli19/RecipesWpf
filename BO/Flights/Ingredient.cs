@@ -10,7 +10,6 @@ namespace BO.Flights
     {
         public string Id { get; set; }
         public string Aisle { get; set; }
-        public string ImageLink { get; set; }
         public string Name { get; set; }
     }
 }

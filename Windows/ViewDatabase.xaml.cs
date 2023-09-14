@@ -29,7 +29,7 @@ namespace Recipes.Windows
 
         public ViewDatabase(string my_id)
         {
-            List<Recipe> datRecipes = bl.GetAllRecipeDetails(my_id);
+            List<Recipe> datRecipes = bl.GetAllRecipeDetails(my_id);  //bl.RecipeDataBase
             DataBaseGrid.Visibility = Visibility.Visible;
             DataBaseGrid.ItemsSource = datRecipes;
         }

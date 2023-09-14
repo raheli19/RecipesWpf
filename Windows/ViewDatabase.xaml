@@ -7,9 +7,14 @@
         mc:Ignorable="d"
         Title="ViewDatabase" Height="450" Width="800">
     <Grid>
-        <DataGrid x:Name="DataBaseGrid"  Visibility="Hidden" Margin="251,140,0,10" Opacity="0.8" >
+        <Grid.Background>
+            <ImageBrush ImageSource="recipes_enter_maccarron.jpg" Stretch="UniformToFill" />
+
+        </Grid.Background>
+        <DataGrid x:Name="DataBaseGrid"  Visibility="Visible" Margin="10,69,31.6,10" Opacity="0.8" ItemsSource="{Binding datRecipes}" >
 
         </DataGrid>
-        
+        <Label x:Name="Database" Background="Gray" Opacity="0.75" Foreground="AntiqueWhite" FontSize="20" FontFamily="Arial " FontWeight="Bold" Content="    List of all our recipes:"  HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="35" Width="303"/>
+
     </Grid>
 </Window>

@@ -9,6 +9,7 @@ namespace BO
 {
     public class Recipe
     {
+        public string Title { get; set; }
         public int StarRating { get; set; }
         public string Comments { get; set; }
         public string Date { get; set; }

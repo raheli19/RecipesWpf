@@ -446,7 +446,6 @@ namespace DAL
                             string ingredientId = ingredient.Id.ToString();
                             string ingredientName = ingredient.Name.ToString();
                             string ingredientAisle = ingredient.Aisle.ToString();
-                            string ingredientImage = ingredient.ImageLink.ToString();
 
                             // Create an Ingredient object and add it to the list
                             AllDetails.Add(new Ingredient
@@ -454,9 +453,11 @@ namespace DAL
                                 Id = ingredientId,
                                 Name = ingredientName,
                                 Aisle = ingredientAisle,
-                                ImageLink = ingredientImage
                             });
                         }
+
+
+                        string title = recipe.Title.ToString();
 
                         int starRat = random.Next(1, 6);
 
@@ -473,6 +474,7 @@ namespace DAL
 
                         recipesDataBase.Add(new Recipe
                         {
+                            Title = title,
                             StarRating = starRat,
                             Comments = comment,
                             Date = date,
