@@ -23,7 +23,7 @@ namespace DAL
 
         #region recipes
 
-        public List<Recipe> recipesDataBase = new List<Recipe>();
+        private List<Recipe> recipesDataBase = new List<Recipe>();
 
         public List<Recipe> RecipesDataBase
         {
@@ -420,8 +420,7 @@ namespace DAL
         public List<Recipe> GetAllRecipeDetails(string Id)
         {
             Random random = new Random();
-            JArray RecipeDetails = null;
-            //List<Recipe> AllDetails = new List<Recipe>();
+            List<Ingredient> AllDetails = new List<Ingredient>();
 
             DateTime startDate = new DateTime(2022, 1, 1); // Start date
             DateTime endDate = new DateTime(2023, 12, 31); // End date
@@ -434,25 +433,30 @@ namespace DAL
             {
                 try
                 {
-                    HelperClass Helper = new HelperClass();
-                    var json = RequestDataSync(allURL);
-                    RecipeDetails = JArray.Parse(json);
+                    // HelperClass Helper = new HelperClass();
+                    //var json = RequestDataSync(allURL);
+                    //RecipeDetails = JArray.Parse(json);
+                    var json = webClient.DownloadString(allURL);
+                    var recipe = JsonConvert.DeserializeObject<Recipe>(json);
 
-
-
-                    foreach (var item in RecipeDetails)
-
+                    if (recipe.extendedIngredients != null)
                     {
+                        foreach (var ingredient in recipe.extendedIngredients)
+                        {
+                            string ingredientId = ingredient.Id.ToString();
+                            string ingredientName = ingredient.Name.ToString();
+                            string ingredientAisle = ingredient.Aisle.ToString();
+                            string ingredientImage = ingredient.ImageLink.ToString();
 
-                        JObject recipe = (JObject)item;
-
-                        string recipeId = recipe["id"].ToString();
-
-                        string recipeAisle = recipe["aisle"].ToString();
-
-                        string imageLink = recipe["image"].ToString();
-
-                        string recipeName = recipe["name"].ToString();
+                            // Create an Ingredient object and add it to the list
+                            AllDetails.Add(new Ingredient
+                            {
+                                Id = ingredientId,
+                                Name = ingredientName,
+                                Aisle = ingredientAisle,
+                                ImageLink = ingredientImage
+                            });
+                        }
 
                         int starRat = random.Next(1, 6);
 
@@ -464,17 +468,15 @@ namespace DAL
 
                         string date = randomDate.ToString("yyyy-MM-dd").Replace('/', '-');
 
+                        string extIngredients = AllDetails.ToString();
+
 
                         recipesDataBase.Add(new Recipe
                         {
-
-                            Id = recipeId,
-                            Aisle = recipeAisle,
-                            ImageLink = imageLink,
-                            Name = recipeName,
                             StarRating = starRat,
                             Comments = comment,
                             Date = date,
+                            extendedIngredients = AllDetails,
 
                         });
 

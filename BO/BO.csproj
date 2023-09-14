@@ -83,6 +83,7 @@
     <Compile Include="Flights\Historical.cs" />
     <Compile Include="Flights\Identification.cs" />
     <Compile Include="Flights\Info.cs" />
+    <Compile Include="Flights\Ingredient.cs" />
     <Compile Include="Flights\Origin.cs" />
     <Compile Include="Flights\Position.cs" />
     <Compile Include="Flights\Real.cs" />
