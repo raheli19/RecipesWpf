@@ -23,28 +23,17 @@
                 <DataGridTemplateColumn >
                     <DataGridTemplateColumn.CellTemplate >
                         <DataTemplate >
-                            <Button Content="Comment" Visibility="Visible" HorizontalAlignment="Center"  Tag="{Binding Id}" Grid.Row="0" Cursor="Hand" Click="btnComment_click"/>
+                          
+
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTemplateColumn>
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <TextBox Text="{Binding Comments, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-                <DataGridTemplateColumn>
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <Button Content="Save" Tag="{Binding Id}" Click="btnSaveComment_Click" />
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
+
 
             </DataGrid.Columns>
         </DataGrid>
         <Label x:Name="Database" Background="Gray" Opacity="0.75" Foreground="AntiqueWhite" FontSize="20" FontFamily="Arial " FontWeight="Bold" Content="    List of all our recipes:"  HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="35" Width="303"/>
-
+        <TextBox x:Name="TextBoxComment" HorizontalAlignment="Center" Margin="0,10,0,0" Tag="{Binding RId}" TextWrapping="Wrap"  VerticalAlignment="Top" Width="76" Height="50" TouchEnter="enter_comment">
+        </TextBox>
     </Grid>
 </Window>

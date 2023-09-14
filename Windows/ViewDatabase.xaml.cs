@@ -31,8 +31,17 @@ namespace Recipes.Windows
         }
 
         //
-        private void btnComment_click(object sender, RoutedEventArgs e)  
+       /* private void enter(object sender, RoutedEventArgs e)  
         {
+            string recipeId = ((Button)sender).Tag.ToString();
+
+
+
+
+
+            
+
+
             var my_name = ((Button)sender).Tag.ToString();
             Console.WriteLine(my_name);
 
@@ -42,8 +51,9 @@ namespace Recipes.Windows
 
 
 
-        }
+        }*/
         //
+        /*
         private void btnSaveComment_Click(object sender, RoutedEventArgs e)
         {
             var button = (Button)sender;
@@ -54,7 +64,11 @@ namespace Recipes.Windows
             bl.UpdateCommentRecipe(recipeId, updatedComments);
         }
 
-
-
+        */
+        private void enter_comment(object sender, RoutedEventArgs e)
+        {
+            string recipeId = ((Button)sender).Tag.ToString();
+            Console.WriteLine("AAAAAAAAAAAAAAA");
+        }
     }
 }
