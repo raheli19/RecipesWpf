@@ -68,7 +68,9 @@ namespace Recipes.Windows
         private void enter_comment(object sender, RoutedEventArgs e)
         {
             string recipeId = ((Button)sender).Tag.ToString();
-            Console.WriteLine("AAAAAAAAAAAAAAA");
+            var row= DataBaseGrid.SelectedCells[0];
+            var txt=row.Column.GetCellContent(row.Item);
+
         }
     }
 }
