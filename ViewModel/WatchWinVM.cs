@@ -27,12 +27,15 @@ namespace FlightsMap.ViewModel
                 c.SelectedDates.Add(DateTime.Today);
             }
             ClockSign(2);
+            
         }
         
         public User MyUser { get; set; }
         public Calendar calendar { get; set; }
         BLImp bl = new BLImp();
-        private ObservableCollection<Watch> watchList;
+        //private ObservableCollection<Watch> watchList;
+        private ObservableCollection<Calend> watchList;
+
 
         public event PropertyChangedEventHandler PropertyChanged;
         private void OnPropertyChanged(string propertyName)
@@ -43,7 +46,39 @@ namespace FlightsMap.ViewModel
             }
         }
 
-        public ObservableCollection<Watch> WatchList
+        //public ObservableCollection<Watch> WatchList
+        //{
+        //    get
+        //    {
+        //        return watchList;
+        //    }
+        //    set
+        //    {
+
+        //        watchList = value;
+        //        OnPropertyChanged("WatchList");
+        //    }
+        //}
+
+        //private void DateChangedEvent(object sender, RoutedEventArgs e)
+        //{
+        //    DateTime start = calendar.SelectedDates.First();
+        //    DateTime end = calendar.SelectedDates.Last().AddHours(23.99999);
+        //    WatchList= new ObservableCollection<Calend>(bl.GetUserWatches(MyUser.UserId, start, end));
+        //}
+
+        //private void DateChanged()
+        //{
+        //    if (calendar.SelectedDates.Count > 0)
+        //    {
+        //        DateTime start = calendar.SelectedDates.First();
+        //        DateTime end = calendar.SelectedDates.Last().AddHours(23.99999);
+        //        WatchList = new ObservableCollection<Watch>(bl.GetUserWatches(MyUser.UserId, start, end));
+        //    }
+
+        //}
+
+        public ObservableCollection<Calend> WatchList
         {
             get
             {
@@ -51,27 +86,37 @@ namespace FlightsMap.ViewModel
             }
             set
             {
-              
+
                 watchList = value;
                 OnPropertyChanged("WatchList");
             }
         }
-        private void DateChangedEvent(object sender, RoutedEventArgs e)
+
+        private void DateChangedEvent(object sender, RoutedEventArgs e)                       //// 
         {
             DateTime start = calendar.SelectedDates.First();
-            DateTime end = calendar.SelectedDates.Last().AddHours(23.99999);
-            WatchList= new ObservableCollection<Watch>(bl.GetUserWatches(MyUser.UserId, start, end));
+            //DateTime end = calendar.SelectedDates.Last().AddHours(23.99999);
+            WatchList = new ObservableCollection<Calend>(bl.GetCalendWatches(start));
         }
-        private void DateChanged()
+
+       
+
+        private void DateChanged()                                                           /////
         {
             if (calendar.SelectedDates.Count > 0)
             {
-                DateTime start = calendar.SelectedDates.First();
-                DateTime end = calendar.SelectedDates.Last().AddHours(23.99999);
-                WatchList = new ObservableCollection<Watch>(bl.GetUserWatches(MyUser.UserId, start, end));
+                // Get the selected date from the calendar
+                DateTime selectedDate = calendar.SelectedDate.GetValueOrDefault();
+
+                // Call a method to retrieve the list of recipes for the selected date
+                List<Calend> recipes = bl.GetCalendWatches(selectedDate);
+                WatchList = new ObservableCollection<Calend>(recipes);
+                
             }
-            
+
         }
+        
+
         private void ClockSign(int seconds)
         {
             DispatcherTimer timer = new DispatcherTimer();
@@ -79,12 +124,12 @@ namespace FlightsMap.ViewModel
             timer.Interval = new TimeSpan(0, 0, seconds);
             timer.Start();
         }
-        public string Title
-        {
-            get
-            {
-                return "View History - " + MyUser.UserId;
-            }
-        }
+        //public string Title
+        //{
+        //    get
+        //    {
+        //        return "View History - " + MyUser.UserId;
+        //    }
+        //}
     }
 }

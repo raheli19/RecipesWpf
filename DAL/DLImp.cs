@@ -25,6 +25,8 @@ namespace DAL
         #region recipes
 
         static public List<Recipe> recipesDataBase = new List<Recipe>();
+        static public List<Calend> calendarList = new List<Calend>();
+
 
         public List<Recipe> getRecipesDB()
         {
@@ -38,6 +40,17 @@ namespace DAL
             recipesDataBase.Add(recipe);
         }
 
+        public List<Calend> getCalendDB()
+        {
+            return calendarList;
+        }
+
+
+
+        public void AddCalendToDB(Calend calend)
+        {
+            calendarList.Add(calend);
+        }
 
         public List<RecipeInfoPartial> SearchByIngredients(List<string> listOfIngredients)
         {
@@ -583,24 +596,59 @@ namespace DAL
             }
         }
 
-        public List<Watch> GetUserWatches(string userName, DateTime start, DateTime end)
+        //public List<Watch> GetUserWatches(string userName, DateTime start, DateTime end)
+        //{
+        //    using (var db = new FlightContext())
+        //    {
+        //        var l = (db.Watches.Where(w => w.UserName == userName && w.Date <= end && w.Date >= start)).ToList();
+        //        l.Reverse();
+        //        return l;
+        //    }
+        //}
+
+        public List<Calend> GetCalendWatches(DateTime date)
         {
-            using (var db = new FlightContext())
+            try
             {
-                var l = (db.Watches.Where(w => w.UserName == userName && w.Date <= end && w.Date >= start)).ToList();
-                l.Reverse();
-                return l;
+                if (getRecipesDB() != null)
+                {
+                    foreach (
+                        var item in getRecipesDB())
+                    {
+                        if (item.Date == date.ToString("yyyy-MM-dd").Replace('/', '-'))
+                        {
+                            string holidayName = RecordRecipeUsage(date);
+                           
+                            var cal = new Calend
+                            {
+                                Recipe = item.Title,
+                                Date = date,
+                                HolidayName = holidayName
+                            };
+                            AddCalendToDB(cal);
+                        }
+                    }
+                    return getCalendDB();
+                }
             }
+            catch (Exception e)
+            {
+                Debug.Print(e.Message);
+            }
+            return getCalendDB();
         }
+
+
+
         #endregion
 
         #region holidays
-        public RecipeDateUsage RecordRecipeUsage()
+        public string RecordRecipeUsage(DateTime date)
         {
 
             List<DateTime> recordedDates = new List<DateTime>();
 
-            DateTime currentDate = DateTime.Today;
+            DateTime currentDate = date;
             DateTime endDate = currentDate.AddDays(6);
             string start = currentDate.ToString("yyyy-MM-dd").Replace('/', '-');
             string end = currentDate.AddDays(6).ToString("yyyy-MM-dd").Replace('/', '-');
@@ -631,7 +679,7 @@ namespace DAL
                                     Title = item.title
                                 };
 
-                                return recipeUsage; // Return the first holiday found
+                                return recipeUsage.Title.ToString(); // Return the first holiday found
                             }
                         }
                     }
@@ -641,7 +689,7 @@ namespace DAL
                     Debug.Print(e.Message);
                 }
 
-                return null;
+                return "No Jewish holiday in this period";
             }
         }
         #endregion

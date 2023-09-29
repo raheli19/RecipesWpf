@@ -35,7 +35,9 @@ namespace FlightsMap.ViewModel.Commands
             var c = (Calendar)parameter;
             DateTime start = c.SelectedDates.First();
             DateTime end = c.SelectedDates.Last().AddHours(23.99999);
-            vm.WatchList = new ObservableCollection<Watch>(bl.GetUserWatches(vm.MyUser.UserId, start, end));
+            //vm.WatchList = new ObservableCollection<Watch>(bl.GetUserWatches(vm.MyUser.UserId, start, end));
+
+            vm.WatchList = new ObservableCollection<Calend>(bl.GetCalendWatches( start));
         }
     }
 }

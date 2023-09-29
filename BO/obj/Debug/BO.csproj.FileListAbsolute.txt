@@ -93,4 +93,3 @@ C:\ProjectMaarehetHalonot\RecipesWpf\BO\obj\Debug\BO.csproj.CoreCompileInputs.ca
 C:\ProjectMaarehetHalonot\RecipesWpf\BO\obj\Debug\BO.csproj.CopyComplete
 C:\ProjectMaarehetHalonot\RecipesWpf\BO\obj\Debug\BO.dll
 C:\ProjectMaarehetHalonot\RecipesWpf\BO\obj\Debug\BO.pdb
-C:\ProjectMaarehetHalonot\RecipesWpf\BO\obj\Debug\BO.csproj.AssemblyReference.cache

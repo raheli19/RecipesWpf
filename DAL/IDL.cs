@@ -13,13 +13,17 @@ namespace DAL
         void AddUser(User u);
         void UpdatePassword(User u, string newPassword);
         bool ExistUser(User u);
-        List<Watch> GetUserWatches(string userName, DateTime start, DateTime end);
-        RecipeDateUsage RecordRecipeUsage();
+        //List<Watch> GetUserWatches(string userName, DateTime start, DateTime end);
+        List<Calend> GetCalendWatches(DateTime dateClikcked);
+        string RecordRecipeUsage(DateTime date);
         void UpdateRateRecipe(string recipeName, int starRating);
         void UpdateCommentRecipe(string recipeName, string comment);
         List<Recipe> GetAllRecipeDetails(string recipeId);
         List<Recipe> getRecipesDB();
         void AddRecipeToDB(Recipe recipe);
+        List<Calend> getCalendDB();
+        void AddCalendToDB(Calend calend);
+
 
 
 

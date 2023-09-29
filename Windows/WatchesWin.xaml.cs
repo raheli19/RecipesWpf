@@ -1,9 +1,11 @@
 ﻿using BL;
 using BO;
 using BO.Flights;
+using FlightsMap.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,10 +30,34 @@ namespace FlightsMap.Windows
 
         public WatchesWin()
         {
-            InitializeComponent();        
+            InitializeComponent();
+            listView.Visibility = Visibility.Visible;
+            //DataContext = new WatchWinVM(MyUser, calendar);
         }
-       
-        
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        private void OnPropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+        private ObservableCollection<Calend> watchList;
+
+        public ObservableCollection<Calend> WatchList
+        {
+            get
+            {
+                return watchList;
+            }
+            set
+            {
+
+                watchList = value;
+                OnPropertyChanged("WatchList");
+            }
+        }
 
         private void enter_ingredients_click(object sender, RoutedEventArgs e)
         {
@@ -39,6 +65,20 @@ namespace FlightsMap.Windows
             List<RecipesSimilar> simRecipes = bl.GetSimilarRecipes(id);
             dataGrid.Visibility = Visibility.Visible;
             dataGrid.ItemsSource = simRecipes;
+        }
+
+        private void DateChanged(object sender, RoutedEventArgs e)
+        {
+            // Get the selected date from the calendar
+            DateTime selectedDate = calender.SelectedDate.GetValueOrDefault();
+
+            // Call a method to retrieve the list of recipes for the selected date
+            List<Calend> recipes = bl.GetCalendWatches(selectedDate);
+            WatchList = new ObservableCollection<Calend>(recipes);
+
+            // Bind the list of recipes to the ListView
+            listView.ItemsSource = recipes;
+            //listView.ItemsSource = WatchList;
         }
     }
 }

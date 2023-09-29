@@ -9,12 +9,15 @@ namespace BL
     {
         List<Recipe> getRecipesDB();
         void AddRecipeToDB(Recipe recipe);
+        List<Calend> getCalendDB();
+        void AddCalendToDB(Calend calend);
         void AddUser(User u);
         bool ExistUser(User u);
         void AddWatch(Watch w);
         List<Watch> GetAllWatches();
-        List<Watch> GetUserWatches(string userName, DateTime start, DateTime end);
-        RecipeDateUsage RecordRecipeUsage();
+        //List<Watch> GetUserWatches(string userName, DateTime start, DateTime end);
+        List<Calend> GetCalendWatches(DateTime dateClikcked);
+        string RecordRecipeUsage(DateTime date);
         List<Recipe> GetAllRecipeDetails(string Id);
 
         void UpdateRateRecipe(string recipeName, int starRating);

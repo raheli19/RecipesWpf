@@ -43,16 +43,24 @@ namespace BL
 
         
 
-        public RecipeDateUsage RecordRecipeUsage()
+        public string RecordRecipeUsage(DateTime date)
         {
-            return dl.RecordRecipeUsage();
+           return dl.RecordRecipeUsage(date);
         }
 
-        public List<Watch> GetUserWatches(string userName,DateTime start,DateTime end)
+        //public List<Watch> GetUserWatches(string userName,DateTime start,DateTime end)
+        //{
+
+        //    return dl.GetUserWatches(userName, start, end);
+        //      //  return new List<Watch> { new Watch { Destination = "Fdc", Origin = "rcd", Date = new DateTime(2022, 10, 21) } };
+        //}
+
+
+        public List<Calend> GetCalendWatches(DateTime date)
         {
 
-            return dl.GetUserWatches(userName, start, end);
-              //  return new List<Watch> { new Watch { Destination = "Fdc", Origin = "rcd", Date = new DateTime(2022, 10, 21) } };
+            return dl.GetCalendWatches(date);
+            //  return new List<Watch> { new Watch { Destination = "Fdc", Origin = "rcd", Date = new DateTime(2022, 10, 21) } };
         }
 
         #region flights
@@ -210,6 +218,14 @@ namespace BL
             dl.UpdateCommentRecipe(recipeName, comment);
         }
 
+        public List<Calend> getCalendDB()
+        {
+            return dl.getCalendDB();
+        }
 
+        public void AddCalendToDB(Calend calend)
+        {
+            dl.AddCalendToDB(calend);
+        }
     }
 }
