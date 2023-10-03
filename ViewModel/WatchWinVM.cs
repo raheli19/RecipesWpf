@@ -26,7 +26,8 @@ namespace FlightsMap.ViewModel
             {
                 c.SelectedDates.Add(DateTime.Today);
             }
-            ClockSign(2);
+            //ClockSign(2);
+            
             
         }
         
@@ -34,6 +35,7 @@ namespace FlightsMap.ViewModel
         public Calendar calendar { get; set; }
         BLImp bl = new BLImp();
         //private ObservableCollection<Watch> watchList;
+
         private ObservableCollection<Calend> watchList;
 
 
@@ -42,9 +44,60 @@ namespace FlightsMap.ViewModel
         {
             if (PropertyChanged != null)
             {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName)); //PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
         }
+
+
+
+        public ObservableCollection<Calend> WatchList
+        {
+            get
+            {
+                return watchList;
+            }
+            set
+            {
+
+                watchList = value;
+                OnPropertyChanged("WatchList");
+            }
+        }
+
+        //private void DateChangedEvent(object sender, RoutedEventArgs e)                       //// 
+        //{
+        //    DateTime start = calendar.SelectedDates.First();
+        //    //DateTime end = calendar.SelectedDates.Last().AddHours(23.99999);
+        //    WatchList = new ObservableCollection<Calend>(bl.GetCalendWatches(start));
+        //}
+
+        private void DateChangedEvent(object sender, SelectionChangedEventArgs e)
+        {
+            // Get the selected date from the calendar
+            if (e.AddedItems.Count > 0 && e.AddedItems[0] is DateTime selectedDate)
+            {
+                // Call a method to retrieve the list of Calend for the selected date
+                List<Calend> recipes = bl.GetCalendWatches(selectedDate);
+                WatchList = new ObservableCollection<Calend>(recipes);
+            }
+        }
+
+
+        private void DateChanged()                                                       
+        {
+
+            if (calendar.SelectedDate.HasValue)
+            {
+                DateTime selectedDate = calendar.SelectedDate.Value;
+
+                // Call a method to retrieve the list of recipes for the selected date
+                List<Calend> recipes = bl.GetCalendWatches(selectedDate);
+                //WatchList = new ObservableCollection<Calend>(recipes);
+                
+            }
+
+        }
+
 
         //public ObservableCollection<Watch> WatchList
         //{
@@ -75,61 +128,16 @@ namespace FlightsMap.ViewModel
         //        DateTime end = calendar.SelectedDates.Last().AddHours(23.99999);
         //        WatchList = new ObservableCollection<Watch>(bl.GetUserWatches(MyUser.UserId, start, end));
         //    }
-
         //}
 
-        public ObservableCollection<Calend> WatchList
-        {
-            get
-            {
-                return watchList;
-            }
-            set
-            {
 
-                watchList = value;
-                OnPropertyChanged("WatchList");
-            }
-        }
-
-        private void DateChangedEvent(object sender, RoutedEventArgs e)                       //// 
-        {
-            DateTime start = calendar.SelectedDates.First();
-            //DateTime end = calendar.SelectedDates.Last().AddHours(23.99999);
-            WatchList = new ObservableCollection<Calend>(bl.GetCalendWatches(start));
-        }
-
-       
-
-        private void DateChanged()                                                           /////
-        {
-            if (calendar.SelectedDates.Count > 0)
-            {
-                // Get the selected date from the calendar
-                DateTime selectedDate = calendar.SelectedDate.GetValueOrDefault();
-
-                // Call a method to retrieve the list of recipes for the selected date
-                List<Calend> recipes = bl.GetCalendWatches(selectedDate);
-                WatchList = new ObservableCollection<Calend>(recipes);
-                
-            }
-
-        }
-        
-
-        private void ClockSign(int seconds)
-        {
-            DispatcherTimer timer = new DispatcherTimer();
-            timer.Tick += (s, e) => DateChanged();
-            timer.Interval = new TimeSpan(0, 0, seconds);
-            timer.Start();
-        }
-        //public string Title
+        //private void ClockSign(int seconds)
         //{
-        //    get
-        //    {
-        //        return "View History - " + MyUser.UserId;
-        //    }
+        //    DispatcherTimer timer = new DispatcherTimer();
+        //    timer.Tick += (s, e) => DateChanged();
+        //    timer.Interval = new TimeSpan(0, 0, seconds);
+        //    timer.Start();
         //}
+
     }
 }

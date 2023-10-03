@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:FlightsMap.Windows" xmlns:i="http://schemas.microsoft.com/xaml/behaviors" xmlns:local1="clr-namespace:FlightsMap"
+        xmlns:local="clr-namespace:FlightsMap.Windows" xmlns:i="http://schemas.microsoft.com/xaml/behaviors" xmlns:local1="clr-namespace:FlightsMap" xmlns:viewmodel="clr-namespace:FlightsMap.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:WatchWinVM}"
         mc:Ignorable="d"
         Title="{Binding MyUser.UserId}" Height="510" Width="850" ResizeMode="NoResize">
     <Window.Resources>
@@ -14,14 +14,13 @@
                   ItemsSource="{Binding WatchList}" Visibility="Visible" Height="246" Width="486">
                 <ListView.View>
                     <GridView AllowsColumnReorder="true">
-                        <GridViewColumn DisplayMemberBinding="{Binding Path=Recipe}" Header="Recipe" />
-
-                        <GridViewColumn DisplayMemberBinding="{Binding Path=Date, Converter={StaticResource DateConverter}}" Header="Date" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Recipe}" Header="Recipe" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Date, Converter={StaticResource DateConverter}}" Header="Date" />
                         <GridViewColumn DisplayMemberBinding="{Binding Path=HolidayName}" Header="Holiday Name" />
                     </GridView>
                 </ListView.View>
             </ListView>
-        <Calendar x:Name="calender" SelectionMode="SingleRange" SelectedDatesChanged="DateChanged" HorizontalAlignment="Left" Height="358" Margin="10,61,0,0" VerticalAlignment="Top" Width="241">
+        <Calendar x:Name="calender" SelectionMode="SingleDate" SelectedDatesChanged="DateChanged" HorizontalAlignment="Left" Height="358" Margin="10,61,0,0" VerticalAlignment="Top" Width="241">
 
         </Calendar>
         <Label Content="{Binding Title}" FontSize="30" HorizontalAlignment="Center"  Margin="39,10,310.2,0" VerticalAlignment="Top" FontFamily="Gill Sans Ultra Bold" Height="44" Width="494"  />

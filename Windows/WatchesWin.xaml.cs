@@ -17,6 +17,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using static FlightsMap.ViewModel.WatchWinVM;
+
 
 namespace FlightsMap.Windows
 {
@@ -31,9 +33,23 @@ namespace FlightsMap.Windows
         public WatchesWin()
         {
             InitializeComponent();
-            listView.Visibility = Visibility.Visible;
-            //DataContext = new WatchWinVM(MyUser, calendar);
+            //listView.Visibility = Visibility.Visible;
+            //WatchList = new ObservableCollection<Calend>();
         }
+
+        public WatchesWin(User myUser, Calendar calendar)
+        {
+            InitializeComponent();
+
+            MyUser = myUser;
+            this.calendar = calendar;
+
+            // Create an instance of WatchWinVM and set it as DataContext
+            DataContext = new WatchWinVM(MyUser, calendar);
+
+            listView.Visibility = Visibility.Visible;
+        }
+
 
         public event PropertyChangedEventHandler PropertyChanged;
         private void OnPropertyChanged(string propertyName)
@@ -44,6 +60,7 @@ namespace FlightsMap.Windows
             }
         }
         private ObservableCollection<Calend> watchList;
+        
 
         public ObservableCollection<Calend> WatchList
         {
@@ -58,6 +75,9 @@ namespace FlightsMap.Windows
                 OnPropertyChanged("WatchList");
             }
         }
+
+        public User MyUser { get; private set; }
+        public Calendar calendar { get; private set; }
 
         private void enter_ingredients_click(object sender, RoutedEventArgs e)
         {
@@ -74,11 +94,10 @@ namespace FlightsMap.Windows
 
             // Call a method to retrieve the list of recipes for the selected date
             List<Calend> recipes = bl.GetCalendWatches(selectedDate);
-            WatchList = new ObservableCollection<Calend>(recipes);
+            //WatchList = new ObservableCollection<Calend>(recipes);
 
             // Bind the list of recipes to the ListView
-            listView.ItemsSource = recipes;
-            //listView.ItemsSource = WatchList;
+            //listView.ItemsSource = recipes;
         }
     }
 }
