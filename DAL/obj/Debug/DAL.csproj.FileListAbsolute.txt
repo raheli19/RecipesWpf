@@ -127,6 +127,6 @@ C:\ProjectMaarehetHalonot\RecipesWpf\DAL\bin\Debug\Newtonsoft.Json.xml
 C:\ProjectMaarehetHalonot\RecipesWpf\DAL\bin\Debug\System.Diagnostics.DiagnosticSource.xml
 C:\ProjectMaarehetHalonot\RecipesWpf\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
 C:\ProjectMaarehetHalonot\RecipesWpf\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
-C:\ProjectMaarehetHalonot\RecipesWpf\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\ProjectMaarehetHalonot\RecipesWpf\DAL\obj\Debug\DAL.dll
 C:\ProjectMaarehetHalonot\RecipesWpf\DAL\obj\Debug\DAL.pdb
+C:\ProjectMaarehetHalonot\RecipesWpf\DAL\obj\Debug\DAL.csproj.CopyComplete

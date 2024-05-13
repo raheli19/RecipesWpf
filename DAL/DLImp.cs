@@ -315,7 +315,7 @@ namespace DAL
             List<Recipe> recipeDetails = getRecipesDB();
             var existingRecipe = recipeDetails.FirstOrDefault(r => r.Title == recipeName);
 
-            // Update existing recipe with new rate
+            // Update existing recipe with new comment
             existingRecipe.Comments = comment;
 
             List<Recipe> checkLst = getRecipesDB();

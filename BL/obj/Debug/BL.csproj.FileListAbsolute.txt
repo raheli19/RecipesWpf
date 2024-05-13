@@ -127,6 +127,6 @@ C:\ProjectMaarehetHalonot\RecipesWpf\BL\bin\Debug\Microsoft.Xaml.Behaviors.xml
 C:\ProjectMaarehetHalonot\RecipesWpf\BL\bin\Debug\Newtonsoft.Json.xml
 C:\ProjectMaarehetHalonot\RecipesWpf\BL\obj\Debug\BL.csproj.AssemblyReference.cache
 C:\ProjectMaarehetHalonot\RecipesWpf\BL\obj\Debug\BL.csproj.CoreCompileInputs.cache
-C:\ProjectMaarehetHalonot\RecipesWpf\BL\obj\Debug\BL.csproj.CopyComplete
 C:\ProjectMaarehetHalonot\RecipesWpf\BL\obj\Debug\BL.dll
 C:\ProjectMaarehetHalonot\RecipesWpf\BL\obj\Debug\BL.pdb
+C:\ProjectMaarehetHalonot\RecipesWpf\BL\obj\Debug\BL.csproj.CopyComplete

@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Recipes.Windows"
+        xmlns:local="clr-namespace:Recipes.Windows" xmlns:local1="clr-namespace:Recipes"
         mc:Ignorable="d"
         Title="ViewDatabase" Height="450" Width="800">
     <Grid>
@@ -13,37 +13,32 @@
         </Grid.Background>
         <DataGrid x:Name="DataBaseGrid" SelectionMode="Single" Visibility="Visible" Grid.Row="1" Margin="10,69,31.6,10" Opacity="0.8" >
             <DataGrid.Columns>
-                <DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Image">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Image Width="100" Height="100" Source="{Binding Image}"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTemplateColumn >
-                    <DataGridTemplateColumn.CellTemplate >
-                        <DataTemplate >
-                            <Button Content="Comment" Visibility="Visible" HorizontalAlignment="Center"  Tag="{Binding Id}" Grid.Row="0" Cursor="Hand" Click="btnComment_click"/>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-                <DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Comments">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <TextBox Text="{Binding Comments, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Rating">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Content="Save" Tag="{Binding Id}" Click="btnSaveComment_Click" />
+                            <!--  <ComboBox ItemsSource="{Binding Ratings}" SelectedValue="{Binding SelectedRating}" />  /-->
+                            <local1:StarRatingControl RatingChanged="StarRatingControl_RatingChanged" />
+                           
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-
             </DataGrid.Columns>
         </DataGrid>
+
         <Label x:Name="Database" Background="Gray" Opacity="0.75" Foreground="AntiqueWhite" FontSize="20" FontFamily="Arial " FontWeight="Bold" Content="    List of all our recipes:"  HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="35" Width="303"/>
 
     </Grid>

@@ -54,6 +54,20 @@ namespace Recipes.Windows
             bl.UpdateCommentRecipe(recipeId, updatedComments);
         }
 
+        private void StarRatingControl_RatingChanged(object sender, int rating)
+        {
+            if (sender is StarRatingControl starRatingControl)
+            {
+                if (DataBaseGrid.SelectedItem is Recipe selectedRecipe)
+                {
+                    // Get the recipe name associated with this row (you need to adjust this part based on your data)
+                    string recipeName = selectedRecipe.Title; ;
+
+                    // Call the DAL method to update the rating
+                    bl.UpdateRateRecipe(recipeName, rating);
+                }
+            }
+        }
 
 
     }

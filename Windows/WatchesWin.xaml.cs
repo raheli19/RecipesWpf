@@ -93,7 +93,7 @@ namespace FlightsMap.Windows
             DateTime selectedDate = calender.SelectedDate.GetValueOrDefault();
 
             // Call a method to retrieve the list of recipes for the selected date
-            List<Calend> recipes = bl.GetCalendWatches(selectedDate);
+            //List<Calend> recipes = bl.GetCalendWatches(selectedDate);
             //WatchList = new ObservableCollection<Calend>(recipes);
 
             // Bind the list of recipes to the ListView

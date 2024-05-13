@@ -325,7 +325,6 @@ C:\ProjectMaarehetHalonot\RecipesWpf\obj\Debug\Recipes.g.resources
 C:\ProjectMaarehetHalonot\RecipesWpf\obj\Debug\Recipes.Properties.Resources.resources
 C:\ProjectMaarehetHalonot\RecipesWpf\obj\Debug\GUI.csproj.GenerateResource.cache
 C:\ProjectMaarehetHalonot\RecipesWpf\obj\Debug\GUI.csproj.CoreCompileInputs.cache
-C:\ProjectMaarehetHalonot\RecipesWpf\obj\Debug\GUI.csproj.CopyComplete
 C:\ProjectMaarehetHalonot\RecipesWpf\obj\Debug\Recipes.exe
 C:\ProjectMaarehetHalonot\RecipesWpf\obj\Debug\Recipes.pdb
 C:\ProjectMaarehetHalonot\RecipesWpf\obj\Debug\Windows\ViewDatabase.g.cs
@@ -334,3 +333,6 @@ C:\Users\Marc\Desktop\Recipes\obj\Debug\Windows\ViewDatabase.g.cs
 C:\Users\Marc\Desktop\Recipes\obj\Debug\Windows\ViewDatabase.baml
 C:\ProjectMaarehetHalonot\RecipesWpf\obj\Debug\Windows\Window1.g.cs
 C:\ProjectMaarehetHalonot\RecipesWpf\obj\Debug\Windows\Window1.baml
+C:\ProjectMaarehetHalonot\RecipesWpf\obj\Debug\Windows\StarRatingControl.g.cs
+C:\ProjectMaarehetHalonot\RecipesWpf\obj\Debug\Windows\StarRatingControl.baml
+C:\ProjectMaarehetHalonot\RecipesWpf\obj\Debug\GUI.csproj.CopyComplete

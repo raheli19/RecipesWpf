@@ -34,8 +34,6 @@ namespace FlightsMap.ViewModel
         public User MyUser { get; set; }
         public Calendar calendar { get; set; }
         BLImp bl = new BLImp();
-        //private ObservableCollection<Watch> watchList;
-
         private ObservableCollection<Calend> watchList;
 
 
@@ -64,12 +62,6 @@ namespace FlightsMap.ViewModel
             }
         }
 
-        //private void DateChangedEvent(object sender, RoutedEventArgs e)                       //// 
-        //{
-        //    DateTime start = calendar.SelectedDates.First();
-        //    //DateTime end = calendar.SelectedDates.Last().AddHours(23.99999);
-        //    WatchList = new ObservableCollection<Calend>(bl.GetCalendWatches(start));
-        //}
 
         private void DateChangedEvent(object sender, SelectionChangedEventArgs e)
         {
@@ -89,10 +81,6 @@ namespace FlightsMap.ViewModel
             if (calendar.SelectedDate.HasValue)
             {
                 DateTime selectedDate = calendar.SelectedDate.Value;
-
-                // Call a method to retrieve the list of recipes for the selected date
-                List<Calend> recipes = bl.GetCalendWatches(selectedDate);
-                //WatchList = new ObservableCollection<Calend>(recipes);
                 
             }
 
@@ -137,6 +125,14 @@ namespace FlightsMap.ViewModel
         //    timer.Tick += (s, e) => DateChanged();
         //    timer.Interval = new TimeSpan(0, 0, seconds);
         //    timer.Start();
+        //}
+
+
+        //private void DateChangedEvent(object sender, RoutedEventArgs e)                       //// 
+        //{
+        //    DateTime start = calendar.SelectedDates.First();
+        //    //DateTime end = calendar.SelectedDates.Last().AddHours(23.99999);
+        //    WatchList = new ObservableCollection<Calend>(bl.GetCalendWatches(start));
         //}
 
     }

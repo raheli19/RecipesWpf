@@ -93,6 +93,7 @@
     </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.IO.Pipelines, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.IO.Pipelines.5.0.2\lib\net461\System.IO.Pipelines.dll</HintPath>
     </Reference>
@@ -112,6 +113,7 @@
     <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -121,9 +123,11 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="UIAutomationProvider" />
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="Windows\App.xaml">
@@ -131,6 +135,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="DateConverter.cs" />
+    <Compile Include="Windows\StarRatingControl.xaml.cs">
+      <DependentUpon>StarRatingControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\Commands\CommentAndRating.cs" />
     <Compile Include="ViewModel\Commands\DateChangeC.cs" />
     <Compile Include="ViewModel\Commands\LoginC.cs" />
     <Compile Include="ViewModel\Commands\OpenWatchC.cs" />
@@ -153,6 +161,10 @@
     <Compile Include="Windows\WinFlightDetails.xaml.cs">
       <DependentUpon>WinFlightDetails.xaml</DependentUpon>
     </Compile>
+    <Page Include="Windows\StarRatingControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\enterWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
