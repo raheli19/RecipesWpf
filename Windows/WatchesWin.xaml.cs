@@ -1,7 +1,7 @@
 ﻿using BL;
 using BO;
 using BO.Flights;
-using FlightsMap.ViewModel;
+using Recipes.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -17,10 +17,10 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using static FlightsMap.ViewModel.WatchWinVM;
+using static Recipes.ViewModel.WatchWinVM;
 
 
-namespace FlightsMap.Windows
+namespace Recipes.Windows
 {
     /// <summary>
     /// Interaction logic for WatchesWin.xaml

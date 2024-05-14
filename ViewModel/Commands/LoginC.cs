@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 
-namespace FlightsMap.ViewModel.Commands
+namespace Recipes.ViewModel.Commands
 {
    public class LoginC:ICommand
     {

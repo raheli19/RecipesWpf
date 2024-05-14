@@ -1,6 +1,6 @@
 ﻿using BL;
 using BO;
-using FlightsMap.ViewModel.Commands;
+using Recipes.ViewModel.Commands;
 using Microsoft.Maps.MapControl.WPF;
 using System;
 using System.Collections.Generic;
@@ -12,7 +12,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Threading;
 
-namespace FlightsMap.ViewModel
+namespace Recipes.ViewModel
 {
     public class MainWinVM: INotifyPropertyChanged
     {

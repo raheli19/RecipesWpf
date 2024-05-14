@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Input;
 
-namespace FlightsMap.ViewModel.Commands
+namespace Recipes.ViewModel.Commands
 {
     public class DateChangeC : ICommand
     {

@@ -1,6 +1,6 @@
 ﻿using BL;
 using BO;
-using FlightsMap.ViewModel.Commands;
+using Recipes.ViewModel.Commands;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace FlightsMap.ViewModel
+namespace Recipes.ViewModel
 {
    public class EnterWinVM
     {

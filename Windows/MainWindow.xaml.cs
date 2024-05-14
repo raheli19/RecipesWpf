@@ -1,9 +1,9 @@
 ﻿using BL;
 using BO;
 using BO.Flights;
-using FlightsMap.ViewModel;
-using FlightsMap.ViewModel.Commands;
-using FlightsMap.Windows;
+using Recipes.ViewModel;
+using Recipes.ViewModel.Commands;
+using Recipes.Windows;
 using Recipes.Windows;
 using System;
 using System.Collections.Generic;
@@ -18,7 +18,7 @@ using System.Windows.Threading;
 
 
 
-namespace FlightsMap
+namespace Recipes
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

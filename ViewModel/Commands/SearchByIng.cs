@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using System.Windows;
 
-namespace FlightsMap.ViewModel.Commands
+namespace Recipes.ViewModel.Commands
 {
     public class SearchByIng: ICommand
     {

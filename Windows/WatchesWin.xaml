@@ -1,9 +1,9 @@
-﻿<Window x:Class="FlightsMap.Windows.WatchesWin"
+﻿<Window x:Class="Recipes.Windows.WatchesWin"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:FlightsMap.Windows" xmlns:i="http://schemas.microsoft.com/xaml/behaviors" xmlns:local1="clr-namespace:FlightsMap" xmlns:viewmodel="clr-namespace:FlightsMap.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:WatchWinVM}"
+        xmlns:local="clr-namespace:Recipes.Windows" xmlns:i="http://schemas.microsoft.com/xaml/behaviors" xmlns:local1="clr-namespace:Recipes" xmlns:viewmodel="clr-namespace:Recipes.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:WatchWinVM}"
         mc:Ignorable="d"
         Title="{Binding MyUser.UserId}" Height="510" Width="850" ResizeMode="NoResize">
     <Window.Resources>

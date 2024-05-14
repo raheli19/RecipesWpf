@@ -1,8 +1,8 @@
-﻿<Window x:Class="FlightsMap.enterWin"
+﻿<Window x:Class="Recipes.enterWin"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:v="clr-namespace:FlightsMap.ViewModel" xmlns:v1="clr-namespace:BO;assembly=BO"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:v="clr-namespace:Recipes.ViewModel" xmlns:v1="clr-namespace:BO;assembly=BO"
         mc:Ignorable="d"
          Height="550" Width="350" ResizeMode="NoResize">
     <Window.DataContext>

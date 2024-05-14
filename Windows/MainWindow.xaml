@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:m="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF" 
         xmlns:maps="using:Windows.UI.Xaml.Controls.Maps"
-        xmlns:syncfusion="http://schemas.syncfusion.com/wpf" xmlns:local="clr-namespace:FlightsMap.ViewModel" xmlns:av="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="av" x:Class="FlightsMap.MainWindow"
+        xmlns:syncfusion="http://schemas.syncfusion.com/wpf" xmlns:local="clr-namespace:Recipes.ViewModel" xmlns:av="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="av" x:Class="Recipes.MainWindow"
       
         Height="600" Width="1005"
         Background="{DynamicResource MaterialDesignPaper}"

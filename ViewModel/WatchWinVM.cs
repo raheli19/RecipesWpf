@@ -1,6 +1,6 @@
 ﻿using BL;
 using BO;
-using FlightsMap.ViewModel.Commands;
+using Recipes.ViewModel.Commands;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -13,7 +13,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Threading;
 
-namespace FlightsMap.ViewModel
+namespace Recipes.ViewModel
 {
     public class WatchWinVM : INotifyPropertyChanged
     {
