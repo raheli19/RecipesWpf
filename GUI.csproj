@@ -243,34 +243,13 @@
     <Resource Include="Windows\recipes_enter_maccarron.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Windows\airplane_take_off_48px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Windows\airplane_landing_100px.png" />
-    <Resource Include="Windows\airplane_mode_on_52px.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="icons8_fighter_jet.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Windows\location_48px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Windows\airplane_landing_r100px.png" />
-    <Resource Include="Windows\airplane_take_off_r100px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Windows\delayed.png" />
-    <Resource Include="Windows\estimated.png" />
-    <Resource Include="Windows\land.png" />
     <Resource Include="Windows\scheduled.png" />
-    <Resource Include="Windows\takaoff.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Windows\weather.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Windows\airplane_bkgd.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Windows\plan.png" />
