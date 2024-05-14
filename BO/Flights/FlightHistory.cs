@@ -2,7 +2,7 @@
 
 namespace BO
 {
-    public class FlightHistory
+    public class ReciperHistory
     {
         public List<Aircraft> aircraft { get; set; }
     }

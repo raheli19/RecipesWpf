@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace BO
 {
-   public class Flight
+   public class Reciper
     {
-        public string FlightNumber { get; set; }
+        public string ReciperNumber { get; set; }
         public string Origin { get; set; }
         public string Destination { get; set; }
         public Double Longtitude  { get; set; }

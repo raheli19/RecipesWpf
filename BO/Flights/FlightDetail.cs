@@ -2,7 +2,7 @@
 
 namespace BO
 {
-    public class FlightDetail
+    public class ReciperDetail
     {
         public Identification identification { get; set; }
         public Status status { get; set; }
@@ -13,7 +13,7 @@ namespace BO
         public object owner { get; set; }
         public object airspace { get; set; }
         public Airport airport { get; set; }
-        public FlightHistory flightHistory { get; set; }
+        public ReciperHistory ReciperHistory { get; set; }
         public object ems { get; set; }
         public List<string> availability { get; set; }
         public Time time { get; set; }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.DB
 {
-    class FlightContext:DbContext
+    class ReciperContext:DbContext
     {
         public DbSet<User> Users { get; set; }
         public DbSet<Watch> Watches { get; set; }

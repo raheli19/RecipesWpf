@@ -3,7 +3,7 @@ using BO;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using BO.Flights;
+using BO.Recipers;
 
 namespace BL
 {
@@ -63,10 +63,10 @@ namespace BL
             //  return new List<Watch> { new Watch { Destination = "Fdc", Origin = "rcd", Date = new DateTime(2022, 10, 21) } };
         }
 
-        #region flights
-        public Dictionary<string, List<FlightInfoPartial>> GetCurrentFlights()
+        #region Recipers
+        public Dictionary<string, List<ReciperInfoPartial>> GetCurrentRecipers()
         {
-           return dl.GetCurrentFlights();
+           return dl.GetCurrentRecipers();
         }
         public  List<RecipeInfoPartial> SearchByIngredients(List<string> listOfIngredients)
         {
@@ -86,19 +86,19 @@ namespace BL
         {
             return dl.GetSimilarRecipes(recipeId);
         }
-        public FlightDetail GetFlightDetail(string partialFlightID)
+        public ReciperDetail GetReciperDetail(string partialReciperID)
         {
-            return dl.GetFlightData(partialFlightID);
+            return dl.GetReciperData(partialReciperID);
         }
 
-        public Dictionary<string, Dictionary<string, string>> GetWeather(FlightDetail flight ,FlightInfoPartial fip)
+        public Dictionary<string, Dictionary<string, string>> GetWeather(ReciperDetail Reciper ,ReciperInfoPartial fip)
         {
            
             Dictionary<string, Dictionary<string, string>> result = new Dictionary<string, Dictionary<string, string>>();
 
             Dictionary<string, string> currentW = dl.GetCurrentWeather(fip.Long.ToString(), fip.Lat.ToString());
-            Dictionary<string, string> originW = dl.GetCurrentWeather(dl.GetLonLatOrigin(flight)["lon"], dl.GetLonLatOrigin(flight)["lat"]);
-            Dictionary<string, string> destinationW = dl.GetCurrentWeather(dl.GetLonLatDestination(flight)["lon"], dl.GetLonLatDestination(flight)["lat"]);
+            Dictionary<string, string> originW = dl.GetCurrentWeather(dl.GetLonLatOrigin(Reciper)["lon"], dl.GetLonLatOrigin(Reciper)["lat"]);
+            Dictionary<string, string> destinationW = dl.GetCurrentWeather(dl.GetLonLatDestination(Reciper)["lon"], dl.GetLonLatDestination(Reciper)["lat"]);
 
             result.Add("current", currentW);
             result.Add("origin", originW);
@@ -107,100 +107,100 @@ namespace BL
             return result;
         }
 
-        public double GetDistance(FlightDetail flight)
+        public double GetDistance(ReciperDetail Reciper)
         {
-            return dl.GetDistance(flight);
+            return dl.GetDistance(Reciper);
         }
 
-        public double GetRemainingDistance(FlightDetail flight, FlightInfoPartial fip)
+        public double GetRemainingDistance(ReciperDetail Reciper, ReciperInfoPartial fip)
         {
-            return dl.GetRemainingDst(flight, fip);
+            return dl.GetRemainingDst(Reciper, fip);
         }
 
-        public int GetProp(FlightDetail flight, FlightInfoPartial fip)
+        public int GetProp(ReciperDetail Reciper, ReciperInfoPartial fip)
         {
-            double remainingProp = GetRemainingDistance(flight, fip) / GetDistance(flight);
+            double remainingProp = GetRemainingDistance(Reciper, fip) / GetDistance(Reciper);
             int tmp = (int)(( 1 - remainingProp) * 100);
             return tmp;
         }
         #endregion
 
-        public string GetStringRemainingTime(FlightDetail flight)
+        public string GetStringRemainingTime(ReciperDetail Reciper)
         {
-            TimeSpan time= dl.GetTimeBetween(flight);
+            TimeSpan time= dl.GetTimeBetween(Reciper);
             string strtime= time.ToString(@"hh\:mm");
             return strtime;
         }
 
-        public string GetFlightNumber(FlightDetail flight)
+        public string GetReciperNumber(ReciperDetail Reciper)
         {
-            return dl.GetFlightNumber(flight);
+            return dl.GetReciperNumber(Reciper);
 
         }
 
-        public string GetAirlineCompany(FlightDetail flight)
+        public string GetAirlineCompany(ReciperDetail Reciper)
         {
-            return dl.GetAirlineCompany(flight);
+            return dl.GetAirlineCompany(Reciper);
         }
 
-        public string GetOrigin(FlightInfoPartial fip)
+        public string GetOrigin(ReciperInfoPartial fip)
         {
             return dl.GetOrigin(fip);
         }
 
-        public string GetDestination(FlightInfoPartial fip)
+        public string GetDestination(ReciperInfoPartial fip)
         {
             return dl.GetDestination(fip);
         }
 
-        public string GetOriginName(FlightDetail flight)
+        public string GetOriginName(ReciperDetail Reciper)
         {
-            return dl.GetOriginName(flight);
+            return dl.GetOriginName(Reciper);
         }
 
-        public string GetDestName(FlightDetail flight)
+        public string GetDestName(ReciperDetail Reciper)
         {
-            return dl.GetDestName(flight);
+            return dl.GetDestName(Reciper);
         }
 
-        public string GetScheDest(FlightDetail flight)
+        public string GetScheDest(ReciperDetail Reciper)
         {
-            return dl.GetScheDest(flight);
+            return dl.GetScheDest(Reciper);
         }
 
-        public string GetSSource(FlightDetail flight)
+        public string GetSSource(ReciperDetail Reciper)
         {
-            return dl.GetSSource(flight);
+            return dl.GetSSource(Reciper);
         }
 
-        public string GetActual(FlightDetail flight)
+        public string GetActual(ReciperDetail Reciper)
         {
-            return dl.GetActual(flight);
+            return dl.GetActual(Reciper);
         }
 
-        public string GetEstimated(FlightDetail flight)
+        public string GetEstimated(ReciperDetail Reciper)
         {
-            return dl.GetEstimated(flight);
+            return dl.GetEstimated(Reciper);
         }
 
-        public string GetStatusAirplane(FlightDetail flight)
+        public string GetStatusAirplane(ReciperDetail Reciper)
         {
-            return dl.GetStatusAirplane(flight);
+            return dl.GetStatusAirplane(Reciper);
         }
 
-        public string GetFlightStatus(FlightDetail flight)
+        public string GetReciperStatus(ReciperDetail Reciper)
         {
-            return dl.GetFlightStatus(flight);
+            return dl.GetReciperStatus(Reciper);
         }
 
-        public string GetSTimezone(FlightDetail flight)
+        public string GetSTimezone(ReciperDetail Reciper)
         {
-            return dl.GetSTimezone(flight);
+            return dl.GetSTimezone(Reciper);
         }
 
-        public string GetDTimezone(FlightDetail flight)
+        public string GetDTimezone(ReciperDetail Reciper)
         {
-            return dl.GetDTimezone(flight);
+            return dl.GetDTimezone(Reciper);
         }
 
         public List<Recipe> GetAllRecipeDetails(string Id)

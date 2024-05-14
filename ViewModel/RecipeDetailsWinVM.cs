@@ -1,5 +1,5 @@
 ﻿using BL;
-using BO.Flights;
+using BO.Recipers;
 using BO;
 using Recipes.Windows;
 using System;
@@ -12,67 +12,67 @@ namespace Recipes.ViewModel
 {
     internal class RecipeDetailsWinVM
     {
-        public WinFlightDetails WFD { get; set; }
+        public WinReciperDetails WFD { get; set; }
         BLImp bl = new BLImp();
         public HelperClass helper;
 
-        public FlightInfoPartial FlightPartial { get; set; }
-        public FlightDetail Flight { get; set; }
+        public ReciperInfoPartial ReciperPartial { get; set; }
+        public ReciperDetail Reciper { get; set; }
 
-        public RecipeDetailsWinVM(FlightInfoPartial fip)
+        public RecipeDetailsWinVM(ReciperInfoPartial fip)
         {
-            FlightPartial = fip;
-            Flight = bl.GetFlightDetail(FlightPartial.SourceId);
+            ReciperPartial = fip;
+            Reciper = bl.GetReciperDetail(ReciperPartial.SourceId);
 
             helper = new HelperClass();
         }
-        public string FlightNumber
+        public string ReciperNumber
         {
             get
             {
-                return bl.GetFlightNumber(Flight);
+                return bl.GetReciperNumber(Reciper);
             }
         }
         public string AirlineCompany
         {
             get
             {
-                return bl.GetAirlineCompany(Flight);
+                return bl.GetAirlineCompany(Reciper);
             }
         }
         public string Source
         {
             get
             {
-                return bl.GetOrigin(FlightPartial);
+                return bl.GetOrigin(ReciperPartial);
             }
         }
         public string Destination
         {
             get
             {
-                return bl.GetDestination(FlightPartial);
+                return bl.GetDestination(ReciperPartial);
             }
         }
         public string SourceName
         {
             get
             {
-                return bl.GetOriginName(Flight);
+                return bl.GetOriginName(Reciper);
             }
         }
         public string DestinationName
         {
             get
             {
-                return bl.GetDestName(Flight);
+                return bl.GetDestName(Reciper);
             }
         }
         public string SDest
         {
             get
             {
-                return bl.GetScheDest(Flight);
+                return bl.GetScheDest(Reciper);
 
 
             }
@@ -81,7 +81,7 @@ namespace Recipes.ViewModel
         {
             get
             {
-                return bl.GetSSource(Flight);
+                return bl.GetSSource(Reciper);
 
             }
         }
@@ -89,7 +89,7 @@ namespace Recipes.ViewModel
         {
             get
             {
-                return bl.GetActual(Flight);
+                return bl.GetActual(Reciper);
 
             }
         }
@@ -97,7 +97,7 @@ namespace Recipes.ViewModel
         {
             get
             {
-                return bl.GetEstimated(Flight);
+                return bl.GetEstimated(Reciper);
 
             }
         }
@@ -105,15 +105,15 @@ namespace Recipes.ViewModel
         {
             get
             {
-                return bl.GetStatusAirplane(Flight);
+                return bl.GetStatusAirplane(Reciper);
 
             }
         }
-        public string FlightStatus
+        public string ReciperStatus
         {
             get
             {
-                return bl.GetFlightStatus(Flight);
+                return bl.GetReciperStatus(Reciper);
 
             }
         }
@@ -122,7 +122,7 @@ namespace Recipes.ViewModel
         {
             get
             {
-                return bl.GetSTimezone(Flight);
+                return bl.GetSTimezone(Reciper);
 
 
 
@@ -132,7 +132,7 @@ namespace Recipes.ViewModel
         {
             get
             {
-                return bl.GetDTimezone(Flight);
+                return bl.GetDTimezone(Reciper);
 
 
             }
@@ -141,14 +141,14 @@ namespace Recipes.ViewModel
         {
             get
             {
-                return bl.GetProp(Flight, FlightPartial);
+                return bl.GetProp(Reciper, ReciperPartial);
             }
         }
         public string PBStatus
         {
             get
             {
-                return bl.GetRemainingDistance(Flight, FlightPartial).ToString("F1") + " km in " + bl.GetStringRemainingTime(Flight) + " Left.";
+                return bl.GetRemainingDistance(Reciper, ReciperPartial).ToString("F1") + " km in " + bl.GetStringRemainingTime(Reciper) + " Left.";
             }
         }
 
@@ -156,7 +156,7 @@ namespace Recipes.ViewModel
         {
             get
             {
-                var result = bl.GetWeather(Flight, FlightPartial);
+                var result = bl.GetWeather(Reciper, ReciperPartial);
                 //This function returns a Dictionary of dictionaries.
 
                 // there are 3 locations: current, origin and destination
@@ -171,7 +171,7 @@ namespace Recipes.ViewModel
         {
             get
             {
-                var result = bl.GetWeather(Flight, FlightPartial);
+                var result = bl.GetWeather(Reciper, ReciperPartial);
                 return result["destination"]["shortDesc"].ToUpper() + " " + result["destination"]["temperature"] + " °C";
             }
         }
@@ -179,7 +179,7 @@ namespace Recipes.ViewModel
         {
             get
             {
-                var result = bl.GetWeather(Flight, FlightPartial);
+                var result = bl.GetWeather(Reciper, ReciperPartial);
                 return result["current"]["shortDesc"].ToUpper() + " " + result["current"]["temperature"] + " °C";
             }
         }

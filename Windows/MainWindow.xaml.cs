@@ -1,6 +1,6 @@
 ﻿using BL;
 using BO;
-using BO.Flights;
+using BO.Recipers;
 using Recipes.ViewModel;
 using Recipes.ViewModel.Commands;
 using Recipes.Windows;
@@ -110,7 +110,7 @@ namespace Recipes
 
             List<Recipe> checkLst2 = bl.getRecipesDB();
 
-            WinFlightDetails window = new WinFlightDetails(my_id, my_link);
+            WinReciperDetails window = new WinReciperDetails(my_id, my_link);
             window.Show();
 
         }

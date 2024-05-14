@@ -1,4 +1,4 @@
-﻿<Window x:Class="Recipes.Windows.WinFlightDetails"
+﻿<Window x:Class="Recipes.Windows.WinReciperDetails"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Recipes.Windows"
         mc:Ignorable="d"     
         Height="496" Width="582" ResizeMode="NoResize"  HorizontalContentAlignment="Center"
-        Left="820" Title="{Binding FlightNumber}">
+        Left="820" Title="{Binding ReciperNumber}">
 
     <Window.Resources>
 

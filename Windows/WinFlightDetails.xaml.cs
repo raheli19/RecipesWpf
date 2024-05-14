@@ -17,17 +17,17 @@ using System.Windows.Shapes;
 namespace Recipes.Windows
 {
     /// <summary>
-    /// Logique d'interaction pour WinFlightDetails.xaml
+    /// Logique d'interaction pour WinReciperDetails.xaml
     /// </summary>
-    public partial class WinFlightDetails : Window
+    public partial class WinReciperDetails : Window
     {
         BLImp bl = new BLImp();
-        public WinFlightDetails()
+        public WinReciperDetails()
         {
             InitializeComponent();
 
         }
-        public WinFlightDetails(string id,string link)
+        public WinReciperDetails(string id,string link)
         {
             List<Recipe> recipes = bl.getRecipesDB();
 

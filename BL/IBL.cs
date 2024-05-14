@@ -1,5 +1,5 @@
 ﻿using BO;
-using BO.Flights;
+using BO.Recipers;
 using System;
 using System.Collections.Generic;
 
@@ -23,34 +23,34 @@ namespace BL
         void UpdateRateRecipe(string recipeName, int starRating);
         void UpdateCommentRecipe(string recipeName, string comment);
 
-        Dictionary<string, List<FlightInfoPartial>> GetCurrentFlights();
+        Dictionary<string, List<ReciperInfoPartial>> GetCurrentRecipers();
         List<RecipeInfoPartial> SearchByIngredients(List<string> listOfIngredients);
         List<RecipeKeyWord> SearchByKeyWord(string keyWord);
         string AnalyzedRecipeInstructions(string recipeId);
         List<RecipesSimilar> GetSimilarRecipes(string recipeId);
-        FlightDetail GetFlightDetail(string partialFlightID);
+        ReciperDetail GetReciperDetail(string partialReciperID);
 
-        Dictionary<string, Dictionary<string, string>> GetWeather(FlightDetail flight, FlightInfoPartial fip);
+        Dictionary<string, Dictionary<string, string>> GetWeather(ReciperDetail Reciper, ReciperInfoPartial fip);
    
-        double GetDistance(FlightDetail flight);
-        int GetProp(FlightDetail flight, FlightInfoPartial fip);
-        double GetRemainingDistance(FlightDetail flight, FlightInfoPartial fip);
+        double GetDistance(ReciperDetail Reciper);
+        int GetProp(ReciperDetail Reciper, ReciperInfoPartial fip);
+        double GetRemainingDistance(ReciperDetail Reciper, ReciperInfoPartial fip);
 
-        string GetStringRemainingTime(FlightDetail flight);
+        string GetStringRemainingTime(ReciperDetail Reciper);
 
-        string GetFlightNumber(FlightDetail flight);
-        string GetAirlineCompany(FlightDetail flight);
-        string GetOrigin(FlightInfoPartial fip);
-        string GetDestination(FlightInfoPartial fip);
-        string GetOriginName(FlightDetail flight);
-        string GetDestName(FlightDetail flight);
-        string GetScheDest(FlightDetail flight);
-        string GetSSource(FlightDetail flight);
-        string GetActual(FlightDetail flight);
-        string GetEstimated(FlightDetail flight);
-        string GetStatusAirplane(FlightDetail flight);
-        string GetFlightStatus(FlightDetail flight);
-        string GetSTimezone(FlightDetail flight);
-        string GetDTimezone(FlightDetail flight);
+        string GetReciperNumber(ReciperDetail Reciper);
+        string GetAirlineCompany(ReciperDetail Reciper);
+        string GetOrigin(ReciperInfoPartial fip);
+        string GetDestination(ReciperInfoPartial fip);
+        string GetOriginName(ReciperDetail Reciper);
+        string GetDestName(ReciperDetail Reciper);
+        string GetScheDest(ReciperDetail Reciper);
+        string GetSSource(ReciperDetail Reciper);
+        string GetActual(ReciperDetail Reciper);
+        string GetEstimated(ReciperDetail Reciper);
+        string GetStatusAirplane(ReciperDetail Reciper);
+        string GetReciperStatus(ReciperDetail Reciper);
+        string GetSTimezone(ReciperDetail Reciper);
+        string GetDTimezone(ReciperDetail Reciper);
     }
 }

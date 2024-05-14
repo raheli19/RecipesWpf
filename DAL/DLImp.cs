@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json;
-using BO.Flights;
+using BO.Recipers;
 using Newtonsoft.Json.Linq;
 using System.Diagnostics;
 using GeoCoordinatePortable;
@@ -334,32 +334,32 @@ namespace DAL
 
 
 
-        private const string flightDetails = @"https://data-live.flightradar24.com/clickhandler/?version=1.5&flight=";
-        public Dictionary<string, List<FlightInfoPartial>> GetCurrentFlights()
+        private const string ReciperDetails = @"https://data-live.Reciperradar24.com/clickhandler/?version=1.5&Reciper=";
+        public Dictionary<string, List<ReciperInfoPartial>> GetCurrentRecipers()
         {
             Console.WriteLine("AAAAAAAAAAA");
-            JObject AllFlightsData = null;
-            string allURL = @"https://data-cloud.flightradar24.com/zones/fcgi/feed.js?faa=1&bounds=41.13,29.993,25.002,36.383&satellite=1&mlat=1&flarm=1&adsb=1&gnd=1&air=1&vehicles=1&estimated=1&maxage=14400&gliders=1&selected=2d1e1f33&ems=1&stats=1";
+            JObject AllRecipersData = null;
+            string allURL = @"https://data-cloud.Reciperradar24.com/zones/fcgi/feed.js?faa=1&bounds=41.13,29.993,25.002,36.383&satellite=1&mlat=1&flarm=1&adsb=1&gnd=1&air=1&vehicles=1&estimated=1&maxage=14400&gliders=1&selected=2d1e1f33&ems=1&stats=1";
 
-            Dictionary<string, List<FlightInfoPartial>> flightsDictionary = new Dictionary<string, List<FlightInfoPartial>>();
+            Dictionary<string, List<ReciperInfoPartial>> RecipersDictionary = new Dictionary<string, List<ReciperInfoPartial>>();
 
-            List<FlightInfoPartial> Incoming = new List<FlightInfoPartial>();
-            List<FlightInfoPartial> Outgoing = new List<FlightInfoPartial>();
+            List<ReciperInfoPartial> Incoming = new List<ReciperInfoPartial>();
+            List<ReciperInfoPartial> Outgoing = new List<ReciperInfoPartial>();
 
             using (var webClient = new System.Net.WebClient())
             {
                 HelperClass Helper = new HelperClass();
                 var json = RequestDataSync(allURL);
-                AllFlightsData = JObject.Parse(json);
+                AllRecipersData = JObject.Parse(json);
                 try
                 {
-                    foreach (var item in AllFlightsData)
+                    foreach (var item in AllRecipersData)
                     {
                         var key = item.Key;
                         if (key == "full_count" || key == "version")
                             continue;
                         if (item.Value[11].ToString() == "TLV")
-                            Outgoing.Add(new FlightInfoPartial
+                            Outgoing.Add(new ReciperInfoPartial
                             {
                                 Source = item.Value[11].ToString(),
                                 Destination = item.Value[12].ToString(),
@@ -367,10 +367,10 @@ namespace DAL
                                 Long = Convert.ToDouble(item.Value[2]),
                                 Lat = Convert.ToDouble(item.Value[1]),
                                 DateAndTime = Helper.GetDateTimeFromEpoch(Convert.ToDouble(item.Value[10])),
-                                FlightCode = item.Value[13].ToString(),
+                                ReciperCode = item.Value[13].ToString(),
                             });
                         else if (item.Value[12].ToString() == "TLV")
-                            Incoming.Add(new FlightInfoPartial
+                            Incoming.Add(new ReciperInfoPartial
                             {
                                 Id = -1,
                                 Source = item.Value[11].ToString(),
@@ -379,7 +379,7 @@ namespace DAL
                                 Long = Convert.ToDouble(item.Value[2]),
                                 Lat = Convert.ToDouble(item.Value[1]),
                                 DateAndTime = Helper.GetDateTimeFromEpoch(Convert.ToDouble(item.Value[10])),
-                                FlightCode = item.Value[13].ToString(),
+                                ReciperCode = item.Value[13].ToString(),
 
 
                             });
@@ -390,10 +390,10 @@ namespace DAL
                     Debug.Print(e.Message);
                 }
 
-                flightsDictionary.Add("Incoming", Incoming);
-                flightsDictionary.Add("Outgoing", Outgoing);
+                RecipersDictionary.Add("Incoming", Incoming);
+                RecipersDictionary.Add("Outgoing", Outgoing);
             }
-            return flightsDictionary;
+            return RecipersDictionary;
         }
 
 
@@ -407,17 +407,17 @@ namespace DAL
             }
         }
 
-        public FlightDetail GetFlightData(string key)
+        public ReciperDetail GetReciperData(string key)
         {
-            string CurrentUrl = (string)flightDetails + key;
-            FlightDetail currentFlight = null;
+            string CurrentUrl = (string)ReciperDetails + key;
+            ReciperDetail currentReciper = null;
 
             using (var webClient = new System.Net.WebClient())
             {
                 var json = webClient.DownloadString(CurrentUrl);
                 try
                 {
-                    currentFlight = (FlightDetail)JsonConvert.DeserializeObject<FlightDetail>(json, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore });
+                    currentReciper = (ReciperDetail)JsonConvert.DeserializeObject<ReciperDetail>(json, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore });
                 }
                 catch (Exception e)
                 {
@@ -426,7 +426,7 @@ namespace DAL
 
             }
 
-            return currentFlight;
+            return currentReciper;
         }
 
 
@@ -560,7 +560,7 @@ namespace DAL
         #region user
         public void AddUser(User u)
         {
-            using (var db = new FlightContext())
+            using (var db = new ReciperContext())
             {
                 db.Users.Add(u);
                 db.SaveChanges();
@@ -570,7 +570,7 @@ namespace DAL
 
         public void AddWatch(Watch w)
         {
-            using (var db = new FlightContext())
+            using (var db = new ReciperContext())
             {
                 db.Watches.Add(w);
                 db.SaveChanges();
@@ -579,7 +579,7 @@ namespace DAL
 
         public void UpdatePassword(User u, string newPassword)
         {
-            using (var ctx = new FlightContext())
+            using (var ctx = new ReciperContext())
             {
                 var user = ctx.Users.Find(u);
                 if (user != null)
@@ -595,7 +595,7 @@ namespace DAL
 
         public bool ExistUser(User u)
         {
-            using (var ctx = new FlightContext())
+            using (var ctx = new ReciperContext())
             {
                 if (ctx.Users.Find(u.UserId) != null)
                     return true;
@@ -605,7 +605,7 @@ namespace DAL
 
         //public List<Watch> GetUserWatches(string userName, DateTime start, DateTime end)
         //{
-        //    using (var db = new FlightContext())
+        //    using (var db = new ReciperContext())
         //    {
         //        var l = (db.Watches.Where(w => w.UserName == userName && w.Date <= end && w.Date >= start)).ToList();
         //        l.Reverse();
@@ -725,24 +725,24 @@ namespace DAL
         #endregion
 
         #region distance and time
-        public Dictionary<string, string> GetLonLatOrigin(FlightDetail flight)
+        public Dictionary<string, string> GetLonLatOrigin(ReciperDetail Reciper)
         {
-            string lon = flight.airport.origin.position.longitude.ToString();
-            string lat = flight.airport.origin.position.latitude.ToString();
+            string lon = Reciper.airport.origin.position.longitude.ToString();
+            string lat = Reciper.airport.origin.position.latitude.ToString();
             return new Dictionary<string, string>() { { "lon", lon }, { "lat", lat } };
         }
 
-        public Dictionary<string, string> GetLonLatDestination(FlightDetail flight)
+        public Dictionary<string, string> GetLonLatDestination(ReciperDetail Reciper)
         {
-            string lon = flight.airport.destination.position.longitude.ToString();
-            string lat = flight.airport.destination.position.latitude.ToString();
+            string lon = Reciper.airport.destination.position.longitude.ToString();
+            string lat = Reciper.airport.destination.position.latitude.ToString();
             return new Dictionary<string, string>() { { "lon", lon }, { "lat", lat } };
         }
 
-        public double GetDistance(FlightDetail flight)
+        public double GetDistance(ReciperDetail Reciper)
         {
-            Dictionary<string, string> origin = GetLonLatOrigin(flight);
-            Dictionary<string, string> dest = GetLonLatDestination(flight);
+            Dictionary<string, string> origin = GetLonLatOrigin(Reciper);
+            Dictionary<string, string> dest = GetLonLatDestination(Reciper);
 
             GeoCoordinate pin1 = new GeoCoordinate(Convert.ToDouble(origin["lat"]), Convert.ToDouble(origin["lon"]));
             GeoCoordinate pin2 = new GeoCoordinate(Convert.ToDouble(dest["lat"]), Convert.ToDouble(dest["lon"]));
@@ -753,9 +753,9 @@ namespace DAL
 
         }
 
-        public double GetRemainingDst(FlightDetail flight, FlightInfoPartial fip)
+        public double GetRemainingDst(ReciperDetail Reciper, ReciperInfoPartial fip)
         {
-            Dictionary<string, string> dest = GetLonLatDestination(flight);
+            Dictionary<string, string> dest = GetLonLatDestination(Reciper);
 
             GeoCoordinate pin1 = new GeoCoordinate(Convert.ToDouble(fip.Lat), Convert.ToDouble(fip.Long));
             GeoCoordinate pin2 = new GeoCoordinate(Convert.ToDouble(dest["lat"]), Convert.ToDouble(dest["lon"]));
@@ -767,16 +767,16 @@ namespace DAL
             return tmp;
         }
 
-        public TimeSpan GetTimeBetween(FlightDetail flight)
+        public TimeSpan GetTimeBetween(ReciperDetail Reciper)
         {
             HelperClass helperClass = new HelperClass();
             DateTime origin = DateTime.UtcNow;
             long time;
-            if (flight.time.estimated.arrival != null)
+            if (Reciper.time.estimated.arrival != null)
             {
-                time = (long)flight.time.estimated.arrival;
+                time = (long)Reciper.time.estimated.arrival;
             }
-            else time = flight.time.scheduled.arrival;
+            else time = Reciper.time.scheduled.arrival;
             DateTime dest = helperClass.GetDateTimeFromEpoch(time);
 
             TimeSpan res = dest.Subtract(origin);
@@ -786,16 +786,16 @@ namespace DAL
         #endregion
 
         #region other
-        public string GetFlightNumber(FlightDetail flight)
+        public string GetReciperNumber(ReciperDetail Reciper)
         {
             try
             {
-                if (flight.identification.number.Default != null)
+                if (Reciper.identification.number.Default != null)
                 {
-                    var flightnum = flight.identification.number.Default;
-                    if (flight.identification.number.alternative != null)
-                        flightnum += " / " + flight.identification.number.alternative;
-                    return flightnum.ToString();
+                    var Recipernum = Reciper.identification.number.Default;
+                    if (Reciper.identification.number.alternative != null)
+                        Recipernum += " / " + Reciper.identification.number.alternative;
+                    return Recipernum.ToString();
                 }
                 return "N/A";
             }
@@ -806,13 +806,13 @@ namespace DAL
             }
         }
 
-        public string GetAirlineCompany(FlightDetail flight)
+        public string GetAirlineCompany(ReciperDetail Reciper)
         {
-            var airline = flight.airline.name;
+            var airline = Reciper.airline.name;
             return airline;
         }
 
-        public string GetOrigin(FlightInfoPartial fip)
+        public string GetOrigin(ReciperInfoPartial fip)
         {
             try
             {
@@ -825,7 +825,7 @@ namespace DAL
             }
         }
 
-        public string GetDestination(FlightInfoPartial fip)
+        public string GetDestination(ReciperInfoPartial fip)
         {
             try
             {
@@ -838,11 +838,11 @@ namespace DAL
             }
         }
 
-        public string GetOriginName(FlightDetail flight)
+        public string GetOriginName(ReciperDetail Reciper)
         {
             try
             {
-                return flight.airport.origin.name;
+                return Reciper.airport.origin.name;
             }
             catch (Exception e)
             {
@@ -851,11 +851,11 @@ namespace DAL
             }
         }
 
-        public string GetDestName(FlightDetail flight)
+        public string GetDestName(ReciperDetail Reciper)
         {
             try
             {
-                return flight.airport.destination.name;
+                return Reciper.airport.destination.name;
             }
             catch (Exception e)
             {
@@ -864,13 +864,13 @@ namespace DAL
             }
         }
 
-        public string GetScheDest(FlightDetail flight)
+        public string GetScheDest(ReciperDetail Reciper)
         {
             try
             {
                 HelperClass helper = new HelperClass();
-                int utctime = flight.time.scheduled.arrival;
-                int offset = flight.airport.destination.timezone.offset;
+                int utctime = Reciper.time.scheduled.arrival;
+                int offset = Reciper.airport.destination.timezone.offset;
                 int total = utctime + offset;
                 return helper.GetDateTimeFromEpoch(total).ToString("HH:mm");
 
@@ -882,12 +882,12 @@ namespace DAL
             }
         }
 
-        public string GetSSource(FlightDetail flight)
+        public string GetSSource(ReciperDetail Reciper)
         {
             try
             {
-                int utctime = flight.time.scheduled.departure;
-                int offset = flight.airport.origin.timezone.offset;
+                int utctime = Reciper.time.scheduled.departure;
+                int offset = Reciper.airport.origin.timezone.offset;
                 int total = utctime + offset;
                 return helperC.GetDateTimeFromEpoch(total).ToString("HH:mm");
 
@@ -898,35 +898,35 @@ namespace DAL
             }
         }
 
-        public string GetActual(FlightDetail flight)
+        public string GetActual(ReciperDetail Reciper)
         {
-            if (flight.time.real.departure != null)
+            if (Reciper.time.real.departure != null)
             {
-                long utctime = (long)flight.time.real.departure;
-                long offset = flight.airport.origin.timezone.offset;
+                long utctime = (long)Reciper.time.real.departure;
+                long offset = Reciper.airport.origin.timezone.offset;
                 long total = utctime + offset;
                 return helperC.GetDateTimeFromEpoch(total).ToString("HH:mm");
             }
-            return GetScheDest(flight);
+            return GetScheDest(Reciper);
         }
 
-        public string GetEstimated(FlightDetail flight)
+        public string GetEstimated(ReciperDetail Reciper)
         {
-            if (flight.time.estimated.arrival != null)
+            if (Reciper.time.estimated.arrival != null)
             {
-                long utctime = (long)flight.time.estimated.arrival;
-                long offset = flight.airport.destination.timezone.offset;
+                long utctime = (long)Reciper.time.estimated.arrival;
+                long offset = Reciper.airport.destination.timezone.offset;
                 long total = utctime + offset;
                 return helperC.GetDateTimeFromEpoch(total).ToString("HH:mm");
 
             }
-            return helperC.GetDateTimeFromEpoch(flight.time.scheduled.arrival).ToString("HH:mm");
+            return helperC.GetDateTimeFromEpoch(Reciper.time.scheduled.arrival).ToString("HH:mm");
 
         }
 
-        public string GetStatusAirplane(FlightDetail flight)
+        public string GetStatusAirplane(ReciperDetail Reciper)
         {
-            switch (flight.status.generic.status.text)
+            switch (Reciper.status.generic.status.text)
             {
                 case "scheduled":
                     return "scheduled.png";
@@ -941,16 +941,16 @@ namespace DAL
             return "takeoff.png";
         }
 
-        public string GetFlightStatus(FlightDetail flight)
+        public string GetReciperStatus(ReciperDetail Reciper)
         {
-            return flight.status.text;
+            return Reciper.status.text;
         }
 
-        public string GetSTimezone(FlightDetail flight)
+        public string GetSTimezone(ReciperDetail Reciper)
         {
             try
             {
-                return flight.airport.origin.timezone.abbr + "(UTC " + flight.airport.origin.timezone.offsetHours + ")";
+                return Reciper.airport.origin.timezone.abbr + "(UTC " + Reciper.airport.origin.timezone.offsetHours + ")";
             }
             catch (Exception e)
             {
@@ -959,11 +959,11 @@ namespace DAL
             }
         }
 
-        public string GetDTimezone(FlightDetail flight)
+        public string GetDTimezone(ReciperDetail Reciper)
         {
             try
             {
-                return flight.airport.origin.timezone.abbr + "(UTC " + flight.airport.destination.timezone.offsetHours + ")";
+                return Reciper.airport.origin.timezone.abbr + "(UTC " + Reciper.airport.destination.timezone.offsetHours + ")";
             }
             catch (Exception e)
             {

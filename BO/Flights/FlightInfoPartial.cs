@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BO.Flights
+namespace BO.Recipers
 {
-    public class FlightInfoPartial
+    public class ReciperInfoPartial
     {
         public int Id { get; set; }
         public string SourceId { get; set; }
@@ -15,6 +15,6 @@ namespace BO.Flights
         public DateTime DateAndTime { get; set; }
         public string Source { get; set; }
         public string Destination { get; set; }
-        public string FlightCode { get; set; }
+        public string ReciperCode { get; set; }
     }
 }
