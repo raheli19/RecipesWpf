@@ -58,8 +58,8 @@ namespace DAL
             //JObject AllRecipesData = null;
             JArray AllRecipesData = null;
             string ingredientsParam = string.Join(",", listOfIngredients); // Convertir la liste en une chaîne de caractères séparée par des virgules
-            //string allURL = @"https://api.spoonacular.com/recipes/findByIngredients?ingredients=" + listOfIngredients + "&apiKey=58e214373f5d418dbd86a05188042992";
-            string allURL = $"https://api.spoonacular.com/recipes/findByIngredients?ingredients={ingredientsParam}&apiKey=58e214373f5d418dbd86a05188042992";
+            //string allURL = @"https://api.spoonacular.com/recipes/findByIngredients?ingredients=" + listOfIngredients + "&apiKey=cf71c601dec44bf086ed3a33b400c7c0";
+            string allURL = $"https://api.spoonacular.com/recipes/findByIngredients?ingredients={ingredientsParam}&apiKey=cf71c601dec44bf086ed3a33b400c7c0";
 
             Dictionary<string, List<RecipeInfoPartial>> recipesDictionary = new Dictionary<string, List<RecipeInfoPartial>>();
             List<RecipeInfoPartial> recipes = new List<RecipeInfoPartial>();
@@ -138,7 +138,7 @@ namespace DAL
         public List<RecipeKeyWord> SearchByKeyWord(string keyWord)
         {
             JObject AllRecipesData = null;
-            string allURL = $"https://api.spoonacular.com/recipes/complexSearch?query={keyWord}&apiKey=58e214373f5d418dbd86a05188042992";
+            string allURL = $"https://api.spoonacular.com/recipes/complexSearch?query={keyWord}&apiKey=cf71c601dec44bf086ed3a33b400c7c0";
 
             Dictionary<string, List<RecipeKeyWord>> recipesDictionary = new Dictionary<string, List<RecipeKeyWord>>();
             List<RecipeKeyWord> recipes = new List<RecipeKeyWord>();
@@ -198,7 +198,7 @@ namespace DAL
         public string AnalyzedRecipeInstructions(string recipeId)
         {
             JArray AllRecipesData = null;
-            string allURL = $"https://api.spoonacular.com/recipes/{recipeId}/analyzedInstructions?&apiKey=58e214373f5d418dbd86a05188042992";
+            string allURL = $"https://api.spoonacular.com/recipes/{recipeId}/analyzedInstructions?&apiKey=cf71c601dec44bf086ed3a33b400c7c0";
 
             Dictionary<string, List<RecipeInfoPartial>> recipesDictionary = new Dictionary<string, List<RecipeInfoPartial>>();
             List<RecipeInfoPartial> recipes = new List<RecipeInfoPartial>();
@@ -241,7 +241,7 @@ namespace DAL
         public List<RecipesSimilar> GetSimilarRecipes(string recipeId)
         {
             JArray AllRecipesData = null;
-            string allURL = $"https://api.spoonacular.com/recipes/{recipeId}/similar?&apiKey=58e214373f5d418dbd86a05188042992";
+            string allURL = $"https://api.spoonacular.com/recipes/{recipeId}/similar?&apiKey=cf71c601dec44bf086ed3a33b400c7c0";
 
             List<RecipesSimilar> recipes = new List<RecipesSimilar>();
 
@@ -443,7 +443,7 @@ namespace DAL
             // Calculate the number of days between start and end dates
             int range = (endDate - startDate).Days;
 
-            string allURL = $"https://api.spoonacular.com/recipes/{Id}/information?includeNutrition=false&apiKey=58e214373f5d418dbd86a05188042992";
+            string allURL = $"https://api.spoonacular.com/recipes/{Id}/information?includeNutrition=false&apiKey=cf71c601dec44bf086ed3a33b400c7c0";
             using (var webClient = new System.Net.WebClient())
             {
                 try
@@ -495,7 +495,7 @@ namespace DAL
                         }
 
                         string image = recipe.Image.ToString();
-                        string instructions = recipe.Instructions.ToString();
+                        string instructions = recipe.Instructions?.ToString() ?? string.Empty;
                         string instructionsWithoutHtml = Regex.Replace(instructions, "<.*?>", "");
                         string[] words2 = instructionsWithoutHtml.Split(' ');
                         int wordCount2 = 0;
