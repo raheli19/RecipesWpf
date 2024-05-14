@@ -145,7 +145,6 @@
     <Compile Include="ViewModel\Commands\SearchByIng.cs" />
     <Compile Include="ViewModel\Commands\SignUpC.cs" />
     <Compile Include="ViewModel\EnterWinVM.cs" />
-    <Compile Include="ViewModel\FlightDetailsWinVM.cs" />
     <Compile Include="ViewModel\MainWinVM.cs" />
     <Compile Include="ViewModel\RecipeDetailsWinVM.cs" />
     <Compile Include="ViewModel\WatchWinVM.cs" />
