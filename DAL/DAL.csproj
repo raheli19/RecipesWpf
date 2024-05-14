@@ -202,7 +202,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DB\FlightContext.cs" />
+    <Compile Include="DB\RecipesContext.cs" />
     <Compile Include="DLImp.cs" />
     <Compile Include="IDL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
