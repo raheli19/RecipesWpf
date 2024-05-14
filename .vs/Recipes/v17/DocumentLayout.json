@@ -3,15 +3,23 @@
   "WorkspaceRootPath": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{97E33B05-AF2E-4AFD-ADA7-D5EF2348B3EF}|DAL\\DAL.csproj|c:\\users\\avino\\source\\repos\\recipeswpf\\dal\\db\\recipescontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{55F4BB3F-12F9-4FEB-A767-60016CC0E5EA}|BO\\BO.csproj|c:\\users\\avino\\source\\repos\\recipeswpf\\bo\\recipes\\reciperhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55F4BB3F-12F9-4FEB-A767-60016CC0E5EA}|BO\\BO.csproj|solutionrelative:bo\\recipes\\reciperhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55F4BB3F-12F9-4FEB-A767-60016CC0E5EA}|BO\\BO.csproj|C:\\Users\\avino\\source\\repos\\RecipesWpf\\bo\\weather.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55F4BB3F-12F9-4FEB-A767-60016CC0E5EA}|BO\\BO.csproj|solutionrelative:bo\\weather.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97E33B05-AF2E-4AFD-ADA7-D5EF2348B3EF}|DAL\\DAL.csproj|C:\\Users\\avino\\source\\repos\\RecipesWpf\\dal\\db\\recipescontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{97E33B05-AF2E-4AFD-ADA7-D5EF2348B3EF}|DAL\\DAL.csproj|solutionrelative:dal\\db\\recipescontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AB3D64EE-995A-4D23-9255-161CA11195A2}|GUI.csproj|c:\\users\\avino\\source\\repos\\recipeswpf\\windows\\window1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{AB3D64EE-995A-4D23-9255-161CA11195A2}|GUI.csproj|C:\\Users\\avino\\source\\repos\\RecipesWpf\\windows\\window1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{AB3D64EE-995A-4D23-9255-161CA11195A2}|GUI.csproj|solutionrelative:windows\\window1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AB3D64EE-995A-4D23-9255-161CA11195A2}|GUI.csproj|c:\\users\\avino\\source\\repos\\recipeswpf\\windows\\winreciperdetails.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{AB3D64EE-995A-4D23-9255-161CA11195A2}|GUI.csproj|C:\\Users\\avino\\source\\repos\\RecipesWpf\\windows\\winreciperdetails.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{AB3D64EE-995A-4D23-9255-161CA11195A2}|GUI.csproj|solutionrelative:windows\\winreciperdetails.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
@@ -19,23 +27,23 @@
       "RelativeMoniker": "D:0:0:{C7F7466B-3A68-4542-86FF-330F8833AE49}|BL\\BL.csproj|solutionrelative:bl\\blimp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AB3D64EE-995A-4D23-9255-161CA11195A2}|GUI.csproj|c:\\users\\avino\\source\\repos\\recipeswpf\\windows\\watcheswin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AB3D64EE-995A-4D23-9255-161CA11195A2}|GUI.csproj|C:\\Users\\avino\\source\\repos\\RecipesWpf\\windows\\watcheswin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AB3D64EE-995A-4D23-9255-161CA11195A2}|GUI.csproj|solutionrelative:windows\\watcheswin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{55F4BB3F-12F9-4FEB-A767-60016CC0E5EA}|BO\\BO.csproj|c:\\users\\avino\\source\\repos\\recipeswpf\\bo\\recipes\\recipeinfopartial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{55F4BB3F-12F9-4FEB-A767-60016CC0E5EA}|BO\\BO.csproj|C:\\Users\\avino\\source\\repos\\RecipesWpf\\bo\\recipes\\recipeinfopartial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{55F4BB3F-12F9-4FEB-A767-60016CC0E5EA}|BO\\BO.csproj|solutionrelative:bo\\recipes\\recipeinfopartial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{55F4BB3F-12F9-4FEB-A767-60016CC0E5EA}|BO\\BO.csproj|c:\\users\\avino\\source\\repos\\recipeswpf\\bo\\recipes\\recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{55F4BB3F-12F9-4FEB-A767-60016CC0E5EA}|BO\\BO.csproj|C:\\Users\\avino\\source\\repos\\RecipesWpf\\bo\\recipes\\recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{55F4BB3F-12F9-4FEB-A767-60016CC0E5EA}|BO\\BO.csproj|solutionrelative:bo\\recipes\\recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AB3D64EE-995A-4D23-9255-161CA11195A2}|GUI.csproj|c:\\users\\avino\\source\\repos\\recipeswpf\\viewmodel\\recipedetailswinvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AB3D64EE-995A-4D23-9255-161CA11195A2}|GUI.csproj|C:\\Users\\avino\\source\\repos\\RecipesWpf\\viewmodel\\recipedetailswinvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AB3D64EE-995A-4D23-9255-161CA11195A2}|GUI.csproj|solutionrelative:viewmodel\\recipedetailswinvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{55F4BB3F-12F9-4FEB-A767-60016CC0E5EA}|BO\\BO.csproj|c:\\users\\avino\\source\\repos\\recipeswpf\\bo\\recipes\\recipedateusage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{55F4BB3F-12F9-4FEB-A767-60016CC0E5EA}|BO\\BO.csproj|C:\\Users\\avino\\source\\repos\\RecipesWpf\\bo\\recipes\\recipedateusage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{55F4BB3F-12F9-4FEB-A767-60016CC0E5EA}|BO\\BO.csproj|solutionrelative:bo\\recipes\\recipedateusage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -51,7 +59,7 @@
       "RelativeMoniker": "D:0:0:{AB3D64EE-995A-4D23-9255-161CA11195A2}|GUI.csproj|solutionrelative:viewmodel\\mainwinvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AB3D64EE-995A-4D23-9255-161CA11195A2}|GUI.csproj|c:\\users\\avino\\source\\repos\\recipeswpf\\windows\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{AB3D64EE-995A-4D23-9255-161CA11195A2}|GUI.csproj|C:\\Users\\avino\\source\\repos\\RecipesWpf\\windows\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{AB3D64EE-995A-4D23-9255-161CA11195A2}|GUI.csproj|solutionrelative:windows\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
@@ -103,23 +111,15 @@
       "RelativeMoniker": "D:0:0:{55F4BB3F-12F9-4FEB-A767-60016CC0E5EA}|BO\\BO.csproj|solutionrelative:bo\\holiday.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{55F4BB3F-12F9-4FEB-A767-60016CC0E5EA}|BO\\BO.csproj|C:\\Users\\avino\\source\\repos\\RecipesWpf\\bo\\flights\\estimated.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55F4BB3F-12F9-4FEB-A767-60016CC0E5EA}|BO\\BO.csproj|solutionrelative:bo\\flights\\estimated.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{55F4BB3F-12F9-4FEB-A767-60016CC0E5EA}|BO\\BO.csproj|C:\\Users\\avino\\source\\repos\\RecipesWpf\\bo\\users\\watch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{55F4BB3F-12F9-4FEB-A767-60016CC0E5EA}|BO\\BO.csproj|solutionrelative:bo\\users\\watch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55F4BB3F-12F9-4FEB-A767-60016CC0E5EA}|BO\\BO.csproj|C:\\Users\\avino\\source\\repos\\RecipesWpf\\bo\\weather.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55F4BB3F-12F9-4FEB-A767-60016CC0E5EA}|BO\\BO.csproj|solutionrelative:bo\\weather.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{55F4BB3F-12F9-4FEB-A767-60016CC0E5EA}|BO\\BO.csproj|C:\\Users\\avino\\source\\repos\\RecipesWpf\\bo\\calend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{55F4BB3F-12F9-4FEB-A767-60016CC0E5EA}|BO\\BO.csproj|solutionrelative:bo\\calend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{55F4BB3F-12F9-4FEB-A767-60016CC0E5EA}|BO\\BO.csproj|c:\\users\\avino\\source\\repos\\recipeswpf\\bo\\recipes\\recipekeyword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{55F4BB3F-12F9-4FEB-A767-60016CC0E5EA}|BO\\BO.csproj|C:\\Users\\avino\\source\\repos\\RecipesWpf\\bo\\recipes\\recipekeyword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{55F4BB3F-12F9-4FEB-A767-60016CC0E5EA}|BO\\BO.csproj|solutionrelative:bo\\recipes\\recipekeyword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -127,7 +127,7 @@
       "RelativeMoniker": "D:0:0:{55F4BB3F-12F9-4FEB-A767-60016CC0E5EA}|BO\\BO.csproj|solutionrelative:bo\\users\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AB3D64EE-995A-4D23-9255-161CA11195A2}|GUI.csproj|c:\\users\\avino\\source\\repos\\recipeswpf\\windows\\winreciperdetails.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AB3D64EE-995A-4D23-9255-161CA11195A2}|GUI.csproj|C:\\Users\\avino\\source\\repos\\RecipesWpf\\windows\\winreciperdetails.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AB3D64EE-995A-4D23-9255-161CA11195A2}|GUI.csproj|solutionrelative:windows\\winreciperdetails.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -141,6 +141,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{AB3D64EE-995A-4D23-9255-161CA11195A2}|GUI.csproj|C:\\Users\\avino\\source\\repos\\RecipesWpf\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AB3D64EE-995A-4D23-9255-161CA11195A2}|GUI.csproj|solutionrelative:properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\avino\\source\\repos\\RecipesWpf\\bo\\flights\\estimated.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:bo\\flights\\estimated.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -160,23 +164,24 @@
         },
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Window1.xaml",
-              "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\Windows\\Window1.xaml",
-              "RelativeDocumentMoniker": "Windows\\Window1.xaml",
-              "ToolTip": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\Windows\\Window1.xaml",
-              "RelativeToolTip": "Windows\\Window1.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-14T15:22:27.464Z",
+              "DocumentIndex": 0,
+              "Title": "ReciperHistory.cs",
+              "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\BO\\Recipes\\ReciperHistory.cs",
+              "RelativeDocumentMoniker": "BO\\Recipes\\ReciperHistory.cs",
+              "ToolTip": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\BO\\Recipes\\ReciperHistory.cs",
+              "RelativeToolTip": "BO\\Recipes\\ReciperHistory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T15:27:56.427Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "RecipeDetailsWinVM.cs",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\ViewModel\\RecipeDetailsWinVM.cs",
               "RelativeDocumentMoniker": "ViewModel\\RecipeDetailsWinVM.cs",
@@ -184,12 +189,11 @@
               "RelativeToolTip": "ViewModel\\RecipeDetailsWinVM.cs",
               "ViewState": "AQIAABwAAAAAAAAAAAAkwBIAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T15:14:59.949Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-14T15:14:59.949Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\Windows\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "Windows\\MainWindow.xaml.cs",
@@ -197,12 +201,11 @@
               "RelativeToolTip": "Windows\\MainWindow.xaml.cs",
               "ViewState": "AQIAACIAAAAAAAAAAAAuwDcAAAA8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T08:23:15.662Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-14T08:23:15.662Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "BLImp.cs",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\BL\\BLImp.cs",
               "RelativeDocumentMoniker": "BL\\BLImp.cs",
@@ -210,12 +213,11 @@
               "RelativeToolTip": "BL\\BLImp.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T13:07:22.911Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-10T13:07:22.911Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "RecipesContext.cs",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\DAL\\DB\\RecipesContext.cs",
               "RelativeDocumentMoniker": "DAL\\DB\\RecipesContext.cs",
@@ -223,24 +225,45 @@
               "RelativeToolTip": "DAL\\DB\\RecipesContext.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T13:16:59.755Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-10T13:16:59.755Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "Weather.cs",
+              "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\BO\\Weather.cs",
+              "RelativeDocumentMoniker": "BO\\Weather.cs",
+              "ToolTip": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\BO\\Weather.cs",
+              "RelativeToolTip": "BO\\Weather.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T13:13:10.138Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Window1.xaml",
+              "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\Windows\\Window1.xaml",
+              "RelativeDocumentMoniker": "Windows\\Window1.xaml",
+              "ToolTip": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\Windows\\Window1.xaml",
+              "RelativeToolTip": "Windows\\Window1.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-14T15:22:27.464Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "WinReciperDetails.xaml",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\Windows\\WinReciperDetails.xaml",
               "RelativeDocumentMoniker": "Windows\\WinReciperDetails.xaml",
               "ToolTip": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\Windows\\WinReciperDetails.xaml",
               "RelativeToolTip": "Windows\\WinReciperDetails.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-14T15:21:48.834Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-14T15:21:48.834Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Recipe.cs",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\BO\\Recipes\\Recipe.cs",
               "RelativeDocumentMoniker": "BO\\Recipes\\Recipe.cs",
@@ -248,12 +271,11 @@
               "RelativeToolTip": "BO\\Recipes\\Recipe.cs",
               "ViewState": "AQIAAAIAAAAAAAAAAAAMwA0AAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T15:15:10.275Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-14T15:15:10.275Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "WatchesWin.xaml.cs",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\Windows\\WatchesWin.xaml.cs",
               "RelativeDocumentMoniker": "Windows\\WatchesWin.xaml.cs",
@@ -261,12 +283,11 @@
               "RelativeToolTip": "Windows\\WatchesWin.xaml.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T15:15:29.924Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-14T15:15:29.924Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "WatchWinVM.cs",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\ViewModel\\WatchWinVM.cs",
               "RelativeDocumentMoniker": "ViewModel\\WatchWinVM.cs",
@@ -274,12 +295,11 @@
               "RelativeToolTip": "ViewModel\\WatchWinVM.cs",
               "ViewState": "AQIAABwAAAAAAAAAAAAuwB8AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T13:13:27.626Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-10T13:13:27.626Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "RecipeInfoPartial.cs",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\BO\\Recipes\\RecipeInfoPartial.cs",
               "RelativeDocumentMoniker": "BO\\Recipes\\RecipeInfoPartial.cs",
@@ -287,12 +307,11 @@
               "RelativeToolTip": "BO\\Recipes\\RecipeInfoPartial.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAEwAgAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T15:15:23.763Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-14T15:15:23.763Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "MainWinVM.cs",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\ViewModel\\MainWinVM.cs",
               "RelativeDocumentMoniker": "ViewModel\\MainWinVM.cs",
@@ -300,24 +319,22 @@
               "RelativeToolTip": "ViewModel\\MainWinVM.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T13:07:22.922Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-10T13:07:22.922Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "ViewDatabase.xaml",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\Windows\\ViewDatabase.xaml",
               "RelativeDocumentMoniker": "Windows\\ViewDatabase.xaml",
               "ToolTip": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\Windows\\ViewDatabase.xaml",
               "RelativeToolTip": "Windows\\ViewDatabase.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-14T14:22:25.596Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-14T14:22:25.596Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "DateConverter.cs",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\DateConverter.cs",
               "RelativeDocumentMoniker": "DateConverter.cs",
@@ -325,12 +342,11 @@
               "RelativeToolTip": "DateConverter.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T13:26:18.2Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-10T13:26:18.2Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "RecipeDateUsage.cs",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\BO\\Recipes\\RecipeDateUsage.cs",
               "RelativeDocumentMoniker": "BO\\Recipes\\RecipeDateUsage.cs",
@@ -338,12 +354,11 @@
               "RelativeToolTip": "BO\\Recipes\\RecipeDateUsage.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T13:16:38.044Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-10T13:16:38.044Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "IDL.cs",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\DAL\\IDL.cs",
               "RelativeDocumentMoniker": "DAL\\IDL.cs",
@@ -351,36 +366,33 @@
               "RelativeToolTip": "DAL\\IDL.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T08:58:37.844Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-14T08:58:37.844Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "WatchesWin.xaml",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\Windows\\WatchesWin.xaml",
               "RelativeDocumentMoniker": "Windows\\WatchesWin.xaml",
               "ToolTip": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\Windows\\WatchesWin.xaml",
               "RelativeToolTip": "Windows\\WatchesWin.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-14T14:20:47.978Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-14T14:20:47.978Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\Windows\\App.xaml",
               "RelativeDocumentMoniker": "Windows\\App.xaml",
               "ToolTip": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\Windows\\App.xaml",
               "RelativeToolTip": "Windows\\App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-14T14:54:51.85Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-14T14:54:51.85Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "DLImp.cs",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\DAL\\DLImp.cs",
               "RelativeDocumentMoniker": "DAL\\DLImp.cs",
@@ -388,24 +400,22 @@
               "RelativeToolTip": "DAL\\DLImp.cs",
               "ViewState": "AQIAAO8BAAAAAAAAAEBlwPgBAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T13:07:23.996Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-10T13:07:23.996Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\Windows\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Windows\\MainWindow.xaml",
               "ToolTip": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\Windows\\MainWindow.xaml",
               "RelativeToolTip": "Windows\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-14T08:21:37.069Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-14T08:21:37.069Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "ViewDatabase.xaml.cs",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\Windows\\ViewDatabase.xaml.cs",
               "RelativeDocumentMoniker": "Windows\\ViewDatabase.xaml.cs",
@@ -413,12 +423,11 @@
               "RelativeToolTip": "Windows\\ViewDatabase.xaml.cs",
               "ViewState": "AQIAAAsAAAAAAAAAAAAiwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-13T20:07:21.291Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-13T20:07:21.291Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "StarRatingControl.xaml.cs",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\Windows\\StarRatingControl.xaml.cs",
               "RelativeDocumentMoniker": "Windows\\StarRatingControl.xaml.cs",
@@ -426,24 +435,22 @@
               "RelativeToolTip": "Windows\\StarRatingControl.xaml.cs",
               "ViewState": "AQIAADwAAAAAAAAAAAAgwFIAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T09:04:53.171Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-14T09:04:53.171Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "StarRatingControl.xaml",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\Windows\\StarRatingControl.xaml",
               "RelativeDocumentMoniker": "Windows\\StarRatingControl.xaml",
               "ToolTip": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\Windows\\StarRatingControl.xaml",
               "RelativeToolTip": "Windows\\StarRatingControl.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-13T14:19:56.74Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-13T14:19:56.74Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "IBL.cs",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\BL\\IBL.cs",
               "RelativeDocumentMoniker": "BL\\IBL.cs",
@@ -451,12 +458,11 @@
               "RelativeToolTip": "BL\\IBL.cs",
               "ViewState": "AQIAABQAAAAAAAAAAIA5wBsAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-13T15:03:25.664Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-13T15:03:25.664Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "EnterWinVM.cs",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\ViewModel\\EnterWinVM.cs",
               "RelativeDocumentMoniker": "ViewModel\\EnterWinVM.cs",
@@ -464,12 +470,11 @@
               "RelativeToolTip": "ViewModel\\EnterWinVM.cs",
               "ViewState": "AQIAABgAAAAAAAAAAAAuwA0AAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T13:07:22.902Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-10T13:07:22.902Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 35,
               "Title": "Estimated.cs",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\BO\\Flights\\Estimated.cs",
               "RelativeDocumentMoniker": "BO\\Flights\\Estimated.cs",
@@ -481,7 +486,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "Watch.cs",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\BO\\Users\\Watch.cs",
               "RelativeDocumentMoniker": "BO\\Users\\Watch.cs",
@@ -489,8 +494,7 @@
               "RelativeToolTip": "BO\\Users\\Watch.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T13:15:27.557Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-10T13:15:27.557Z"
             },
             {
               "$type": "Document",
@@ -506,7 +510,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "Holiday.cs",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\BO\\Holiday.cs",
               "RelativeDocumentMoniker": "BO\\Holiday.cs",
@@ -515,18 +519,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-10T13:15:19.323Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "Weather.cs",
-              "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\BO\\Weather.cs",
-              "RelativeDocumentMoniker": "BO\\Weather.cs",
-              "ToolTip": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\BO\\Weather.cs",
-              "RelativeToolTip": "BO\\Weather.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T13:13:10.138Z"
             },
             {
               "$type": "Document",
@@ -550,8 +542,7 @@
               "RelativeToolTip": "BO\\Recipes\\RecipeKeyWord.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T13:07:22.919Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-10T13:07:22.919Z"
             },
             {
               "$type": "Document",
@@ -586,8 +577,7 @@
               "RelativeToolTip": "Properties\\AssemblyInfo.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T13:07:22.908Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-10T13:07:22.908Z"
             },
             {
               "$type": "Document",
@@ -599,8 +589,7 @@
               "RelativeToolTip": "Windows\\WinReciperDetails.xaml.cs",
               "ViewState": "AQIAABMAAACYmZmZmZkrwB0AAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T13:07:22.93Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-10T13:07:22.93Z"
             }
           ]
         }
