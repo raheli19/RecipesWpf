@@ -108,7 +108,7 @@
                     <DataGridTemplateColumn.CellTemplate >
                         <DataTemplate >
                             <Button Content="Steps" CommandParameter="{Binding ImageLink}" CommandTarget="{Binding}"
-                HorizontalAlignment="Right"  Tag="{Binding Name}"  Grid.Row="0" Cursor="Hand" Click="btnGrid_click"/>
+                HorizontalAlignment="Right"  Tag="{Binding Id}"  Grid.Row="0" Cursor="Hand" Click="btnGrid_click"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>

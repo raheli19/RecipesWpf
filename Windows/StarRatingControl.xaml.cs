@@ -34,6 +34,7 @@ namespace Recipes
 
         private void StarRatingControl_Unloaded(object sender, RoutedEventArgs e)
         {
+            Console.WriteLine("O");
             if (sender is Button button && int.TryParse(button.Tag.ToString(), out int rating))
             {
                 var r = button.DataContext as Recipe;
@@ -46,6 +47,8 @@ namespace Recipes
 
         private void Star_Click(object sender, RoutedEventArgs e)
         {
+            Console.WriteLine("PO");
+
             if (sender is Button button && int.TryParse(button.Tag.ToString(), out int rating))
             {
                 var r = button.DataContext as Recipe;
@@ -56,6 +59,7 @@ namespace Recipes
 
         public void SetRating(string recipeName, int rating)
         {
+
             foreach (UIElement child in (Content as StackPanel).Children)
             {
                 if (child is Button button)
@@ -70,6 +74,11 @@ namespace Recipes
                     }
                     if (tag == rating) // Only update the rating for the clicked star
                     {
+                        Console.WriteLine(rating);
+                        Console.WriteLine(recipeName);
+                        Console.WriteLine("TO");
+
+
                         // Update the rating in the database
                         bl.UpdateRateRecipe(recipeName, rating);
                     }
@@ -82,6 +91,8 @@ namespace Recipes
 
         private void SaveRating(string recipeName, int rating)
         {
+            Console.WriteLine("LO");
+
             bl.UpdateRateRecipe(recipeName, rating);
         }
     }

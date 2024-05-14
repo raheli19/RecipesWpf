@@ -9,6 +9,7 @@ using Newtonsoft.Json.Linq;
 using System.Diagnostics;
 using GeoCoordinatePortable;
 using System.Text.RegularExpressions;
+using System.Windows.Media;
 
 //using System.Activities;
 //using System.Device.Location;
@@ -22,7 +23,7 @@ namespace DAL
     {
         HelperClass helperC = new HelperClass();
 
-        #region recipes
+         #region recipes
 
         static public List<Recipe> recipesDataBase = new List<Recipe>();
         static public List<Calend> calendarList = new List<Calend>();
@@ -304,12 +305,18 @@ namespace DAL
 
            // Update existing recipe with new rate
            existingRecipe.StarRating = starRating;
-                    
-           List<Recipe> checkLst = getRecipesDB();
-           
+            Console.WriteLine("MO");
+            Console.WriteLine(existingRecipe);
+            Console.WriteLine(recipeDetails);
+
+
+
+            List<Recipe> checkLst = getRecipesDB();
+            Console.WriteLine(checkLst);
+
         }
 
-           
+
         public void UpdateCommentRecipe(string recipeName, string comment)
         {
             List<Recipe> recipeDetails = getRecipesDB();
