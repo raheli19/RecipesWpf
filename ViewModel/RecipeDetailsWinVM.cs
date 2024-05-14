@@ -33,11 +33,11 @@ namespace Recipes.ViewModel
                 return bl.GetReciperNumber(Reciper);
             }
         }
-        public string AirlineCompany
+        public string RecipermCompany
         {
             get
             {
-                return bl.GetAirlineCompany(Reciper);
+                return bl.GetRecipermCompany(Reciper);
             }
         }
         public string Source
@@ -101,11 +101,11 @@ namespace Recipes.ViewModel
 
             }
         }
-        public string StatusAirplane
+        public string StatusRecipero
         {
             get
             {
-                return bl.GetStatusAirplane(Reciper);
+                return bl.GetStatusRecipero(Reciper);
 
             }
         }

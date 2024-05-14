@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BO
 {
-    public class Aircraft//כלי טיס
+    public class Reciperu
     {
         public Model model { get; set; }
         public int countryId { get; set; }
@@ -16,7 +16,7 @@ namespace BO
         public object msn { get; set; }
         public Images images { get; set; }
         public Identification identification { get; set; }
-        public Airport airport { get; set; }
+        public Reciperi Reciperi { get; set; }
         public Time time { get; set; }
     }
 }

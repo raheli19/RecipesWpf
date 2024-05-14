@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{55F4BB3F-12F9-4FEB-A767-60016CC0E5EA}|BO\\BO.csproj|c:\\users\\avino\\source\\repos\\recipeswpf\\bo\\recipes\\reciperi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55F4BB3F-12F9-4FEB-A767-60016CC0E5EA}|BO\\BO.csproj|solutionrelative:bo\\recipes\\reciperi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55F4BB3F-12F9-4FEB-A767-60016CC0E5EA}|BO\\BO.csproj|c:\\users\\avino\\source\\repos\\recipeswpf\\bo\\recipes\\reciperm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55F4BB3F-12F9-4FEB-A767-60016CC0E5EA}|BO\\BO.csproj|solutionrelative:bo\\recipes\\reciperm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55F4BB3F-12F9-4FEB-A767-60016CC0E5EA}|BO\\BO.csproj|c:\\users\\avino\\source\\repos\\recipeswpf\\bo\\recipes\\reciperu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55F4BB3F-12F9-4FEB-A767-60016CC0E5EA}|BO\\BO.csproj|solutionrelative:bo\\recipes\\reciperu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{55F4BB3F-12F9-4FEB-A767-60016CC0E5EA}|BO\\BO.csproj|c:\\users\\avino\\source\\repos\\recipeswpf\\bo\\recipes\\reciperhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{55F4BB3F-12F9-4FEB-A767-60016CC0E5EA}|BO\\BO.csproj|solutionrelative:bo\\recipes\\reciperhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -169,6 +181,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Reciperi.cs",
+              "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\BO\\Recipes\\Reciperi.cs",
+              "RelativeDocumentMoniker": "BO\\Recipes\\Reciperi.cs",
+              "ToolTip": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\BO\\Recipes\\Reciperi.cs",
+              "RelativeToolTip": "BO\\Recipes\\Reciperi.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T15:34:38.554Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Reciperm.cs",
+              "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\BO\\Recipes\\Reciperm.cs",
+              "RelativeDocumentMoniker": "BO\\Recipes\\Reciperm.cs",
+              "ToolTip": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\BO\\Recipes\\Reciperm.cs*",
+              "RelativeToolTip": "BO\\Recipes\\Reciperm.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T15:34:27.344Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Reciperu.cs",
+              "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\BO\\Recipes\\Reciperu.cs",
+              "RelativeDocumentMoniker": "BO\\Recipes\\Reciperu.cs",
+              "ToolTip": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\BO\\Recipes\\Reciperu.cs*",
+              "RelativeToolTip": "BO\\Recipes\\Reciperu.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T15:30:56.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "ReciperHistory.cs",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\BO\\Recipes\\ReciperHistory.cs",
               "RelativeDocumentMoniker": "BO\\Recipes\\ReciperHistory.cs",
@@ -181,7 +232,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "RecipeDetailsWinVM.cs",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\ViewModel\\RecipeDetailsWinVM.cs",
               "RelativeDocumentMoniker": "ViewModel\\RecipeDetailsWinVM.cs",
@@ -193,7 +244,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\Windows\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "Windows\\MainWindow.xaml.cs",
@@ -205,7 +256,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "BLImp.cs",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\BL\\BLImp.cs",
               "RelativeDocumentMoniker": "BL\\BLImp.cs",
@@ -217,7 +268,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "RecipesContext.cs",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\DAL\\DB\\RecipesContext.cs",
               "RelativeDocumentMoniker": "DAL\\DB\\RecipesContext.cs",
@@ -229,7 +280,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Weather.cs",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\BO\\Weather.cs",
               "RelativeDocumentMoniker": "BO\\Weather.cs",
@@ -241,7 +292,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "Window1.xaml",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\Windows\\Window1.xaml",
               "RelativeDocumentMoniker": "Windows\\Window1.xaml",
@@ -252,7 +303,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "WinReciperDetails.xaml",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\Windows\\WinReciperDetails.xaml",
               "RelativeDocumentMoniker": "Windows\\WinReciperDetails.xaml",
@@ -263,7 +314,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "Recipe.cs",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\BO\\Recipes\\Recipe.cs",
               "RelativeDocumentMoniker": "BO\\Recipes\\Recipe.cs",
@@ -275,7 +326,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "WatchesWin.xaml.cs",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\Windows\\WatchesWin.xaml.cs",
               "RelativeDocumentMoniker": "Windows\\WatchesWin.xaml.cs",
@@ -287,7 +338,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "WatchWinVM.cs",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\ViewModel\\WatchWinVM.cs",
               "RelativeDocumentMoniker": "ViewModel\\WatchWinVM.cs",
@@ -299,7 +350,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "RecipeInfoPartial.cs",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\BO\\Recipes\\RecipeInfoPartial.cs",
               "RelativeDocumentMoniker": "BO\\Recipes\\RecipeInfoPartial.cs",
@@ -311,7 +362,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "MainWinVM.cs",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\ViewModel\\MainWinVM.cs",
               "RelativeDocumentMoniker": "ViewModel\\MainWinVM.cs",
@@ -323,7 +374,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "ViewDatabase.xaml",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\Windows\\ViewDatabase.xaml",
               "RelativeDocumentMoniker": "Windows\\ViewDatabase.xaml",
@@ -334,7 +385,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "DateConverter.cs",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\DateConverter.cs",
               "RelativeDocumentMoniker": "DateConverter.cs",
@@ -346,7 +397,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "RecipeDateUsage.cs",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\BO\\Recipes\\RecipeDateUsage.cs",
               "RelativeDocumentMoniker": "BO\\Recipes\\RecipeDateUsage.cs",
@@ -358,7 +409,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 27,
               "Title": "IDL.cs",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\DAL\\IDL.cs",
               "RelativeDocumentMoniker": "DAL\\IDL.cs",
@@ -370,7 +421,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "WatchesWin.xaml",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\Windows\\WatchesWin.xaml",
               "RelativeDocumentMoniker": "Windows\\WatchesWin.xaml",
@@ -381,7 +432,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\Windows\\App.xaml",
               "RelativeDocumentMoniker": "Windows\\App.xaml",
@@ -392,7 +443,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "DLImp.cs",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\DAL\\DLImp.cs",
               "RelativeDocumentMoniker": "DAL\\DLImp.cs",
@@ -404,7 +455,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\Windows\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Windows\\MainWindow.xaml",
@@ -415,7 +466,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "ViewDatabase.xaml.cs",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\Windows\\ViewDatabase.xaml.cs",
               "RelativeDocumentMoniker": "Windows\\ViewDatabase.xaml.cs",
@@ -427,7 +478,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "StarRatingControl.xaml.cs",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\Windows\\StarRatingControl.xaml.cs",
               "RelativeDocumentMoniker": "Windows\\StarRatingControl.xaml.cs",
@@ -439,7 +490,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "StarRatingControl.xaml",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\Windows\\StarRatingControl.xaml",
               "RelativeDocumentMoniker": "Windows\\StarRatingControl.xaml",
@@ -450,7 +501,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "IBL.cs",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\BL\\IBL.cs",
               "RelativeDocumentMoniker": "BL\\IBL.cs",
@@ -462,7 +513,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 28,
               "Title": "EnterWinVM.cs",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\ViewModel\\EnterWinVM.cs",
               "RelativeDocumentMoniker": "ViewModel\\EnterWinVM.cs",
@@ -474,7 +525,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 38,
               "Title": "Estimated.cs",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\BO\\Flights\\Estimated.cs",
               "RelativeDocumentMoniker": "BO\\Flights\\Estimated.cs",
@@ -486,7 +537,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 30,
               "Title": "Watch.cs",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\BO\\Users\\Watch.cs",
               "RelativeDocumentMoniker": "BO\\Users\\Watch.cs",
@@ -498,7 +549,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 31,
               "Title": "Calend.cs",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\BO\\Calend.cs",
               "RelativeDocumentMoniker": "BO\\Calend.cs",
@@ -510,7 +561,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 29,
               "Title": "Holiday.cs",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\BO\\Holiday.cs",
               "RelativeDocumentMoniker": "BO\\Holiday.cs",
@@ -522,7 +573,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 33,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\BO\\Users\\User.cs",
               "RelativeDocumentMoniker": "BO\\Users\\User.cs",
@@ -534,7 +585,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 32,
               "Title": "RecipeKeyWord.cs",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\BO\\Recipes\\RecipeKeyWord.cs",
               "RelativeDocumentMoniker": "BO\\Recipes\\RecipeKeyWord.cs",
@@ -546,7 +597,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 35,
               "Title": "Settings.Designer.cs",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\Properties\\Settings.Designer.cs",
               "RelativeDocumentMoniker": "Properties\\Settings.Designer.cs",
@@ -558,7 +609,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 36,
               "Title": "Settings.settings",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\Properties\\Settings.settings",
               "RelativeDocumentMoniker": "Properties\\Settings.settings",
@@ -569,7 +620,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 37,
               "Title": "AssemblyInfo.cs",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\Properties\\AssemblyInfo.cs",
               "RelativeDocumentMoniker": "Properties\\AssemblyInfo.cs",
@@ -581,7 +632,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 34,
               "Title": "WinReciperDetails.xaml.cs",
               "DocumentMoniker": "C:\\Users\\avino\\source\\repos\\RecipesWpf\\Windows\\WinReciperDetails.xaml.cs",
               "RelativeDocumentMoniker": "Windows\\WinReciperDetails.xaml.cs",

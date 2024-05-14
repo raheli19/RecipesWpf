@@ -39,7 +39,7 @@ namespace BL
         string GetStringRemainingTime(ReciperDetail Reciper);
 
         string GetReciperNumber(ReciperDetail Reciper);
-        string GetAirlineCompany(ReciperDetail Reciper);
+        string GetRecipermCompany(ReciperDetail Reciper);
         string GetOrigin(ReciperInfoPartial fip);
         string GetDestination(ReciperInfoPartial fip);
         string GetOriginName(ReciperDetail Reciper);
@@ -48,7 +48,7 @@ namespace BL
         string GetSSource(ReciperDetail Reciper);
         string GetActual(ReciperDetail Reciper);
         string GetEstimated(ReciperDetail Reciper);
-        string GetStatusAirplane(ReciperDetail Reciper);
+        string GetStatusRecipero(ReciperDetail Reciper);
         string GetReciperStatus(ReciperDetail Reciper);
         string GetSTimezone(ReciperDetail Reciper);
         string GetDTimezone(ReciperDetail Reciper);

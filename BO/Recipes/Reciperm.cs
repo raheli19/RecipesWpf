@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BO
 {
-    public class Airline//חברת תעופה
+    public class Reciperm
     {
         public string name { get; set; }
         public string _short { get; set; }

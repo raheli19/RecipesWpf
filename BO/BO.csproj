@@ -69,9 +69,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Calend.cs" />
-    <Compile Include="Recipes\Aircraft.cs" />
-    <Compile Include="Recipes\Airline.cs" />
-    <Compile Include="Recipes\Airport.cs" />
+    <Compile Include="Recipes\Reciperu.cs" />
+    <Compile Include="Recipes\Reciperm.cs" />
+    <Compile Include="Recipes\Reciperi.cs" />
     <Compile Include="Recipes\Class1.cs" />
     <Compile Include="Recipes\Country.cs" />
     <Compile Include="Recipes\Destination.cs" />

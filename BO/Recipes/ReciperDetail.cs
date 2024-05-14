@@ -8,11 +8,11 @@ namespace BO
         public Status status { get; set; }
         public string level { get; set; }
         public bool promote { get; set; }
-        public Aircraft aircraft { get; set; }
-        public Airline airline { get; set; }
+        public Reciperu Reciperu { get; set; }
+        public Reciperm Reciperm { get; set; }
         public object owner { get; set; }
         public object airspace { get; set; }
-        public Airport airport { get; set; }
+        public Reciperi Reciperi { get; set; }
         public ReciperHistory ReciperHistory { get; set; }
         public object ems { get; set; }
         public List<string> availability { get; set; }

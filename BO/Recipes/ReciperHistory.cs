@@ -4,6 +4,6 @@ namespace BO
 {
     public class ReciperHistory
     {
-        public List<Aircraft> aircraft { get; set; }
+        public List<Reciperu> Reciperu { get; set; }
     }
 }

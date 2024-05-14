@@ -727,15 +727,15 @@ namespace DAL
         #region distance and time
         public Dictionary<string, string> GetLonLatOrigin(ReciperDetail Reciper)
         {
-            string lon = Reciper.airport.origin.position.longitude.ToString();
-            string lat = Reciper.airport.origin.position.latitude.ToString();
+            string lon = Reciper.Reciperi.origin.position.longitude.ToString();
+            string lat = Reciper.Reciperi.origin.position.latitude.ToString();
             return new Dictionary<string, string>() { { "lon", lon }, { "lat", lat } };
         }
 
         public Dictionary<string, string> GetLonLatDestination(ReciperDetail Reciper)
         {
-            string lon = Reciper.airport.destination.position.longitude.ToString();
-            string lat = Reciper.airport.destination.position.latitude.ToString();
+            string lon = Reciper.Reciperi.destination.position.longitude.ToString();
+            string lat = Reciper.Reciperi.destination.position.latitude.ToString();
             return new Dictionary<string, string>() { { "lon", lon }, { "lat", lat } };
         }
 
@@ -806,10 +806,10 @@ namespace DAL
             }
         }
 
-        public string GetAirlineCompany(ReciperDetail Reciper)
+        public string GetRecipermCompany(ReciperDetail Reciper)
         {
-            var airline = Reciper.airline.name;
-            return airline;
+            var Reciperm = Reciper.Reciperm.name;
+            return Reciperm;
         }
 
         public string GetOrigin(ReciperInfoPartial fip)
@@ -842,7 +842,7 @@ namespace DAL
         {
             try
             {
-                return Reciper.airport.origin.name;
+                return Reciper.Reciperi.origin.name;
             }
             catch (Exception e)
             {
@@ -855,7 +855,7 @@ namespace DAL
         {
             try
             {
-                return Reciper.airport.destination.name;
+                return Reciper.Reciperi.destination.name;
             }
             catch (Exception e)
             {
@@ -870,7 +870,7 @@ namespace DAL
             {
                 HelperClass helper = new HelperClass();
                 int utctime = Reciper.time.scheduled.arrival;
-                int offset = Reciper.airport.destination.timezone.offset;
+                int offset = Reciper.Reciperi.destination.timezone.offset;
                 int total = utctime + offset;
                 return helper.GetDateTimeFromEpoch(total).ToString("HH:mm");
 
@@ -887,7 +887,7 @@ namespace DAL
             try
             {
                 int utctime = Reciper.time.scheduled.departure;
-                int offset = Reciper.airport.origin.timezone.offset;
+                int offset = Reciper.Reciperi.origin.timezone.offset;
                 int total = utctime + offset;
                 return helperC.GetDateTimeFromEpoch(total).ToString("HH:mm");
 
@@ -903,7 +903,7 @@ namespace DAL
             if (Reciper.time.real.departure != null)
             {
                 long utctime = (long)Reciper.time.real.departure;
-                long offset = Reciper.airport.origin.timezone.offset;
+                long offset = Reciper.Reciperi.origin.timezone.offset;
                 long total = utctime + offset;
                 return helperC.GetDateTimeFromEpoch(total).ToString("HH:mm");
             }
@@ -915,7 +915,7 @@ namespace DAL
             if (Reciper.time.estimated.arrival != null)
             {
                 long utctime = (long)Reciper.time.estimated.arrival;
-                long offset = Reciper.airport.destination.timezone.offset;
+                long offset = Reciper.Reciperi.destination.timezone.offset;
                 long total = utctime + offset;
                 return helperC.GetDateTimeFromEpoch(total).ToString("HH:mm");
 
@@ -924,7 +924,7 @@ namespace DAL
 
         }
 
-        public string GetStatusAirplane(ReciperDetail Reciper)
+        public string GetStatusRecipero(ReciperDetail Reciper)
         {
             switch (Reciper.status.generic.status.text)
             {
@@ -950,7 +950,7 @@ namespace DAL
         {
             try
             {
-                return Reciper.airport.origin.timezone.abbr + "(UTC " + Reciper.airport.origin.timezone.offsetHours + ")";
+                return Reciper.Reciperi.origin.timezone.abbr + "(UTC " + Reciper.Reciperi.origin.timezone.offsetHours + ")";
             }
             catch (Exception e)
             {
@@ -963,7 +963,7 @@ namespace DAL
         {
             try
             {
-                return Reciper.airport.origin.timezone.abbr + "(UTC " + Reciper.airport.destination.timezone.offsetHours + ")";
+                return Reciper.Reciperi.origin.timezone.abbr + "(UTC " + Reciper.Reciperi.destination.timezone.offsetHours + ")";
             }
             catch (Exception e)
             {

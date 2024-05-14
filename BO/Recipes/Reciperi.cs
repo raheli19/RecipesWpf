@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BO
 {
-    public class Airport
+    public class Reciperi
     {
         public Origin origin { get; set; }
         public Destination destination { get; set; }

@@ -138,9 +138,9 @@ namespace BL
 
         }
 
-        public string GetAirlineCompany(ReciperDetail Reciper)
+        public string GetRecipermCompany(ReciperDetail Reciper)
         {
-            return dl.GetAirlineCompany(Reciper);
+            return dl.GetRecipermCompany(Reciper);
         }
 
         public string GetOrigin(ReciperInfoPartial fip)
@@ -183,9 +183,9 @@ namespace BL
             return dl.GetEstimated(Reciper);
         }
 
-        public string GetStatusAirplane(ReciperDetail Reciper)
+        public string GetStatusRecipero(ReciperDetail Reciper)
         {
-            return dl.GetStatusAirplane(Reciper);
+            return dl.GetStatusRecipero(Reciper);
         }
 
         public string GetReciperStatus(ReciperDetail Reciper)
